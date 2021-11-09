@@ -44,13 +44,13 @@
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -507,6 +507,31 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1636454762369</Id>
+					<Name><![CDATA[kiloToMega]]></Name>
+					<X>360</X><Y>3680</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[pow(10, -3)]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1636454762367</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>SEPARATE_SECTION</DelimeterType>
+							<StartSection><![CDATA[Omrekenfactoren]]></StartSection>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -595,13 +620,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -802,7 +827,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -814,7 +839,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -1066,13 +1091,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -1273,7 +1298,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -1285,7 +1310,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -1538,13 +1563,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -1757,7 +1782,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -1769,7 +1794,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -1974,13 +1999,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -2213,7 +2238,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -2225,7 +2250,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -2433,13 +2458,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -2652,7 +2677,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -2857,13 +2882,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -3076,7 +3101,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -3268,13 +3293,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -3564,13 +3589,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -3802,7 +3827,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -3814,7 +3839,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -4034,13 +4059,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[city]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwel]]></Name>
+							<Name><![CDATA[capacityMWel]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[capacityTennet]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[capacityMwth]]></Name>
+							<Name><![CDATA[capacityMWth]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[efficiencyElectric]]></Name>
@@ -4264,7 +4289,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwel]]></ItemName>
+								<ItemName><![CDATA[capacityMWel]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -4276,7 +4301,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Key>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 								<ClassName><![CDATA[PowerPlant]]></ClassName>
-								<ItemName><![CDATA[capacityMwth]]></ItemName>
+								<ItemName><![CDATA[capacityMWth]]></ItemName>
 							</Key>
 							<Value>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -5226,6 +5251,28 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 
 			<Presentation>
 				<Rectangle>
+					<Id>1636454823448</Id>
+					<Name><![CDATA[rectangle7]]></Name>
+					<X>300</X><Y>3500</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>300</Width>
+					<Height>280</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
 					<Id>1636408107809</Id>
 					<Name><![CDATA[rectangle6]]></Name>
 					<X>0</X><Y>3500</Y>
@@ -6111,6 +6158,27 @@ demand]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>18</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1636454809239</Id>
+					<Name><![CDATA[text52]]></Name>
+					<X>330</X><Y>3530</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[General]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
 						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
@@ -44692,13 +44760,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -45244,7 +45312,7 @@ demand]]></Text>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1636371259133</Id>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 					<X>40</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -45286,7 +45354,7 @@ demand]]></Text>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1636371259139</Id>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 					<X>40</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -46114,13 +46182,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -46408,13 +46476,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -46737,13 +46805,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -47070,13 +47138,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -47399,13 +47467,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -47789,13 +47857,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -48275,13 +48343,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -48604,13 +48672,13 @@ demand]]></Text>
 					<Name><![CDATA[city]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwel]]></Name>
+					<Name><![CDATA[capacityMWel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[capacityTennet]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[capacityMwth]]></Name>
+					<Name><![CDATA[capacityMWth]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[efficiencyElectric]]></Name>
@@ -48992,7 +49060,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980430</Id>
 					<Name><![CDATA[provSupplyTotal]]></Name>
-					<X>3200</X><Y>640</Y>
+					<X>2720</X><Y>1570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49004,7 +49072,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980432</Id>
 					<Name><![CDATA[provSupplyWind]]></Name>
-					<X>3200</X><Y>660</Y>
+					<X>2720</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49016,7 +49084,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980434</Id>
 					<Name><![CDATA[provSupplySolar]]></Name>
-					<X>3200</X><Y>680</Y>
+					<X>2720</X><Y>1610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49028,7 +49096,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980436</Id>
 					<Name><![CDATA[provSupplyGas]]></Name>
-					<X>3200</X><Y>700</Y>
+					<X>2720</X><Y>1630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49040,7 +49108,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980438</Id>
 					<Name><![CDATA[provSupplyCoal]]></Name>
-					<X>3200</X><Y>720</Y>
+					<X>2720</X><Y>1650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49052,7 +49120,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980440</Id>
 					<Name><![CDATA[provSupplyNuclear]]></Name>
-					<X>3200</X><Y>740</Y>
+					<X>360</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49064,7 +49132,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980442</Id>
 					<Name><![CDATA[provImport]]></Name>
-					<X>3200</X><Y>760</Y>
+					<X>360</X><Y>520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49076,7 +49144,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980448</Id>
 					<Name><![CDATA[nrTransStationInProv]]></Name>
-					<X>3200</X><Y>960</Y>
+					<X>50</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49088,7 +49156,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980458</Id>
 					<Name><![CDATA[provBatteryCharge]]></Name>
-					<X>3200</X><Y>780</Y>
+					<X>360</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49100,7 +49168,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980460</Id>
 					<Name><![CDATA[provElectrolyzerDemand]]></Name>
-					<X>3200</X><Y>820</Y>
+					<X>360</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49112,7 +49180,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980462</Id>
 					<Name><![CDATA[provFuelCellGeneration]]></Name>
-					<X>3200</X><Y>840</Y>
+					<X>360</X><Y>600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49124,7 +49192,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980464</Id>
 					<Name><![CDATA[provInstalledCapBatteries]]></Name>
-					<X>5021.997</X><Y>-1114.603</Y>
+					<X>4681.997</X><Y>1465.397</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49136,7 +49204,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980466</Id>
 					<Name><![CDATA[provInstalledCapElectrolyzer]]></Name>
-					<X>5021.997</X><Y>-1088.445</Y>
+					<X>4681.997</X><Y>1491.555</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49148,7 +49216,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980468</Id>
 					<Name><![CDATA[provInstalledCapFuelCell]]></Name>
-					<X>5021.997</X><Y>-1062.286</Y>
+					<X>4681.997</X><Y>1517.714</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49160,7 +49228,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980470</Id>
 					<Name><![CDATA[provInstalledCapSolar]]></Name>
-					<X>5021.997</X><Y>-1009.969</Y>
+					<X>2720</X><Y>1720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49172,7 +49240,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980472</Id>
 					<Name><![CDATA[provInstalledCapWind]]></Name>
-					<X>5021.997</X><Y>-983.81</Y>
+					<X>2720</X><Y>1746.159</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49184,7 +49252,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980474</Id>
 					<Name><![CDATA[provInstalledCapRenewable]]></Name>
-					<X>5021.997</X><Y>-957.652</Y>
+					<X>2720</X><Y>1772.317</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49196,7 +49264,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980476</Id>
 					<Name><![CDATA[builtEnvironmentMeasuredElecDemand]]></Name>
-					<X>1043.352</X><Y>-721.547</Y>
+					<X>518.352</X><Y>1858.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49208,7 +49276,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980478</Id>
 					<Name><![CDATA[builtEnvironmentBehindMeterElecDemand]]></Name>
-					<X>1043.352</X><Y>-701.547</Y>
+					<X>518.352</X><Y>1878.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49220,7 +49288,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980480</Id>
 					<Name><![CDATA[commercialServicesElecDemand]]></Name>
-					<X>1043.352</X><Y>-681.547</Y>
+					<X>518.352</X><Y>1898.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49232,7 +49300,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980482</Id>
 					<Name><![CDATA[publicServicesElecDemand]]></Name>
-					<X>1043.352</X><Y>-661.547</Y>
+					<X>518.352</X><Y>1918.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49244,7 +49312,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980484</Id>
 					<Name><![CDATA[housesMeasuredElecDemand]]></Name>
-					<X>1043.352</X><Y>-641.547</Y>
+					<X>518.352</X><Y>1938.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49256,7 +49324,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980486</Id>
 					<Name><![CDATA[housesBehindMeterElecDemand]]></Name>
-					<X>1043.352</X><Y>-621.547</Y>
+					<X>518.352</X><Y>1958.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49268,7 +49336,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980488</Id>
 					<Name><![CDATA[industryElecDemand]]></Name>
-					<X>1521.016</X><Y>-721.547</Y>
+					<X>996.016</X><Y>1858.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49280,7 +49348,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980490</Id>
 					<Name><![CDATA[industryBElecDemand]]></Name>
-					<X>1521.016</X><Y>-701.547</Y>
+					<X>996.016</X><Y>1878.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49292,7 +49360,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980492</Id>
 					<Name><![CDATA[industryCElecDemand]]></Name>
-					<X>1521.016</X><Y>-681.547</Y>
+					<X>996.016</X><Y>1898.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49304,7 +49372,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980494</Id>
 					<Name><![CDATA[industryEElecDemand]]></Name>
-					<X>1521.016</X><Y>-641.547</Y>
+					<X>996.016</X><Y>1938.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49316,7 +49384,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980496</Id>
 					<Name><![CDATA[industryFElecDemand]]></Name>
-					<X>1521.016</X><Y>-621.547</Y>
+					<X>996.016</X><Y>1958.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49328,7 +49396,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980498</Id>
 					<Name><![CDATA[industryDElecDemand]]></Name>
-					<X>1521.016</X><Y>-661.547</Y>
+					<X>996.016</X><Y>1918.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49340,7 +49408,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980500</Id>
 					<Name><![CDATA[transportElecDemand]]></Name>
-					<X>1989.48</X><Y>-721.547</Y>
+					<X>1464.48</X><Y>1858.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49352,7 +49420,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980502</Id>
 					<Name><![CDATA[agricultureElecDemand]]></Name>
-					<X>2476.345</X><Y>-721.547</Y>
+					<X>1951.345</X><Y>1858.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49364,7 +49432,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980504</Id>
 					<Name><![CDATA[industryAElecDemand]]></Name>
-					<X>2476.345</X><Y>-701.547</Y>
+					<X>1951.345</X><Y>1878.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49376,7 +49444,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980506</Id>
 					<Name><![CDATA[builtEnvironmentHourlyGasDemandM3]]></Name>
-					<X>1049.48</X><Y>-111.547</Y>
+					<X>524.48</X><Y>2508.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49388,7 +49456,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980508</Id>
 					<Name><![CDATA[commercialServicesHourlyGasDemand]]></Name>
-					<X>1050</X><Y>-250</Y>
+					<X>525</X><Y>2370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49400,7 +49468,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980510</Id>
 					<Name><![CDATA[publicServicesHourlyGasDemand]]></Name>
-					<X>1050</X><Y>-230</Y>
+					<X>525</X><Y>2390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49412,7 +49480,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980512</Id>
 					<Name><![CDATA[housesHourlyGasDemand]]></Name>
-					<X>1050</X><Y>-210</Y>
+					<X>525</X><Y>2410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49424,7 +49492,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980514</Id>
 					<Name><![CDATA[housesHourlyDistrictHeatingDemand]]></Name>
-					<X>1049.48</X><Y>-51.547</Y>
+					<X>524.48</X><Y>2568.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49436,7 +49504,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980516</Id>
 					<Name><![CDATA[industryHourlyGasDemandM3]]></Name>
-					<X>1529.48</X><Y>-341.547</Y>
+					<X>1004.48</X><Y>2278.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49448,7 +49516,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980518</Id>
 					<Name><![CDATA[industryBHourlyGasDemand]]></Name>
-					<X>1529.48</X><Y>-321.547</Y>
+					<X>1004.48</X><Y>2298.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49460,7 +49528,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980520</Id>
 					<Name><![CDATA[industryCHourlyGasDemand]]></Name>
-					<X>1529.48</X><Y>-301.547</Y>
+					<X>1004.48</X><Y>2318.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49472,7 +49540,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980522</Id>
 					<Name><![CDATA[industryDHourlyGasDemand]]></Name>
-					<X>1529.48</X><Y>-281.547</Y>
+					<X>1004.48</X><Y>2338.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49484,7 +49552,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980524</Id>
 					<Name><![CDATA[industryEHourlyGasDemand]]></Name>
-					<X>1529.48</X><Y>-261.547</Y>
+					<X>1004.48</X><Y>2358.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49496,7 +49564,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980526</Id>
 					<Name><![CDATA[industryFHourlyGasDemand]]></Name>
-					<X>1529.48</X><Y>-241.547</Y>
+					<X>1004.48</X><Y>2378.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49544,7 +49612,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980540</Id>
 					<Name><![CDATA[builtEnvironmentHourlyHeatDemand]]></Name>
-					<X>1049.48</X><Y>-31.547</Y>
+					<X>524.48</X><Y>2588.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49556,7 +49624,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980542</Id>
 					<Name><![CDATA[industryHourlyHeatDemand]]></Name>
-					<X>1529.48</X><Y>-171.547</Y>
+					<X>1004.48</X><Y>2448.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49568,7 +49636,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980544</Id>
 					<Name><![CDATA[builtEnvironmentHourlyGasDemandkWh]]></Name>
-					<X>1049.48</X><Y>-91.547</Y>
+					<X>524.48</X><Y>2528.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49580,7 +49648,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980546</Id>
 					<Name><![CDATA[agricultureHourlyGasDemandM3]]></Name>
-					<X>2469.48</X><Y>-451.547</Y>
+					<X>1944.48</X><Y>2168.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49592,7 +49660,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980548</Id>
 					<Name><![CDATA[agricultureHourlyGasDemandkWh]]></Name>
-					<X>2469.48</X><Y>-431.547</Y>
+					<X>1944.48</X><Y>2188.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49604,7 +49672,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980550</Id>
 					<Name><![CDATA[agricultureHourlyHeatDemand]]></Name>
-					<X>2469.48</X><Y>-411.547</Y>
+					<X>1944.48</X><Y>2208.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49616,7 +49684,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980552</Id>
 					<Name><![CDATA[industryHourlyGasDemandkWh]]></Name>
-					<X>1529.48</X><Y>-191.547</Y>
+					<X>1004.48</X><Y>2428.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49640,7 +49708,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980556</Id>
 					<Name><![CDATA[onshoreWindCapacity]]></Name>
-					<X>3069.48</X><Y>-1081.547</Y>
+					<X>2720</X><Y>1500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49652,7 +49720,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980558</Id>
 					<Name><![CDATA[provinceHourlyHeatDemand]]></Name>
-					<X>580</X><Y>-1050</Y>
+					<X>55</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49664,7 +49732,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980560</Id>
 					<Name><![CDATA[provinceElectricityDemand]]></Name>
-					<X>580</X><Y>-1090</Y>
+					<X>55</X><Y>1490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49676,7 +49744,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980562</Id>
 					<Name><![CDATA[provinceHourlyGasDemandkWh]]></Name>
-					<X>580</X><Y>-1030</Y>
+					<X>55</X><Y>1550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49688,7 +49756,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980564</Id>
 					<Name><![CDATA[heatPumpHourlyElecDemand]]></Name>
-					<X>590</X><Y>-910</Y>
+					<X>65</X><Y>1670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49700,7 +49768,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980566</Id>
 					<Name><![CDATA[provinceHourlyGasDemandM3]]></Name>
-					<X>580</X><Y>-1010</Y>
+					<X>55</X><Y>1570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49748,7 +49816,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980574</Id>
 					<Name><![CDATA[provinceHourlyElectricityDemand]]></Name>
-					<X>580</X><Y>-1070</Y>
+					<X>55</X><Y>1510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49760,7 +49828,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980576</Id>
 					<Name><![CDATA[builtEnvironmentHourlyElectricityDemand]]></Name>
-					<X>1045</X><Y>-590</Y>
+					<X>520</X><Y>1990</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49772,7 +49840,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980578</Id>
 					<Name><![CDATA[industryHourlyElectricityDemand]]></Name>
-					<X>1520</X><Y>-590</Y>
+					<X>995</X><Y>1990</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49784,7 +49852,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980580</Id>
 					<Name><![CDATA[agricultureHourlyElectricityDemand]]></Name>
-					<X>2480</X><Y>-660</Y>
+					<X>1950</X><Y>1920</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49868,7 +49936,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980594</Id>
 					<Name><![CDATA[commercialServicesHourlyGasDemandM3]]></Name>
-					<X>1050</X><Y>-180</Y>
+					<X>525</X><Y>2440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49880,7 +49948,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980596</Id>
 					<Name><![CDATA[publicServicesHourlyGasDemandM3]]></Name>
-					<X>1050</X><Y>-160</Y>
+					<X>525</X><Y>2460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49892,7 +49960,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980598</Id>
 					<Name><![CDATA[housesHourlyGasDemandM3]]></Name>
-					<X>1050</X><Y>-140</Y>
+					<X>525</X><Y>2480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50000,7 +50068,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980616</Id>
 					<Name><![CDATA[agricultureAnnualElectricityDemand]]></Name>
-					<X>250</X><Y>-670</Y>
+					<X>1950</X><Y>1940</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50012,7 +50080,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980618</Id>
 					<Name><![CDATA[builtEnvironmentAnnualElectricityDemand]]></Name>
-					<X>250</X><Y>-650</Y>
+					<X>520</X><Y>2010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50024,7 +50092,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980620</Id>
 					<Name><![CDATA[industryAnnualElectricityDemand]]></Name>
-					<X>250</X><Y>-630</Y>
+					<X>995</X><Y>2010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50036,7 +50104,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980622</Id>
 					<Name><![CDATA[provBatteryDischarge]]></Name>
-					<X>3200</X><Y>800</Y>
+					<X>360</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50048,7 +50116,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980624</Id>
 					<Name><![CDATA[provDemandTotal]]></Name>
-					<X>3200</X><Y>860</Y>
+					<X>360</X><Y>620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50186,7 +50254,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980793</Id>
 					<Name><![CDATA[builtEnvironmentAnnualElecDemand]]></Name>
-					<X>1043.352</X><Y>-901.547</Y>
+					<X>518.352</X><Y>1678.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50207,7 +50275,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980796</Id>
 					<Name><![CDATA[builtEnvironmentAnnualBehindMeterElecDemand]]></Name>
-					<X>1043.352</X><Y>-881.547</Y>
+					<X>518.352</X><Y>1698.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50228,7 +50296,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980799</Id>
 					<Name><![CDATA[commercialServicesAnnualElecDemand]]></Name>
-					<X>1043.352</X><Y>-861.547</Y>
+					<X>518.352</X><Y>1718.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50249,7 +50317,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980802</Id>
 					<Name><![CDATA[publicServicesAnnualElecDemand]]></Name>
-					<X>1043.352</X><Y>-841.547</Y>
+					<X>518.352</X><Y>1738.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50270,7 +50338,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980805</Id>
 					<Name><![CDATA[housesMeasuredAnnualElecDemand]]></Name>
-					<X>1043.352</X><Y>-821.547</Y>
+					<X>518.352</X><Y>1758.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50291,7 +50359,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980808</Id>
 					<Name><![CDATA[housesBehindMeterAnnualElecDemand]]></Name>
-					<X>1043.352</X><Y>-801.547</Y>
+					<X>518.352</X><Y>1778.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50312,7 +50380,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980811</Id>
 					<Name><![CDATA[industryAnnualElecDemand]]></Name>
-					<X>1521.016</X><Y>-901.547</Y>
+					<X>996.016</X><Y>1678.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50333,7 +50401,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980814</Id>
 					<Name><![CDATA[industryBAnnualElecDemand]]></Name>
-					<X>1521.016</X><Y>-881.547</Y>
+					<X>996.016</X><Y>1698.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50354,7 +50422,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980817</Id>
 					<Name><![CDATA[industryCAnnualElecDemand]]></Name>
-					<X>1521.016</X><Y>-861.547</Y>
+					<X>996.016</X><Y>1718.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50376,7 +50444,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980820</Id>
 					<Name><![CDATA[industryDAnnualElecDemand]]></Name>
 					<Description><![CDATA[Note, this is electricity production]]></Description>
-					<X>1521.016</X><Y>-841.547</Y>
+					<X>996.016</X><Y>1738.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50397,7 +50465,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980823</Id>
 					<Name><![CDATA[industryEAnnualElecDemand]]></Name>
-					<X>1521.016</X><Y>-821.547</Y>
+					<X>996.016</X><Y>1758.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50418,7 +50486,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980826</Id>
 					<Name><![CDATA[industryFAnnualElecDemand]]></Name>
-					<X>1521.016</X><Y>-801.547</Y>
+					<X>996.016</X><Y>1778.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50439,7 +50507,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980829</Id>
 					<Name><![CDATA[transportElecAnnualDemand]]></Name>
-					<X>1995.274</X><Y>-820</Y>
+					<X>1470.274</X><Y>1760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50460,7 +50528,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980832</Id>
 					<Name><![CDATA[agricultureAnnualElecDemand]]></Name>
-					<X>2476.345</X><Y>-911.547</Y>
+					<X>1951.345</X><Y>1668.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50481,7 +50549,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980835</Id>
 					<Name><![CDATA[industryAAnnualElecDemand]]></Name>
-					<X>2476.345</X><Y>-891.547</Y>
+					<X>1951.345</X><Y>1688.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50503,7 +50571,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980838</Id>
 					<Name><![CDATA[builtEnvironmentAnnualGasDemand]]></Name>
 					<Description><![CDATA[m3]]></Description>
-					<X>1043.352</X><Y>-501.547</Y>
+					<X>518.352</X><Y>2118.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50528,7 +50596,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980841</Id>
 					<Name><![CDATA[commercialServicesAnnualGasDemand]]></Name>
 					<Description><![CDATA[m3]]></Description>
-					<X>1043.352</X><Y>-481.547</Y>
+					<X>518.352</X><Y>2138.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50552,7 +50620,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980844</Id>
 					<Name><![CDATA[publicServicesAnnualGasDemand]]></Name>
-					<X>1043.352</X><Y>-461.547</Y>
+					<X>518.352</X><Y>2158.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50573,7 +50641,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980847</Id>
 					<Name><![CDATA[housesAnnualGasDemand]]></Name>
-					<X>1043.352</X><Y>-441.547</Y>
+					<X>518.352</X><Y>2178.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50594,7 +50662,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980850</Id>
 					<Name><![CDATA[housesAnnualGasDemandTempIndependent]]></Name>
-					<X>1043.352</X><Y>-421.547</Y>
+					<X>518.352</X><Y>2198.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50615,7 +50683,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980853</Id>
 					<Name><![CDATA[housesAnnualDistrictHeatingDemand]]></Name>
-					<X>1043.352</X><Y>-371.547</Y>
+					<X>518.352</X><Y>2248.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50636,7 +50704,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980856</Id>
 					<Name><![CDATA[housesAnnualDistrictHeatingDemandTempIndependent]]></Name>
-					<X>1043.352</X><Y>-351.547</Y>
+					<X>518.352</X><Y>2268.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50657,7 +50725,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980859</Id>
 					<Name><![CDATA[housesWithGasConnection]]></Name>
-					<X>1044.48</X><Y>-301.547</Y>
+					<X>519.48</X><Y>2318.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50678,7 +50746,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980862</Id>
 					<Name><![CDATA[housesWithDistrictHeatingConnection]]></Name>
-					<X>1044.48</X><Y>-281.547</Y>
+					<X>519.48</X><Y>2338.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50699,7 +50767,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980865</Id>
 					<Name><![CDATA[industryAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-501.547</Y>
+					<X>1004.48</X><Y>2118.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50720,7 +50788,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980868</Id>
 					<Name><![CDATA[industryBAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-481.547</Y>
+					<X>1004.48</X><Y>2138.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50741,7 +50809,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980871</Id>
 					<Name><![CDATA[industryCAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-461.547</Y>
+					<X>1004.48</X><Y>2158.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50762,7 +50830,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980874</Id>
 					<Name><![CDATA[industryDAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-441.547</Y>
+					<X>1004.48</X><Y>2178.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50783,7 +50851,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980877</Id>
 					<Name><![CDATA[industryEAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-421.547</Y>
+					<X>1004.48</X><Y>2198.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50804,7 +50872,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980880</Id>
 					<Name><![CDATA[industryFAnnualGasDemand]]></Name>
-					<X>1529.48</X><Y>-401.547</Y>
+					<X>1004.48</X><Y>2218.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50825,7 +50893,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980883</Id>
 					<Name><![CDATA[agricultureAnnualGasDemand]]></Name>
-					<X>2469.48</X><Y>-501.547</Y>
+					<X>1944.48</X><Y>2118.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50846,7 +50914,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980886</Id>
 					<Name><![CDATA[industryAAnnualGasDemand]]></Name>
-					<X>2469.48</X><Y>-481.547</Y>
+					<X>1944.48</X><Y>2138.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50867,7 +50935,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980889</Id>
 					<Name><![CDATA[builtEnvironmentAnnualEnergyDemand]]></Name>
-					<X>1049.48</X><Y>-1121.547</Y>
+					<X>524.48</X><Y>1458.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50888,7 +50956,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980892</Id>
 					<Name><![CDATA[industryAnnualEnergyDemand]]></Name>
-					<X>1519.48</X><Y>-1121.547</Y>
+					<X>994.48</X><Y>1458.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50909,7 +50977,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980895</Id>
 					<Name><![CDATA[transportAnnualEnergyDemand]]></Name>
-					<X>1989.48</X><Y>-1121.547</Y>
+					<X>1464.48</X><Y>1458.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50930,7 +50998,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980898</Id>
 					<Name><![CDATA[agricultureAnnualEnergyDemand]]></Name>
-					<X>2469.48</X><Y>-1121.547</Y>
+					<X>1944.48</X><Y>1458.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50951,7 +51019,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980901</Id>
 					<Name><![CDATA[passengerVehicles]]></Name>
-					<X>1989.48</X><Y>-1101.547</Y>
+					<X>1464.48</X><Y>1478.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50973,7 +51041,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980904</Id>
 					<Name><![CDATA[roadTransportAnnual]]></Name>
 					<Description><![CDATA[all fuels (diesel, benzine en LPG)]]></Description>
-					<X>1999.48</X><Y>38.453</Y>
+					<X>1474.48</X><Y>2818.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50998,7 +51066,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980907</Id>
 					<Name><![CDATA[mobileMachineryAnnual]]></Name>
 					<Description><![CDATA[all fuels (diesel, benzine en LPG)]]></Description>
-					<X>1999.48</X><Y>58.453</Y>
+					<X>1474.48</X><Y>2838.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51020,7 +51088,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980910</Id>
 					<Name><![CDATA[inlandAndRecreationalShippingAnnual]]></Name>
 					<Description><![CDATA[all fuels (diesel, benzine en LPG)]]></Description>
-					<X>1999.48</X><Y>78.453</Y>
+					<X>1474.48</X><Y>2858.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51042,7 +51110,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					<Id>1636386980913</Id>
 					<Name><![CDATA[railTransportDieselAnnual]]></Name>
 					<Description><![CDATA[DieselOnly]]></Description>
-					<X>1999.48</X><Y>98.453</Y>
+					<X>1474.48</X><Y>2878.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51063,7 +51131,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980916</Id>
 					<Name><![CDATA[internationalShippingAndFishingAnnual]]></Name>
-					<X>1999.48</X><Y>118.453</Y>
+					<X>1474.48</X><Y>2898.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51084,7 +51152,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980919</Id>
 					<Name><![CDATA[roadTransportEclHighwaysAnnual]]></Name>
-					<X>1999.48</X><Y>158.453</Y>
+					<X>1474.48</X><Y>2938.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51105,7 +51173,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980922</Id>
 					<Name><![CDATA[roadTransportHighwaysOnlyAnnual]]></Name>
-					<X>1999.48</X><Y>178.453</Y>
+					<X>1474.48</X><Y>2958.453</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51264,7 +51332,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980943</Id>
 					<Name><![CDATA[lightCommercialVehicles]]></Name>
-					<X>1990.794</X><Y>-948.453</Y>
+					<X>1465.794</X><Y>1631.547</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51285,7 +51353,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980946</Id>
 					<Name><![CDATA[heavyCommercialVehicles]]></Name>
-					<X>1990.794</X><Y>-928.453</Y>
+					<X>1465.794</X><Y>1651.547</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51306,7 +51374,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980949</Id>
 					<Name><![CDATA[truck]]></Name>
-					<X>1990</X><Y>-1050</Y>
+					<X>1465</X><Y>1530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51327,7 +51395,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980952</Id>
 					<Name><![CDATA[tractorTrailer]]></Name>
-					<X>1990</X><Y>-1030</Y>
+					<X>1465</X><Y>1550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51348,7 +51416,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980955</Id>
 					<Name><![CDATA[van]]></Name>
-					<X>1990</X><Y>-1070</Y>
+					<X>1465</X><Y>1510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51369,7 +51437,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980958</Id>
 					<Name><![CDATA[bus]]></Name>
-					<X>1990</X><Y>-1010</Y>
+					<X>1465</X><Y>1570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51390,7 +51458,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="Parameter">
 					<Id>1636386980961</Id>
 					<Name><![CDATA[otherVehicle]]></Name>
-					<X>1990</X><Y>-990</Y>
+					<X>1465</X><Y>1590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51501,7 +51569,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980384</Id>
 					<Name><![CDATA[housesHourlyGasDemandCollection]]></Name>
-					<X>-950</X><Y>640</Y>
+					<X>520</X><Y>2630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51516,7 +51584,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980386</Id>
 					<Name><![CDATA[publicServicesHourlyGasDemandCollection]]></Name>
-					<X>-950</X><Y>660</Y>
+					<X>520</X><Y>2650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51531,7 +51599,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980388</Id>
 					<Name><![CDATA[commercialServicesHourlyGasDemandCollection]]></Name>
-					<X>-950</X><Y>680</Y>
+					<X>520</X><Y>2670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51546,7 +51614,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980390</Id>
 					<Name><![CDATA[builtEnvironmentHourlyGasDemandkWhCollection]]></Name>
-					<X>-950</X><Y>700</Y>
+					<X>520</X><Y>2690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51606,7 +51674,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980398</Id>
 					<Name><![CDATA[housesHourlyDistrictHeatingDemandCollection]]></Name>
-					<X>-950</X><Y>720</Y>
+					<X>520</X><Y>2710</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51621,7 +51689,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980400</Id>
 					<Name><![CDATA[builtEnvironmentHourlyHeatDemandCollection]]></Name>
-					<X>-950</X><Y>740</Y>
+					<X>520</X><Y>2730</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51636,7 +51704,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980402</Id>
 					<Name><![CDATA[provinceHourlyElectricityDemandCollection]]></Name>
-					<X>-950</X><Y>340</Y>
+					<X>60</X><Y>1620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51651,7 +51719,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980404</Id>
 					<Name><![CDATA[industryHourlyElectricityDemandCollection]]></Name>
-					<X>-950</X><Y>360</Y>
+					<X>1000</X><Y>2040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51666,7 +51734,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980406</Id>
 					<Name><![CDATA[builtEnvironmentHourlyElectricityDemandCollection]]></Name>
-					<X>-950</X><Y>380</Y>
+					<X>520</X><Y>2040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51681,7 +51749,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="CollectionVariable">
 					<Id>1636386980408</Id>
 					<Name><![CDATA[agricultureHourlyElectricityDemandCollection]]></Name>
-					<X>-950</X><Y>400</Y>
+					<X>1950</X><Y>1960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -52144,244 +52212,6 @@ else if (province == "AverageNL"){
 						<FillColor/>
 					</Properties>	
 				</ActionChartElement>
-				<ActionChartElement Class="ActionChart">
-					<Id>1636386980977</Id>
-					<Name><![CDATA[heatPumpSelection]]></Name>
-					<X>-180</X><Y>660</Y>
-					<Label><X>-30</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1636386980978" >
-						<FillColor/>
-					<ReturnModificator>VOID</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					</Properties>
-				</ActionChartElement>
-				<ActionChartElement Class="Decision">
-					<Id>1636386980978</Id>
-					<Name><![CDATA[decision]]></Name>
-					<X>-180</X><Y>710</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Simple or complex]]></Comment>
-					<Properties Width="120" Height="110" Appearance="0" Previous="1636386980977" Next="1636386980981" TrueAction="1636386980980" FalseAction="1636386980979" >
-						<FillColor/>
-						<Condition><![CDATA[simpleHeatPumpCalculation == true]]></Condition>
-					</Properties>
-				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1636386980979</Id>
-					<Name><![CDATA[code7]]></Name>
-					<X>-260</X><Y>795</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Extensive]]></Comment>
-					<Properties Width="100" Height="30" Previous="1636386980978" >
-						<FillColor/>
-						<Code><![CDATA[
-
-
-
-//To do
-//Heat pump schedules based on type and number of stages.
-//Works on a per household base, instead of general number of households
-
-//Code unfinished
-/*HeatPump AllElectric = findFirst(heatPumps, x->x.technology.equals("Decentral air-sourced"))
-
-
-
-
-for (HeatPump hp : heatPumps){
-	if (hp.technology.equals("Decentral ground-sourced"){
-		main.householdsPercAllElectricHP * 
-		
-householdHeatPumpElectrictyDemand
-householdHeatPumpThermalSupply		
-
-
-commercialServicessHeatPumpElectricityDemand
-commercialServicessHeatPumpThermalSupply
-
-
-hourlyHeatDemandPerHousehold = housesHourlyGasDemand / residentialBuildings;
-hourlyHeatDemandPercommercialServices = commercialServicesHourlyGasDemand / commercialServicess;
-hourlyHeatDemandPerpublicServices = publicServicesHourlyGasDemand / publicServicess;
-
-
-
-*/]]></Code>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1636386980980</Id>
-					<Name><![CDATA[code6]]></Name>
-					<X>-100</X><Y>795</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Simple]]></Comment>
-					<Properties Width="100" Height="30" Previous="1636386980978" >
-						<FillColor/>
-						<Code><![CDATA[//HP calculations per type
-
-householdHeatPumpElectricityDemand = 0.0;
-householdHybridHeatPumpGasDemand = 0.0;
-
-commercialServicesHeatPumpElectricityDemand = 0.0;
-commercialServicesHybridHeatPumpGasDemand = 0.0;
-
-publicServicesHeatPumpElectricityDemand = 0.0;
-publicServicesHybridHeatPumpGasDemand = 0.0;
-
-householdAllElectricHeatPumpHeatSupply = 0.0;
-householdHybridHeatPumpHeatSupply = 0.0;
-commercialServicesAllElectricHeatPumpHeatSupply = 0.0;
-commercialServicesHybridHeatPumpHeatSupply = 0.0;
-publicServicesAllElectricHeatPumpHeatSupply = 0.0;
-publicServicesHybridHeatPumpHeatSupply = 0.0;
-
-
-//Share of air-water, water-water or ground-water not yet determined
-
-		
-//households all-electric		
-if (main.householdsPercAllElectricHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Air-water") && x.applicationScale.equals("Household"));
-
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG1AHeatFraction * housesAnnualGasDemand; //Max thermal power used to scale in case of hybrid HP
-	HP.heatDemand = housesHourlyGasDemand * main.householdsPercAllElectricHP;
-	HP.simpleHeatPumpCalculation();
-	householdHeatPumpElectricityDemand += HP.electricityDemand;
-	householdAllElectricHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-
-//household Hybrid heat pumps
-if (main.householdsPercHybridHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Hybrid") && x.applicationScale.equals("Household"));
-	
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG1AHeatFraction * housesAnnualGasDemand;
-	HP.heatDemand = housesHourlyGasDemand * main.householdsPercHybridHP;
-	HP.simpleHeatPumpCalculation();
-	householdHeatPumpElectricityDemand += HP.electricityDemand;
-	householdHybridHeatPumpGasDemand += HP.hybridHeatPumpGasDemand;
-	householdHybridHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-
-//Commercial Building (commercial and public services) all-electric heat pumps
-if (main.buildingsPercAllElectricHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Air-water") && x.applicationScale.equals("Building"));
-
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG2AHeatFraction * commercialServicesAnnualGasDemand;
-	HP.heatDemand = commercialServicesHourlyGasDemand * main.buildingsPercAllElectricHP;
-	HP.simpleHeatPumpCalculation();
-	commercialServicesHeatPumpElectricityDemand += HP.electricityDemand;
-	commercialServicesAllElectricHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-//Commercial Building (commercial and public services) hybrid heat pumps
-if (main.buildingsPercHybridHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Hybrid") && x.applicationScale.equals("Building"));
-	
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG2AHeatFraction * commercialServicesAnnualGasDemand;
-	HP.heatDemand = commercialServicesHourlyGasDemand * main.buildingsPercAllElectricHP;
-	HP.simpleHeatPumpCalculation();
-	commercialServicesHeatPumpElectricityDemand += HP.electricityDemand;
-	commercialServicesHybridHeatPumpGasDemand += HP.hybridHeatPumpGasDemand;
-	commercialServicesHybridHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-
-//Public Building (commercial and public services) all-electric heat pumps
-if (main.buildingsPercAllElectricHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Air-water") && x.applicationScale.equals("Building"));
-
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG2AHeatFraction * publicServicesAnnualGasDemand;
-	HP.heatDemand = publicServicesHourlyGasDemand * main.buildingsPercAllElectricHP;
-	HP.simpleHeatPumpCalculation();
-	publicServicesHeatPumpElectricityDemand += HP.electricityDemand;
-	publicServicesAllElectricHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-
-//Building (commercial and public services) hybrid heat pumps
-if (main.buildingsPercHybridHP > 0){
-	HeatPump HP = findFirst(heatPumps, x -> x.technology.equals("Hybrid") && x.applicationScale.equals("Building"));
-
-	HP.temperature = temperature;
-	HP.COPcalculation();
-	HP.maxThermalPower = maxG2AHeatFraction * publicServicesAnnualGasDemand;
-	HP.heatDemand = publicServicesHourlyGasDemand * main.buildingsPercAllElectricHP;
-	HP.simpleHeatPumpCalculation();
-	publicServicesHeatPumpElectricityDemand += HP.electricityDemand;
-	publicServicesHybridHeatPumpGasDemand += HP.hybridHeatPumpGasDemand;
-	publicServicesHybridHeatPumpHeatSupply += HP.heatDemand;
-}	
-
-
-//Total
-heatPumpElectricityDemand = householdHeatPumpElectricityDemand + commercialServicesHeatPumpElectricityDemand + publicServicesHeatPumpElectricityDemand;
-heatPumpGasDemand = householdHybridHeatPumpGasDemand + commercialServicesHybridHeatPumpGasDemand + publicServicesHybridHeatPumpGasDemand;
-
-
-if (main.dayAheadCalculations == true){ 
-	//traceln("Day ahead is true");
-	householdHeatPumpElectricityDemandCollection.add(householdHeatPumpElectricityDemand);
-	householdHybridHeatPumpGasDemandCollection.add(householdHybridHeatPumpGasDemand);
-	
-	commercialServicesHeatPumpElectricityDemandCollection.add(commercialServicesHeatPumpElectricityDemand);
-	commercialServicesHybridHeatPumpGasDemandCollection.add(commercialServicesHybridHeatPumpGasDemand);
-	
-	publicServicesHeatPumpElectricityDemandCollection.add(publicServicesHeatPumpElectricityDemand);
-	publicServicesHybridHeatPumpGasDemandCollection.add(publicServicesHybridHeatPumpGasDemand);
-	
-	heatPumpElectricityDemandCollection.add(heatPumpElectricityDemand);
-	heatPumpGasDemandCollection.add(heatPumpGasDemand);
-	
-	allElectricHeatPumpHeatSupplyCollection.add(householdAllElectricHeatPumpHeatSupply + commercialServicesAllElectricHeatPumpHeatSupply + publicServicesAllElectricHeatPumpHeatSupply);
-	hybridHeatPumpHeatSupplyCollection.add(householdHybridHeatPumpHeatSupply + commercialServicesHybridHeatPumpHeatSupply + publicServicesHybridHeatPumpHeatSupply);
-	
-	if (householdHeatPumpElectricityDemandCollection.size() > 24){
-		householdHeatPumpElectricityDemandCollection.remove(0);
-		householdHybridHeatPumpGasDemandCollection.remove(0);
-		commercialServicesHeatPumpElectricityDemandCollection.remove(0);
-		commercialServicesHybridHeatPumpGasDemandCollection.remove(0);
-		publicServicesHeatPumpElectricityDemandCollection.remove(0);
-		publicServicesHybridHeatPumpGasDemandCollection.remove(0);
-		heatPumpElectricityDemandCollection.remove(0);
-		heatPumpGasDemandCollection.remove(0);
-		allElectricHeatPumpHeatSupplyCollection.remove(0);
-		hybridHeatPumpHeatSupplyCollection.remove(0);	
-	}	
-}	]]></Code>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="Return">
-					<Id>1636386980981</Id>
-					<Name><![CDATA[returnStatement3]]></Name>
-					<X>-180</X><Y>870</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1636386980978" >
-						<FillColor/>
-					</Properties>	
-				</ActionChartElement>
 			</ActionChartElements>
 			<TableFunctions>
 				<TableFunction AccessType="public" StaticFunction="false">
@@ -52516,454 +52346,6 @@ if (main.dayAheadCalculations == true){
 					</ActiveObjectClass>
 				</ContainerLink>
 			</ContainerLinks>
-			<EmbeddedObjects>
-				<EmbeddedObject>
-					<Id>1636386980772</Id>
-					<Name><![CDATA[heatPumps]]></Name>
-					<X>-310</X><Y>490</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<ActiveObjectClass>
-						<PackageName><![CDATA[neon_integration_model]]></PackageName>
-						<ClassName><![CDATA[HeatPump]]></ClassName>
-					</ActiveObjectClass>
-					<GenericParameterSubstitute>
-						<GenericParameterSubstituteReference>
-							<PackageName><![CDATA[neon_integration_model]]></PackageName>
-							<ClassName><![CDATA[HeatPump]]></ClassName>
-							<ItemName><![CDATA[1622711783602]]></ItemName>
-						</GenericParameterSubstituteReference>
-					</GenericParameterSubstitute>
-					<Parameters>
-						<Parameter>
-							<Name><![CDATA[type]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[technology]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[applicationScale]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[effE]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[effTh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[effFuelOutput]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[availabilityFactor]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[mcMwh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[fomMwY]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[vomMwh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[vomFlh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[icMw]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[installationCostsMw]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[decommissioningCostsMwh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[lifetimeYears]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[cop]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[flh]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[dbColumn]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[input]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[electricCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[heatPumpEfficiencyCarnot]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[EERcooling]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[tempHeatingWater]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[tempCoolingWater]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[inputTemp]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[stages]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[hyrbidPowerScalingFactor]]></Name>
-						</Parameter>
-					</Parameters>
-					<ReplicationFlag>true</ReplicationFlag>
-					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
-					</Replication>
-					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
-					<ColumnCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ColumnCode>
-					<RowCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
-					<LocationNameCode Class="CodeValue">
-						<Code><![CDATA[""]]></Code>
-					</LocationNameCode>
-					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
-					<InitializationDatabaseTableQuery>
-						<TableReference>
-							<PackageName><![CDATA[neon_integration_model]]></PackageName>
-							<ClassName><![CDATA[heat_pumps]]></ClassName>
-						</TableReference>
-					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-					<QuantityColumn>
-					</QuantityColumn>
-					<ParameterToDatabaseColumnMapping>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[type]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[type]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[technology]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[technology]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[applicationScale]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[scale]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[effE]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[eff_e]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[effTh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[eff_th]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[effFuelOutput]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[eff_fuel_output]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[availabilityFactor]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[availability_factor]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[mcMwh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[mc_mwh]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[fomMwY]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[fom_mw_y]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[vomMwh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[vom_mwh]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[vomFlh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[vom_flh]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[icMw]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[ic_mw]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[installationCostsMw]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[installation_costs_mw]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[decommissioningCostsMwh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[decommissioning_costs_mwh]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[lifetimeYears]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[lifetime_years]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[cop]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[cop]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[flh]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[flh]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[dbColumn]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[db_column]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[input]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[input]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[electricCapacity]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[electric_capacity]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[heatPumpEfficiencyCarnot]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[heat_pump_efficiency_carnot]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[EERcooling]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[eercooling]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[tempHeatingWater]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[temp_heating_water]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[tempCoolingWater]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[temp_cooling_water]]></ItemName>
-							</Value>
-						</Item>
-						<Item>
-							<Key>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[HeatPump]]></ClassName>
-								<ItemName><![CDATA[inputTemp]]></ItemName>
-							</Key>
-							<Value>
-								<PackageName><![CDATA[neon_integration_model]]></PackageName>
-								<ClassName><![CDATA[heat_pumps]]></ClassName>
-								<ItemName><![CDATA[input_temp]]></ItemName>
-							</Value>
-						</Item>	
-					</ParameterToDatabaseColumnMapping>
-				</EmbeddedObject>
-			</EmbeddedObjects>
 
 			<Presentation>
 				<Level>
@@ -53004,11 +52386,12 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980630</Id>
 					<Name><![CDATA[rectangle1]]></Name>
-					<X>1000</X><Y>-1180</Y>
+					<X>475</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
+					<Lock>true</Lock>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
@@ -53018,7 +52401,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>477.59214612078887</Width>
-					<Height>1434.6313395878922</Height>
+					<Height>1640</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53047,7 +52430,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980658</Id>
 					<Name><![CDATA[text2]]></Name>
-					<X>1014.402</X><Y>-1221.547</Y>
+					<X>489.402</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53065,33 +52448,10 @@ if (main.dayAheadCalculations == true){
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<RoundedRectangle>
-					<Id>1636386980660</Id>
-					<Name><![CDATA[roundRectangle]]></Name>
-					<X>3160</X><Y>600</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>360</Width>
-					<Height>440</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-1</FillColor>
-					<FillMaterial>null</FillMaterial>
-					<ArcRadius>10</ArcRadius>
-				</RoundedRectangle>
 				<Rectangle>
 					<Id>1636386980668</Id>
 					<Name><![CDATA[rectangle2]]></Name>
-					<X>5000</X><Y>-1180</Y>
+					<X>4660</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53105,7 +52465,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>329.9500831946755</Width>
-					<Height>260</Height>
+					<Height>1440</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53113,7 +52473,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980670</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>5040</X><Y>-1360</Y>
+					<X>4440</X><Y>1200</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53123,7 +52483,7 @@ if (main.dayAheadCalculations == true){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Storage]]></Text>
+					<Text><![CDATA[Balancing]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>64</Size>
@@ -53134,7 +52494,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980692</Id>
 					<Name><![CDATA[rectangle4]]></Name>
-					<X>1477.592</X><Y>-1180</Y>
+					<X>952.592</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53148,7 +52508,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>477.59214612078887</Width>
-					<Height>1434.6313395878922</Height>
+					<Height>1640</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53156,7 +52516,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980694</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>1492.067</X><Y>-1221.547</Y>
+					<X>967.067</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53177,7 +52537,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980696</Id>
 					<Name><![CDATA[rectangle5]]></Name>
-					<X>1955.184</X><Y>-1180</Y>
+					<X>1430.184</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53191,7 +52551,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>477.59214612078887</Width>
-					<Height>1434.6313395878922</Height>
+					<Height>1640</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53199,7 +52559,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980698</Id>
 					<Name><![CDATA[text8]]></Name>
-					<X>1969.731</X><Y>-1221.547</Y>
+					<X>1444.731</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53220,7 +52580,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980700</Id>
 					<Name><![CDATA[rectangle6]]></Name>
-					<X>2432.776</X><Y>-1180</Y>
+					<X>1907.776</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53234,7 +52594,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>477.59214612078887</Width>
-					<Height>1434.6313395878922</Height>
+					<Height>1640</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53242,7 +52602,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980702</Id>
 					<Name><![CDATA[text9]]></Name>
-					<X>2447.395</X><Y>-1221.547</Y>
+					<X>1922.395</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53263,7 +52623,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980704</Id>
 					<Name><![CDATA[text10]]></Name>
-					<X>1028.877</X><Y>-941.547</Y>
+					<X>503.877</X><Y>1638.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53284,7 +52644,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980706</Id>
 					<Name><![CDATA[text11]]></Name>
-					<X>1506.541</X><Y>-941.547</Y>
+					<X>981.541</X><Y>1638.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53305,7 +52665,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980708</Id>
 					<Name><![CDATA[text12]]></Name>
-					<X>1990</X><Y>-860</Y>
+					<X>1465</X><Y>1720</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53326,7 +52686,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980710</Id>
 					<Name><![CDATA[text13]]></Name>
-					<X>2461.87</X><Y>-941.547</Y>
+					<X>1936.87</X><Y>1638.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53391,7 +52751,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980716</Id>
 					<Name><![CDATA[text14]]></Name>
-					<X>1028.877</X><Y>-1161.547</Y>
+					<X>503.877</X><Y>1418.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53412,7 +52772,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980718</Id>
 					<Name><![CDATA[text15]]></Name>
-					<X>1506.541</X><Y>-1161.547</Y>
+					<X>981.541</X><Y>1418.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53433,7 +52793,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980720</Id>
 					<Name><![CDATA[text16]]></Name>
-					<X>1984.206</X><Y>-1161.547</Y>
+					<X>1459.206</X><Y>1418.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53454,7 +52814,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980722</Id>
 					<Name><![CDATA[text17]]></Name>
-					<X>2461.87</X><Y>-1161.547</Y>
+					<X>1936.87</X><Y>1418.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53475,7 +52835,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980724</Id>
 					<Name><![CDATA[text18]]></Name>
-					<X>1039.48</X><Y>-541.547</Y>
+					<X>514.48</X><Y>2078.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53496,7 +52856,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980726</Id>
 					<Name><![CDATA[text19]]></Name>
-					<X>1517.144</X><Y>-541.547</Y>
+					<X>992.144</X><Y>2078.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53517,7 +52877,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980728</Id>
 					<Name><![CDATA[text20]]></Name>
-					<X>1994.808</X><Y>-541.547</Y>
+					<X>1469.808</X><Y>2078.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53538,7 +52898,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980730</Id>
 					<Name><![CDATA[text21]]></Name>
-					<X>2472.473</X><Y>-541.547</Y>
+					<X>1947.473</X><Y>2078.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53559,7 +52919,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980732</Id>
 					<Name><![CDATA[text22]]></Name>
-					<X>1049.48</X><Y>-1.547</Y>
+					<X>524.48</X><Y>2778.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53580,7 +52940,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980734</Id>
 					<Name><![CDATA[text23]]></Name>
-					<X>1527.144</X><Y>-1.547</Y>
+					<X>1002.144</X><Y>2778.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53601,7 +52961,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980736</Id>
 					<Name><![CDATA[text24]]></Name>
-					<X>2004.808</X><Y>-1.547</Y>
+					<X>1479.808</X><Y>2778.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53622,7 +52982,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980738</Id>
 					<Name><![CDATA[text25]]></Name>
-					<X>2482.473</X><Y>-1.547</Y>
+					<X>1957.473</X><Y>2778.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53643,7 +53003,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980740</Id>
 					<Name><![CDATA[rectangle3]]></Name>
-					<X>3029.48</X><Y>-1181.547</Y>
+					<X>2680</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53665,7 +53025,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980742</Id>
 					<Name><![CDATA[text26]]></Name>
-					<X>3043.882</X><Y>-1223.094</Y>
+					<X>2694.402</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53675,7 +53035,7 @@ if (main.dayAheadCalculations == true){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Built environment]]></Text>
+					<Text><![CDATA[Electricity]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>28</Size>
@@ -53686,7 +53046,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980744</Id>
 					<Name><![CDATA[rectangle7]]></Name>
-					<X>3507.072</X><Y>-1181.547</Y>
+					<X>3157.592</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53708,7 +53068,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980746</Id>
 					<Name><![CDATA[text27]]></Name>
-					<X>3521.547</X><Y>-1223.094</Y>
+					<X>3172.067</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53718,7 +53078,7 @@ if (main.dayAheadCalculations == true){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Industry]]></Text>
+					<Text><![CDATA[Heat]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>28</Size>
@@ -53729,7 +53089,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980748</Id>
 					<Name><![CDATA[rectangle8]]></Name>
-					<X>3984.664</X><Y>-1181.547</Y>
+					<X>3635.184</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53751,7 +53111,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980750</Id>
 					<Name><![CDATA[text28]]></Name>
-					<X>3999.211</X><Y>-1223.094</Y>
+					<X>3649.731</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53761,7 +53121,7 @@ if (main.dayAheadCalculations == true){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Transport]]></Text>
+					<Text><![CDATA[Fuels]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>28</Size>
@@ -53772,7 +53132,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980752</Id>
 					<Name><![CDATA[rectangle9]]></Name>
-					<X>4462.256</X><Y>-1181.547</Y>
+					<X>4184</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53792,30 +53152,9 @@ if (main.dayAheadCalculations == true){
 					<FillMaterial>null</FillMaterial>
 				</Rectangle>
 				<Text>
-					<Id>1636386980754</Id>
-					<Name><![CDATA[text29]]></Name>
-					<X>4476.875</X><Y>-1223.094</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<Color>-16777216</Color>
-					<Text><![CDATA[Agriculture]]></Text>
-					<Font>
-						<Name>SansSerif</Name>
-						<Size>28</Size>
-						<Style>1</Style>
-					</Font>
-					<Alignment>LEFT</Alignment>
-				</Text>
-				<Text>
 					<Id>1636386980756</Id>
 					<Name><![CDATA[text30]]></Name>
-					<X>1749.48</X><Y>-1381.547</Y>
+					<X>1040</X><Y>1200</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53836,7 +53175,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980758</Id>
 					<Name><![CDATA[text31]]></Name>
-					<X>3869.48</X><Y>-1381.547</Y>
+					<X>3520</X><Y>1200</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53857,7 +53196,7 @@ if (main.dayAheadCalculations == true){
 				<Rectangle>
 					<Id>1636386980760</Id>
 					<Name><![CDATA[rectangle10]]></Name>
-					<X>525</X><Y>-1180</Y>
+					<X>0</X><Y>1400</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53871,7 +53210,7 @@ if (main.dayAheadCalculations == true){
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>477.59214612078887</Width>
-					<Height>1434.6313395878922</Height>
+					<Height>1640</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-1</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -53879,7 +53218,7 @@ if (main.dayAheadCalculations == true){
 				<Text>
 					<Id>1636386980762</Id>
 					<Name><![CDATA[text32]]></Name>
-					<X>539.402</X><Y>-1221.547</Y>
+					<X>14.402</X><Y>1358.453</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53974,6 +53313,70 @@ if (main.dayAheadCalculations == true){
 					<VerScaleType>AUTO</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimeStackChart>
+				<Rectangle>
+					<Id>1636453907812</Id>
+					<Name><![CDATA[rectangle11]]></Name>
+					<X>300</X><Y>260</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>300</Width>
+					<Height>540</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1636453915391</Id>
+					<Name><![CDATA[text5]]></Name>
+					<X>330</X><Y>270</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Total suppl]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>16</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1636454056515</Id>
+					<Name><![CDATA[text29]]></Name>
+					<X>4680</X><Y>1360</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Storage]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
@@ -53983,30 +53386,6 @@ if (main.dayAheadCalculations == true){
 					<Id>1636409667651</Id>
 					<Name><![CDATA[viewAreaProvince]]></Name>
 					<X>0</X><Y>0</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
-					<Width>1640</Width>
-					<Height>800</Height>
-				</Area>
-				<Area>
-					<Id>1636409750659</Id>
-					<Name><![CDATA[viewAreaProvinceParameters]]></Name>
-					<X>0</X><Y>1200</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Title><![CDATA[]]></Title>
-					<Width>1640</Width>
-					<Height>800</Height>
-				</Area>
-				<Area>
-					<Id>1636409757404</Id>
-					<Name><![CDATA[viewAreaMain2]]></Name>
-					<X>0</X><Y>2400</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54289,6 +53668,9 @@ if (main.dayAheadCalculations == true){
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[menuButtonColor2]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[kiloToMega]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
