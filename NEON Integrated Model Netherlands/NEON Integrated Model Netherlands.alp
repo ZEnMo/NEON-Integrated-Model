@@ -267,6 +267,54 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1636534846384</Id>
+					<Name><![CDATA[simulatedHours]]></Name>
+					<X>40</X><Y>4080</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1636550689614</Id>
+					<Name><![CDATA[quartersPassed]]></Name>
+					<X>40</X><Y>4100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1636550706177</Id>
+					<Name><![CDATA[time]]></Name>
+					<X>40</X><Y>4120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1636623248264</Id>
+					<Name><![CDATA[quarterOfHour]]></Name>
+					<X>40</X><Y>4140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1636370480288</Id>
 					<Name><![CDATA[menuButtonNotSelectedColor]]></Name>
@@ -532,7 +580,355 @@
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
+				<Variable Class="Parameter">
+					<Id>1636550741439</Id>
+					<Name><![CDATA[gasKWhPerM3]]></Name>
+					<X>360</X><Y>3720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1636550741437</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1636633459572</Id>
+					<Name><![CDATA[TJtoMWh]]></Name>
+					<Unit>MWh</Unit> 
+					<X>360</X><Y>3700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[277.777777778]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1636633459570</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1636632240293</Id>
+					<Name><![CDATA[transportElectricityDemandCollection]]></Name>
+					<X>60</X><Y>4750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1636632257787</Id>
+					<Name><![CDATA[agricultureElectricityDemandCollection]]></Name>
+					<X>60</X><Y>4770</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1636632273528</Id>
+					<Name><![CDATA[builtEnvironmentElectricityDemandCollection]]></Name>
+					<X>60</X><Y>4710</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1636632273536</Id>
+					<Name><![CDATA[industryElectricityDemandCollection]]></Name>
+					<X>60</X><Y>4730</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1636633254104</Id>
+					<Name><![CDATA[baseloadElectricityDemandCollection]]></Name>
+					<X>60</X><Y>4690</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
+			<ActionChartElements>
+				<ActionChartElement Class="ActionChart">
+					<Id>1636534923131</Id>
+					<Name><![CDATA[dayAheadEnergyDemand]]></Name>
+					<Description><![CDATA[Excecuted every quarter, start with a 1 day (96 quarter for loop to calculate day ahead demand array)]]></Description>
+					<X>150</X><Y>4230</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1636624568865" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636629781526</Id>
+					<Name><![CDATA[code57]]></Name>
+					<X>150</X><Y>4350</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Time settings]]></Comment>
+					<Properties Width="160" Height="30" Previous="1636624568865" Next="1636624470280" >
+						<FillColor/>
+						<Code><![CDATA[quarterOfHour++; //quarter 1 is 0-15min
+quartersPassed++;]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Decision">
+					<Id>1636624470280</Id>
+					<Name><![CDATA[decision]]></Name>
+					<X>150</X><Y>4400</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[isWholeHour]]></Comment>
+					<Properties Width="140" Height="40" Appearance="0" Previous="1636629781526" Next="1636534924151" TrueAction="1636624658978" >
+						<FillColor/>
+						<Condition><![CDATA[quarterOfHour == 4]]></Condition>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636624658978</Id>
+					<Name><![CDATA[code]]></Name>
+					<X>240</X><Y>4450</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Weather calculations per province]]></Comment>
+					<Properties Width="160" Height="50" Previous="1636624470280" Next="1636624669511" >
+						<FillColor/>
+						<Code><![CDATA[for (Province p : provinces){
+	p.weatherConditions();
+}]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636624669511</Id>
+					<Name><![CDATA[code1]]></Name>
+					<X>240</X><Y>4520</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Heat demand]]></Comment>
+					<Properties Width="160" Height="30" Previous="1636624658978" Next="1636624603808" >
+						<FillColor/>
+						<Code><![CDATA[for (Province p : provinces){
+	p.hourlyHeatDemand();
+}]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636624603808</Id>
+					<Name><![CDATA[code56]]></Name>
+					<X>240</X><Y>4570</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Time settings]]></Comment>
+					<Properties Width="156" Height="30" Previous="1636624669511" >
+						<FillColor/>
+						<Code><![CDATA[quarterOfHour = 0;
+time++;
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1636534924151</Id>
+					<Name><![CDATA[returnStatement]]></Name>
+					<X>150</X><Y>4640</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1636624470280" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636624568865</Id>
+					<Name><![CDATA[code55]]></Name>
+					<X>150</X><Y>4280</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Baseload Electricity demand]]></Comment>
+					<Properties Width="160" Height="50" Previous="1636534923131" Next="1636629781526" >
+						<FillColor/>
+						<Code><![CDATA[//-------Provinces--------
+for (Province x:provinces){
+	x.quarterlyElectricityDemand();
+}
+
+//Day-ahead quarterly collections 
+agricultureElectricityDemandCollection.add(sum(provinces, x -> x.agricultureElecDemand));
+builtEnvironmentElectricityDemandCollection.add(sum(provinces, x -> x.builtEnvironmentBehindMeterElecDemand));
+industryElectricityDemandCollection.add(sum(provinces, x -> x.industryElecDemand));
+baseloadElectricityDemandCollection.add(sum(provinces, x -> x.provinceElectricityDemand));
+
+
+if (baseloadElectricityDemandCollection.size() > 96){
+	//remove last value
+	agricultureElectricityDemandCollection.remove(0);
+	builtEnvironmentElectricityDemandCollection.remove(0);
+	industryElectricityDemandCollection.remove(0);
+	baseloadElectricityDemandCollection.remove(0);
+}
+
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ActionChart">
+					<Id>1636633845176</Id>
+					<Name><![CDATA[currentDemandSupplyCalculation]]></Name>
+					<X>500</X><Y>4230</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1636633848199" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1636633848199</Id>
+					<Name><![CDATA[returnStatement1]]></Name>
+					<X>500</X><Y>4280</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1636633845176" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+			</ActionChartElements>
+			<Events>
+				<Event>
+					<Id>1636534830393</Id>
+					<Name><![CDATA[quarterAndHourlyEnergyCalculationsEvent]]></Name>
+					<X>40</X><Y>4060</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1585641600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[0.25]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[simulatedHours 	= time();
+
+
+
+//----Day-ahead prediction----
+
+
+//First day for loop to start day-ahead arrays
+if (time() == 0){
+	
+	//build up day-ahead demand & supply array
+	for (int i=0; i<96; i++){
+		dayAheadEnergyDemand();
+	}
+	//current demand
+	currentDemandSupplyCalculation();
+}
+
+
+//From quarter 1 on.
+else {
+
+	//energy demand ca
+	dayAheadEnergyDemand();
+	quartersPassed++;
+
+	//current demand
+	currentDemandSupplyCalculation();
+}
+
+
+
+
+]]></Action>
+					<Logging>false</Logging>
+				</Event>
+			</Events>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
@@ -554,6 +950,767 @@ groupTitleBar.setPos( viewArea.getX() -100, viewArea.getY() );
 backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 				</Function>
 			</Functions>
+			<TableFunctions>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663853</Id>
+					<Name><![CDATA[E1DemandProfile]]></Name>
+					<X>1020</X><Y>4120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e1_average]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663881</Id>
+					<Name><![CDATA[E1ADemandProfile]]></Name>
+					<X>1020</X><Y>4140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e1_a]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663890</Id>
+					<Name><![CDATA[E1BDemandProfile]]></Name>
+					<X>1020</X><Y>4160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e1_b]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663902</Id>
+					<Name><![CDATA[E1CDemandProfile]]></Name>
+					<X>1020</X><Y>4180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e1_c]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663909</Id>
+					<Name><![CDATA[E2ADemandProfile]]></Name>
+					<X>1020</X><Y>4230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e2_a]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663918</Id>
+					<Name><![CDATA[E2BDemandProfile]]></Name>
+					<X>1020</X><Y>4250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e2_b]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663926</Id>
+					<Name><![CDATA[E2DemandProfile]]></Name>
+					<X>1020</X><Y>4210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e2_average]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663933</Id>
+					<Name><![CDATA[E3DemandProfile]]></Name>
+					<X>1020</X><Y>4275</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e3_average]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663944</Id>
+					<Name><![CDATA[E3ADemandProfile]]></Name>
+					<X>1020</X><Y>4295</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e3_a]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663952</Id>
+					<Name><![CDATA[E3BDemandProfile]]></Name>
+					<X>1020</X><Y>4315</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e3_b]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663962</Id>
+					<Name><![CDATA[E3CDemandProfile]]></Name>
+					<X>1020</X><Y>4335</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e3_c]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663970</Id>
+					<Name><![CDATA[E3DDemandProfile]]></Name>
+					<X>1020</X><Y>4355</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e3_d]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663982</Id>
+					<Name><![CDATA[E4ADemandProfile]]></Name>
+					<X>1020</X><Y>4380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[quarter]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[electricity_profile2019]]></ClassName>
+								<ItemName><![CDATA[e4_a]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632663991</Id>
+					<Name><![CDATA[SPT]]></Name>
+					<X>1250</X><Y>4120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[spt]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664004</Id>
+					<Name><![CDATA[G1A_TST]]></Name>
+					<X>1250</X><Y>4140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g1_a_tst]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664012</Id>
+					<Name><![CDATA[G1A_RER]]></Name>
+					<X>1250</X><Y>4160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g1_a_rer]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664022</Id>
+					<Name><![CDATA[G1A_TOP]]></Name>
+					<X>1250</X><Y>4180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g1_a_top]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664031</Id>
+					<Name><![CDATA[G2A_TST]]></Name>
+					<X>1250</X><Y>4210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_a_tst]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664043</Id>
+					<Name><![CDATA[G2A_RER]]></Name>
+					<X>1250</X><Y>4230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_a_rer]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664052</Id>
+					<Name><![CDATA[G2A_TOP]]></Name>
+					<X>1250</X><Y>4250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_a_top]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664064</Id>
+					<Name><![CDATA[G2C_TST]]></Name>
+					<X>1250</X><Y>4280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_c_tst]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664075</Id>
+					<Name><![CDATA[G2C_RER]]></Name>
+					<X>1250</X><Y>4300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_c_rer]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636632664086</Id>
+					<Name><![CDATA[G2C_TOP]]></Name>
+					<X>1250</X><Y>4320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[natural_gas_profile2019]]></ClassName>
+								<ItemName><![CDATA[g2_c_top]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+			</TableFunctions>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1636370321649</Id>
@@ -6166,6 +7323,49 @@ demand]]></Text>
 					<Id>1636454809239</Id>
 					<Name><![CDATA[text52]]></Name>
 					<X>330</X><Y>3530</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[General]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1636534707584</Id>
+					<Name><![CDATA[rectangle8]]></Name>
+					<X>600</X><Y>3500</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>300</Width>
+					<Height>280</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1636534715314</Id>
+					<Name><![CDATA[text53]]></Name>
+					<X>640</X><Y>3520</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -44725,6 +45925,18 @@ demand]]></Text>
 					<Width>1640</Width>
 					<Height>800</Height>
 				</Area>
+				<Area>
+					<Id>1636534728366</Id>
+					<Name><![CDATA[viewAreaCode]]></Name>
+					<X>0</X><Y>4000</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1640</Width>
+					<Height>800</Height>
+				</Area>
 			</Areas>
 
 		</ActiveObjectClass>
@@ -48939,13 +50151,7 @@ demand]]></Text>
 			<Id>1636386980365</Id>
 			<Name><![CDATA[Province]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[for(WindFarm w : main.windFarms){
-	if (w.province.equals(province) && w.technology.equals("Onshore")){
-		onshoreWindCapacity += w.capacityMWel;
-	}
-}
-
-industryAnnualGasDemand = industryBAnnualGasDemand + industryCAnnualGasDemand + industryEAnnualGasDemand + industryFAnnualGasDemand;
+			<StartupCode><![CDATA[industryAnnualGasDemand = industryBAnnualGasDemand + industryCAnnualGasDemand + industryEAnnualGasDemand + industryFAnnualGasDemand;
 
 lightCommercialVehicles = van;
 heavyCommercialVehicles = tractorTrailer + truck + bus;
@@ -49118,21 +50324,9 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1636386980440</Id>
-					<Name><![CDATA[provSupplyNuclear]]></Name>
-					<X>360</X><Y>500</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1636386980442</Id>
 					<Name><![CDATA[provImport]]></Name>
-					<X>360</X><Y>520</Y>
+					<X>4240</X><Y>1480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49156,7 +50350,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980458</Id>
 					<Name><![CDATA[provBatteryCharge]]></Name>
-					<X>360</X><Y>540</Y>
+					<X>4240</X><Y>1500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49168,7 +50362,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980460</Id>
 					<Name><![CDATA[provElectrolyzerDemand]]></Name>
-					<X>360</X><Y>580</Y>
+					<X>4240</X><Y>1540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49180,7 +50374,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980462</Id>
 					<Name><![CDATA[provFuelCellGeneration]]></Name>
-					<X>360</X><Y>600</Y>
+					<X>4240</X><Y>1560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49576,7 +50770,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980534</Id>
 					<Name><![CDATA[G1ADemandFraction]]></Name>
-					<X>-40</X><Y>-620</Y>
+					<X>-800</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49588,7 +50782,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980536</Id>
 					<Name><![CDATA[G2ADemandFraction]]></Name>
-					<X>-40</X><Y>-600</Y>
+					<X>-800</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49600,7 +50794,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980538</Id>
 					<Name><![CDATA[G2CDemandFraction]]></Name>
-					<X>-40</X><Y>-580</Y>
+					<X>-800</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49706,18 +50900,6 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1636386980556</Id>
-					<Name><![CDATA[onshoreWindCapacity]]></Name>
-					<X>2720</X><Y>1500</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1636386980558</Id>
 					<Name><![CDATA[provinceHourlyHeatDemand]]></Name>
 					<X>55</X><Y>1530</Y>
@@ -49756,7 +50938,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980564</Id>
 					<Name><![CDATA[heatPumpHourlyElecDemand]]></Name>
-					<X>65</X><Y>1670</Y>
+					<X>60</X><Y>1670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49780,7 +50962,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980568</Id>
 					<Name><![CDATA[G1ATSTFraction]]></Name>
-					<X>-40</X><Y>-560</Y>
+					<X>-800</X><Y>340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49792,7 +50974,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980570</Id>
 					<Name><![CDATA[G2ATSTFraction]]></Name>
-					<X>-40</X><Y>-540</Y>
+					<X>-800</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -49804,7 +50986,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980572</Id>
 					<Name><![CDATA[G2CTSTFraction]]></Name>
-					<X>-40</X><Y>-520</Y>
+					<X>-800</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50104,7 +51286,7 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980622</Id>
 					<Name><![CDATA[provBatteryDischarge]]></Name>
-					<X>360</X><Y>560</Y>
+					<X>4240</X><Y>1520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -50116,7 +51298,19 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 				<Variable Class="PlainVariable">
 					<Id>1636386980624</Id>
 					<Name><![CDATA[provDemandTotal]]></Name>
-					<X>360</X><Y>620</Y>
+					<X>60</X><Y>1700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1636534612634</Id>
+					<Name><![CDATA[provSupplyNuclear]]></Name>
+					<X>2720</X><Y>1680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -51824,172 +53018,9 @@ heavyCommercialVehicles = tractorTrailer + truck + bus;
 			</Variables>
 			<ActionChartElements>
 				<ActionChartElement Class="ActionChart">
-					<Id>1636386980963</Id>
-					<Name><![CDATA[hourlyHeatDemand]]></Name>
-					<X>60</X><Y>-940</Y>
-					<Label><X>-105</X><Y>-10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1636386980964" >
-						<FillColor/>
-					<ReturnModificator>VOID</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					</Properties>
-				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1636386980964</Id>
-					<Name><![CDATA[code3]]></Name>
-					<X>60</X><Y>-890</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Gas Demand Fractions]]></Comment>
-					<Properties Width="200" Height="30" Previous="1636386980963" Next="1636386980965" >
-						<FillColor/>
-						<Code><![CDATA[//------Gas demand fractions-------
-
-//See Excel data 'EnergyProfiles_NL_2017' tab 'Gasprofielen 2017' and NEDU Gas demand profiles for more information.
-//Gas demand based on temperature, TOP, RER and TST.
-
-
-//G1A profile
-if (main.SPT(main.time) < main.G1A_TST(main.time)){
-	G1ATSTFraction = (main.G1A_TST(main.time)- main.SPT(main.time)) * main.G1A_RER(main.time) + main.G1A_TOP(main.time);
-}
-else {
-	G1ATSTFraction = main.G1A_TOP(main.time);
-}
-if (temperature < main.G1A_RER(main.time)){
-	G1ADemandFraction = (main.G1A_RER(main.time)-temperature) * main.G1A_TOP(main.time) + G1ATSTFraction;
-}
-else {
-	G1ADemandFraction = G1ATSTFraction;
-}
-
-//G2A profile
-if (main.SPT(main.time) < main.G2A_TST(main.time)){
-	G2ATSTFraction = (main.G2A_TST(main.time)- main.SPT(main.time)) * main.G2A_RER(main.time) + main.G2A_TOP(main.time);
-}
-else {
-	G2ATSTFraction = main.G2A_TOP(main.time);
-}
-if (temperature < main.G2A_RER(main.time)){
-	G2ADemandFraction = (main.G2A_RER(main.time)-temperature) * main.G2A_TOP(main.time) + G2ATSTFraction;
-}
-else {
-	G2ADemandFraction = G2ATSTFraction;
-}
-
-//G2C profile
-if (main.SPT(main.time) < main.G2C_TST(main.time)){
-	G2CTSTFraction = (main.G2C_TST(main.time)- main.SPT(main.time)) * main.G2C_RER(main.time) + main.G2C_TOP(main.time);
-}
-else {
-	G2CTSTFraction = main.G2C_TOP(main.time);
-}
-if (temperature < main.G2C_RER(main.time)){
-	G2CDemandFraction = (main.G2C_RER(main.time)-temperature) * main.G2C_TOP(main.time) + G2CTSTFraction;
-}
-else {
-	G2CDemandFraction = G2CTSTFraction;
-}]]></Code>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1636386980965</Id>
-					<Name><![CDATA[code]]></Name>
-					<X>60</X><Y>-840</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Energy Demand]]></Comment>
-					<Properties Width="200" Height="30" Previous="1636386980964" Next="1636386980966" >
-						<FillColor/>
-						<Code><![CDATA[//-------BUILT ENVIRONMENT-------
-
-
-//Heat
-publicServicesHourlyGasDemandM3 = G2ADemandFraction * publicServicesAnnualGasDemand;
-commercialServicesHourlyGasDemandM3 = G2ADemandFraction * commercialServicesAnnualGasDemand;
-housesHourlyGasDemandM3 = G1ADemandFraction * housesAnnualGasDemand;
-
-
-publicServicesHourlyGasDemand = publicServicesHourlyGasDemandM3 * main.gasKwhPerM3 * main.kiloToMega;
-commercialServicesHourlyGasDemand = commercialServicesHourlyGasDemandM3 * main.gasKwhPerM3 * main.kiloToMega;
-housesHourlyGasDemand = housesHourlyGasDemandM3 * main.gasKwhPerM3 * main.kiloToMega;
-housesHourlyDistrictHeatingDemand = G1ADemandFraction * housesAnnualDistrictHeatingDemand * main.TJtoMWh * main.kiloToMega;
-
-
-builtEnvironmentHourlyGasDemandM3 =  publicServicesHourlyGasDemandM3 + commercialServicesHourlyGasDemandM3 + housesHourlyGasDemandM3;
-builtEnvironmentHourlyGasDemandkWh = publicServicesHourlyGasDemand + commercialServicesHourlyGasDemand + housesHourlyGasDemand;
-builtEnvironmentHourlyHeatDemand = builtEnvironmentHourlyGasDemandkWh + housesHourlyDistrictHeatingDemand;
-
-
-//-------INDUSTRY-------
-
-//Heat
-industryBHourlyGasDemand = G2CDemandFraction * industryBAnnualGasDemand;
-industryCHourlyGasDemand = G2CDemandFraction * industryCAnnualGasDemand;
-industryDHourlyGasDemand = G2CDemandFraction * industryDAnnualGasDemand;
-industryEHourlyGasDemand = G2CDemandFraction * industryEAnnualGasDemand;
-industryFHourlyGasDemand = G2CDemandFraction * industryFAnnualGasDemand;
-
-industryHourlyGasDemandM3 = industryBHourlyGasDemand + industryCHourlyGasDemand + industryDHourlyGasDemand + industryEHourlyGasDemand + industryFHourlyGasDemand;
-industryHourlyGasDemandkWh = industryHourlyGasDemandM3 * main.gasKwhPerM3 * main.kiloToMega;
-industryHourlyHeatDemand = industryHourlyGasDemandkWh;
-
-
-//-------AGRICULTURE-------
-
-
-//Heat
-agricultureHourlyGasDemandM3 = G2CDemandFraction * agricultureAnnualGasDemand;
-agricultureHourlyGasDemandkWh = agricultureHourlyGasDemandM3 * main.gasKwhPerM3 * main.kiloToMega;
-agricultureHourlyHeatDemand = agricultureHourlyGasDemandkWh;
-
-
-//-------TOTAL-------
-provinceHourlyGasDemandM3 = builtEnvironmentHourlyGasDemandM3 + industryHourlyGasDemandM3 + agricultureHourlyGasDemandM3;
-provinceHourlyGasDemandkWh = agricultureHourlyGasDemandkWh + builtEnvironmentHourlyGasDemandkWh + industryHourlyGasDemandM3;
-provinceHourlyHeatDemand = builtEnvironmentHourlyHeatDemand + industryHourlyHeatDemand + agricultureHourlyHeatDemand;
-
-
-
-
-
-]]></Code>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1636386980966</Id>
-					<Name><![CDATA[code2]]></Name>
-					<X>60</X><Y>-790</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Graph calculation]]></Comment>
-					<Properties Width="200" Height="30" Previous="1636386980965" Next="1636386980967" >
-						<FillColor/>
-						<Code><![CDATA[
-]]></Code>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="Return">
-					<Id>1636386980967</Id>
-					<Name><![CDATA[returnStatement]]></Name>
-					<X>60</X><Y>-740</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1636386980966" >
-						<FillColor/>
-					</Properties>	
-				</ActionChartElement>
-				<ActionChartElement Class="ActionChart">
 					<Id>1636386980969</Id>
 					<Name><![CDATA[quarterlyElectricityDemand]]></Name>
-					<X>330</X><Y>-950</Y>
+					<X>300</X><Y>-940</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -52003,7 +53034,7 @@ provinceHourlyHeatDemand = builtEnvironmentHourlyHeatDemand + industryHourlyHeat
 				<ActionChartElement Class="Code">
 					<Id>1636386980970</Id>
 					<Name><![CDATA[code4]]></Name>
-					<X>330</X><Y>-900</Y>
+					<X>300</X><Y>-890</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -52049,9 +53080,9 @@ industryAElecDemand = 4 * main.E3DemandProfile(main.quartersPassed) * industryAA
 //To do - hourly electricity demand EV
 
 
-//builtEnvironmentHourlyHeatDemand = main.G1A(main.time) * builtEnvironmentAnnualGasDemand * main.gasKwhPerM3 * main.kiloToMega;
-//industryHourlyHeatDemand = main.G2A(main.time) * industryAnnualGasDemand * main.gasKwhPerM3 * main.kiloToMega;
-//agricultureHourlyHeatDemand = main.G2C(main.time) * agricultureAnnualGasDemand * main.gasKwhPerM3 * main.kiloToMega;
+//builtEnvironmentHourlyHeatDemand = main.G1A(main.time) * builtEnvironmentAnnualGasDemand * main.gasKWhPerM3 * main.kiloToMega;
+//industryHourlyHeatDemand = main.G2A(main.time) * industryAnnualGasDemand * main.gasKWhPerM3 * main.kiloToMega;
+//agricultureHourlyHeatDemand = main.G2C(main.time) * agricultureAnnualGasDemand * main.gasKWhPerM3 * main.kiloToMega;
 
 
 //-------Total-------
@@ -52075,7 +53106,7 @@ industryAnnualElectricityDemand += industryElecDemand/4;]]></Code>
 				<ActionChartElement Class="Return">
 					<Id>1636386980971</Id>
 					<Name><![CDATA[returnStatement1]]></Name>
-					<X>330</X><Y>-850</Y>
+					<X>300</X><Y>-840</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -52109,7 +53140,7 @@ industryAnnualElectricityDemand += industryElecDemand/4;]]></Code>
 						<FillColor/>
 						<Code><![CDATA[//Get weather conditions
 
-temperatureCollectio.add(temperature(main.time));
+temperatureCollection.add(temperature(main.time));
 irradianceCollection.add(irradiance(main.time));
 windSpeedCollection.add(windSpeed(main.time));
 
@@ -52118,86 +53149,6 @@ if (temperatureCollection.size() > 24){
 	irradianceCollection.remove(0);
 	windSpeedCollection.remove(0);
 }
-
-
-/*
-if (province.equals("Groningen")){
-	temperatureCollection.add(main.temperatureGroningen(main.time));
-	irradianceCollection.add(main.irradiationGroningen(main.time));
-	windSpeedCollection.add(main.windSpeedGroningen(main.time));
-}
-else if (province.equals("Friesland")){
-	temperatureCollection.add(main.temperatureFriesland(main.time));
-	irradianceCollection.add(main.irradiationFriesland(main.time));
-	windSpeedCollection.add(main.windSpeedFriesland(main.time));
-}
-else if (province.equals("Drenthe")){
-	temperatureCollection.add(main.temperatureDrenthe(main.time));
-	irradianceCollection.add(main.irradiationDrenthe(main.time));
-	windSpeedCollection.add(main.windSpeedDrenthe(main.time));
-}
-else if (province.equals("Overijssel")){
-	temperatureCollection.add(main.temperatureOverijssel(main.time));
-	irradianceCollection.add(main.irradiationOverijssel(main.time));
-	windSpeedCollection.add(main.windSpeedOverijssel(main.time));
-}
-else if (province.equals("Flevoland")){
-	temperatureCollection.add(main.temperatureFlevoland(main.time));
-	irradianceCollection.add(main.irradiationFlevoland(main.time));
-	windSpeedCollection.add(main.windSpeedFlevoland(main.time));
-}
-else if (province.equals("Gelderland")){
-	temperatureCollection.add(main.temperatureGelderland(main.time));
-	irradianceCollection.add(main.irradiationGelderland(main.time));
-	windSpeedCollection.add(main.windSpeedGelderland(main.time));
-}
-else if (province.equals("NoordHolland")){
-	temperatureCollection.add(main.temperatureNoordHolland(main.time));
-	irradianceCollection.add(main.irradiationNoordHolland(main.time));
-	windSpeedCollection.add(main.windSpeedNoordHolland(main.time));
-}
-else if (province.equals("Utrecht")){
-	temperatureCollection.add(main.temperatureUtrecht(main.time));
-	irradianceCollection.add(main.irradiationUtrecht(main.time));
-	windSpeedCollection.add(main.windSpeedUtrecht(main.time));
-}
-else if (province.equals("ZuidHolland")){
-	temperatureCollection.add(main.temperatureZuidHolland(main.time));
-	irradianceCollection.add(main.irradiationZuidHolland(main.time));
-	windSpeedCollection.add(main.windSpeedZuidHolland(main.time));
-}
-else if (province.equals("Zeeland")){
-	temperatureCollection.add(main.temperatureZeeland(main.time));
-	irradianceCollection.add(main.irradiationZeeland(main.time));
-	windSpeedCollection.add(main.windSpeedZeeland(main.time));
-}
-else if (province.equals("NoordBrabant")){
-	temperatureCollection.add(main.temperatureNoordBrabant(main.time));
-	irradianceCollection.add(main.irradiationNoordBrabant(main.time));
-	windSpeedCollection.add(main.windSpeedNoordBrabant(main.time));
-}
-else if (province.equals("Limburg")){
-	temperatureCollection.add(main.temperatureLimburg(main.time));
-	irradianceCollection.add(main.irradiationLimburg(main.time));
-	windSpeedCollection.add(main.windSpeedLimburg(main.time));
-}
-
-
-
-
-if (temperatureCollection.size() > 24){
-	temperatureCollection.remove(0);
-	irradianceCollection.remove(0);
-	windSpeedCollection.remove(0);
-}
-
-/*
-else if (province == "AverageNL"){
-	temperature = main.temperatureAverageNL(main.time);
-	irradiance = main.irradiationAverageNL(main.time);
-	windSpeed = main.windSpeedAverageNL(main.time);
-}
-*/
 ]]></Code>
 					</Properties>	
 				</ActionChartElement>
@@ -52212,12 +53163,176 @@ else if (province == "AverageNL"){
 						<FillColor/>
 					</Properties>	
 				</ActionChartElement>
+				<ActionChartElement Class="ActionChart">
+					<Id>1636633605746</Id>
+					<Name><![CDATA[hourlyHeatDemand]]></Name>
+					<X>60</X><Y>-940</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1636633621230" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636633621230</Id>
+					<Name><![CDATA[code2]]></Name>
+					<X>60</X><Y>-890</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Gas demand fractions]]></Comment>
+					<Properties Width="160" Height="30" Previous="1636633605746" Next="1636633767761" >
+						<FillColor/>
+						<Code><![CDATA[//------Gas demand fractions-------
+
+//See Excel data 'EnergyProfiles_NL_2017' tab 'Gasprofielen 2017' and NEDU Gas demand profiles for more information.
+//Gas demand based on temperature, TOP, RER and TST.
+
+
+//G1A profile
+if (main.SPT(main.time) < main.G1A_TST(main.time)){
+	G1ATSTFraction = (main.G1A_TST(main.time)- main.SPT(main.time)) * main.G1A_RER(main.time) + main.G1A_TOP(main.time);
+}
+else {
+	G1ATSTFraction = main.G1A_TOP(main.time);
+}
+if (temperature(main.time) < main.G1A_RER(main.time)){
+	G1ADemandFraction = (main.G1A_RER(main.time)-temperature(main.time)) * main.G1A_TOP(main.time) + G1ATSTFraction;
+}
+else {
+	G1ADemandFraction = G1ATSTFraction;
+}
+
+//G2A profile
+if (main.SPT(main.time) < main.G2A_TST(main.time)){
+	G2ATSTFraction = (main.G2A_TST(main.time)- main.SPT(main.time)) * main.G2A_RER(main.time) + main.G2A_TOP(main.time);
+}
+else {
+	G2ATSTFraction = main.G2A_TOP(main.time);
+}
+if (temperature(main.time) < main.G2A_RER(main.time)){
+	G2ADemandFraction = (main.G2A_RER(main.time)-temperature(main.time)) * main.G2A_TOP(main.time) + G2ATSTFraction;
+}
+else {
+	G2ADemandFraction = G2ATSTFraction;
+}
+
+//G2C profile
+if (main.SPT(main.time) < main.G2C_TST(main.time)){
+	G2CTSTFraction = (main.G2C_TST(main.time)- main.SPT(main.time)) * main.G2C_RER(main.time) + main.G2C_TOP(main.time);
+}
+else {
+	G2CTSTFraction = main.G2C_TOP(main.time);
+}
+if (temperature(main.time) < main.G2C_RER(main.time)){
+	G2CDemandFraction = (main.G2C_RER(main.time)-temperature(main.time)) * main.G2C_TOP(main.time) + G2CTSTFraction;
+}
+else {
+	G2CDemandFraction = G2CTSTFraction;
+}]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1636633767761</Id>
+					<Name><![CDATA[code]]></Name>
+					<X>60</X><Y>-840</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Heat demand calculation]]></Comment>
+					<Properties Width="160" Height="30" Previous="1636633621230" Next="1636633613629" >
+						<FillColor/>
+						<Code><![CDATA[//-------BUILT ENVIRONMENT-------
+
+//Heat
+publicServicesHourlyGasDemandM3 = G2ADemandFraction * publicServicesAnnualGasDemand;
+commercialServicesHourlyGasDemandM3 = G2ADemandFraction * commercialServicesAnnualGasDemand;
+housesHourlyGasDemandM3 = G1ADemandFraction * housesAnnualGasDemand;
+
+
+publicServicesHourlyGasDemand = publicServicesHourlyGasDemandM3 * main.gasKWhPerM3 * main.kiloToMega;
+commercialServicesHourlyGasDemand = commercialServicesHourlyGasDemandM3 * main.gasKWhPerM3 * main.kiloToMega;
+housesHourlyGasDemand = housesHourlyGasDemandM3 * main.gasKWhPerM3 * main.kiloToMega;
+housesHourlyDistrictHeatingDemand = G1ADemandFraction * housesAnnualDistrictHeatingDemand * main.TJtoMWh * main.kiloToMega;
+
+
+builtEnvironmentHourlyGasDemandM3 =  publicServicesHourlyGasDemandM3 + commercialServicesHourlyGasDemandM3 + housesHourlyGasDemandM3;
+builtEnvironmentHourlyGasDemandkWh = publicServicesHourlyGasDemand + commercialServicesHourlyGasDemand + housesHourlyGasDemand;
+builtEnvironmentHourlyHeatDemand = builtEnvironmentHourlyGasDemandkWh + housesHourlyDistrictHeatingDemand;
+
+
+//-------INDUSTRY-------
+
+//Heat
+industryBHourlyGasDemand = G2CDemandFraction * industryBAnnualGasDemand;
+industryCHourlyGasDemand = G2CDemandFraction * industryCAnnualGasDemand;
+industryDHourlyGasDemand = G2CDemandFraction * industryDAnnualGasDemand;
+industryEHourlyGasDemand = G2CDemandFraction * industryEAnnualGasDemand;
+industryFHourlyGasDemand = G2CDemandFraction * industryFAnnualGasDemand;
+
+industryHourlyGasDemandM3 = industryBHourlyGasDemand + industryCHourlyGasDemand + industryDHourlyGasDemand + industryEHourlyGasDemand + industryFHourlyGasDemand;
+industryHourlyGasDemandkWh = industryHourlyGasDemandM3 * main.gasKWhPerM3 * main.kiloToMega;
+industryHourlyHeatDemand = industryHourlyGasDemandkWh;
+
+
+//-------AGRICULTURE-------
+
+
+//Heat
+agricultureHourlyGasDemandM3 = G2CDemandFraction * agricultureAnnualGasDemand;
+agricultureHourlyGasDemandkWh = agricultureHourlyGasDemandM3 * main.gasKWhPerM3 * main.kiloToMega;
+agricultureHourlyHeatDemand = agricultureHourlyGasDemandkWh;
+
+
+//-------TOTAL-------
+provinceHourlyGasDemandM3 = builtEnvironmentHourlyGasDemandM3 + industryHourlyGasDemandM3 + agricultureHourlyGasDemandM3;
+provinceHourlyGasDemandkWh = agricultureHourlyGasDemandkWh + builtEnvironmentHourlyGasDemandkWh + industryHourlyGasDemandM3;
+provinceHourlyHeatDemand = builtEnvironmentHourlyHeatDemand + industryHourlyHeatDemand + agricultureHourlyHeatDemand;
+
+
+
+
+
+publicServicesHourlyGasDemandCollection.add(publicServicesHourlyGasDemand);
+commercialServicesHourlyGasDemandCollection.add(commercialServicesHourlyGasDemand);
+housesHourlyGasDemandCollection.add(housesHourlyGasDemand);
+housesHourlyDistrictHeatingDemandCollection.add(housesHourlyDistrictHeatingDemand);
+builtEnvironmentHourlyGasDemandkWhCollection.add(builtEnvironmentHourlyGasDemandkWh);
+builtEnvironmentHourlyHeatDemandCollection.add(builtEnvironmentHourlyHeatDemand);
+
+if (publicServicesHourlyGasDemandCollection.size() > 24){
+	publicServicesHourlyGasDemandCollection.remove(0);
+	commercialServicesHourlyGasDemandCollection.remove(0);
+	housesHourlyGasDemandCollection.remove(0);
+	housesHourlyDistrictHeatingDemandCollection.remove(0);
+	
+	builtEnvironmentHourlyGasDemandkWhCollection.remove(0);
+	builtEnvironmentHourlyHeatDemandCollection.remove(0);
+}
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1636633613629</Id>
+					<Name><![CDATA[returnStatement3]]></Name>
+					<X>60</X><Y>-790</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1636633767761" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
 			</ActionChartElements>
 			<TableFunctions>
 				<TableFunction AccessType="public" StaticFunction="false">
-					<Id>1636408376171</Id>
-					<Name><![CDATA[irradiance]]></Name>
-					<X>50</X><Y>550</Y>
+					<Id>1636409208634</Id>
+					<Name><![CDATA[temperature]]></Name>
+					<X>50</X><Y>570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -52230,12 +53345,12 @@ else if (province == "AverageNL"){
 					<ValuesQuery>
 						<TableReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[irradiance2]]></ClassName>
+							<ClassName><![CDATA[temperature]]></ClassName>
 						</TableReference>
 						<Condition>
 							<ColumnReference>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-								<ClassName><![CDATA[irradiance2]]></ClassName>
+								<ClassName><![CDATA[temperature]]></ClassName>
 								<ItemName><![CDATA[province]]></ItemName>
 							</ColumnReference>
 							<Value Class="CodeValue">
@@ -52245,38 +53360,13 @@ else if (province == "AverageNL"){
 						</Condition>
 							<ArgumentColumnReference>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-								<ClassName><![CDATA[irradiance2]]></ClassName>
+								<ClassName><![CDATA[temperature]]></ClassName>
 								<ItemName><![CDATA[timestep]]></ItemName>
 							</ArgumentColumnReference>
 							<ValueColumnReference>
 								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-								<ClassName><![CDATA[irradiance2]]></ClassName>
-								<ItemName><![CDATA[zuid_holland]]></ItemName>
-							</ValueColumnReference>
-					</ValuesQuery>
-// arguments and values
-					<Argument><![CDATA[0.0]]></Argument>
-					<Value><![CDATA[0.0]]></Value>
-				</TableFunction>
-				<TableFunction AccessType="public" StaticFunction="false">
-					<Id>1636409208634</Id>
-					<Name><![CDATA[temperature]]></Name>
-					<X>50</X><Y>570</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<InterpolationMethod>LINEAR</InterpolationMethod>
-					<OutOfRangeBehaviour>ERROR</OutOfRangeBehaviour>
-					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
-					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
-					<ValuesQuery>
-						<TableReference>
-						</TableReference>
-							<ArgumentColumnReference>
-							</ArgumentColumnReference>
-							<ValueColumnReference>
+								<ClassName><![CDATA[temperature]]></ClassName>
+								<ItemName><![CDATA[temperature]]></ItemName>
 							</ValueColumnReference>
 					</ValuesQuery>
 // arguments and values
@@ -52292,16 +53382,79 @@ else if (province == "AverageNL"){
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<InterpolationMethod>LINEAR</InterpolationMethod>
-					<OutOfRangeBehaviour>ERROR</OutOfRangeBehaviour>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
 					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
 					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<ValuesQuery>
 						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[wind_speed]]></ClassName>
 						</TableReference>
+						<Condition>
+							<ColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[wind_speed]]></ClassName>
+								<ItemName><![CDATA[location]]></ItemName>
+							</ColumnReference>
+							<Value Class="CodeValue">
+								<Code><![CDATA[province]]></Code>
+							</Value>
+							<Operator>EQUALS</Operator>
+						</Condition>
 							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[wind_speed]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
 							</ArgumentColumnReference>
 							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[wind_speed]]></ClassName>
+								<ItemName><![CDATA[wind_speed]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1636622990830</Id>
+					<Name><![CDATA[irradiance]]></Name>
+					<X>50</X><Y>550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[irradiance]]></ClassName>
+						</TableReference>
+						<Condition>
+							<ColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[irradiance]]></ClassName>
+								<ItemName><![CDATA[province]]></ItemName>
+							</ColumnReference>
+							<Value Class="CodeValue">
+								<Code><![CDATA[province]]></Code>
+							</Value>
+							<Operator>EQUALS</Operator>
+						</Condition>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[irradiance]]></ClassName>
+								<ItemName><![CDATA[timestep]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[irradiance]]></ClassName>
+								<ItemName><![CDATA[irradiance]]></ItemName>
 							</ValueColumnReference>
 					</ValuesQuery>
 // arguments and values
@@ -53239,7 +54392,7 @@ else if (province == "AverageNL"){
     			<TimeStackChart>
 					<Id>1636386980768</Id>
 					<Name><![CDATA[heatDemandChart]]></Name>
-					<X>-1040</X><Y>-40</Y>
+					<X>800</X><Y>80</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -53348,7 +54501,7 @@ else if (province == "AverageNL"){
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Total suppl]]></Text>
+					<Text><![CDATA[Total supply]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>16</Size>
@@ -53546,15 +54699,6 @@ else if (province == "AverageNL"){
 			<TableImportSettings>
 				<TableReference>
 					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-					<ClassName><![CDATA[irradiance2]]></ClassName>
-				</TableReference>
-				<ConnectionIndex>2</ConnectionIndex>
-				<ExternalTableName><![CDATA["Irradiance2"]]></ExternalTableName>
-				<AutoImport>false</AutoImport>
-			</TableImportSettings>
-			<TableImportSettings>
-				<TableReference>
-					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 					<ClassName><![CDATA[temperature]]></ClassName>
 				</TableReference>
 				<ConnectionIndex>2</ConnectionIndex>
@@ -53672,6 +54816,12 @@ else if (province == "AverageNL"){
 				<Parameter>
 					<ParameterName><![CDATA[kiloToMega]]></ParameterName>
 				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[gasKWhPerM3]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[TJtoMWh]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -53748,6 +54898,12 @@ else if (province == "AverageNL"){
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
 		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionBuild>0</VersionBuild>
+    </RequiredLibraryReference>
+    <RequiredLibraryReference>
+		<LibraryName><![CDATA[neon_integration_model]]></LibraryName>
+		<VersionMajor>0</VersionMajor>
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>0</VersionBuild>
     </RequiredLibraryReference>
