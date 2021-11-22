@@ -819,25 +819,13 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
+						<Type><![CDATA[int]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1637068659035</Id>
 					<Name><![CDATA[batteryCapacity]]></Name>
 					<X>1160</X><Y>2240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1637075436626</Id>
-					<Name><![CDATA[variable]]></Name>
-					<X>50</X><Y>3060</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1857,7 +1845,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480288</Id>
 					<Name><![CDATA[menuButtonNotSelectedColor]]></Name>
-					<X>10</X><Y>3645</Y>
+					<X>10</X><Y>3145</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1881,7 +1869,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480291</Id>
 					<Name><![CDATA[menuButtonSelectedColor]]></Name>
-					<X>10</X><Y>3625</Y>
+					<X>10</X><Y>3125</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1905,7 +1893,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480294</Id>
 					<Name><![CDATA[menuColor]]></Name>
-					<X>10</X><Y>3685</Y>
+					<X>10</X><Y>3185</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1929,7 +1917,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480297</Id>
 					<Name><![CDATA[menuButtonBoarderColor]]></Name>
-					<X>10</X><Y>3665</Y>
+					<X>10</X><Y>3165</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1953,7 +1941,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480300</Id>
 					<Name><![CDATA[menuBoarderColor]]></Name>
-					<X>10</X><Y>3705</Y>
+					<X>10</X><Y>3205</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1977,7 +1965,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480303</Id>
 					<Name><![CDATA[ControlPanelDarkBlue]]></Name>
-					<X>10</X><Y>3745</Y>
+					<X>10</X><Y>3245</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2001,7 +1989,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480306</Id>
 					<Name><![CDATA[ControlPanelLightBlue]]></Name>
-					<X>10</X><Y>3765</Y>
+					<X>10</X><Y>3265</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2025,7 +2013,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480309</Id>
 					<Name><![CDATA[backgroundColor]]></Name>
-					<X>10</X><Y>3725</Y>
+					<X>10</X><Y>3225</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2049,7 +2037,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480312</Id>
 					<Name><![CDATA[menuButtonColor]]></Name>
-					<X>10</X><Y>3585</Y>
+					<X>10</X><Y>3085</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2073,7 +2061,7 @@
 				<Variable Class="Parameter">
 					<Id>1636370480315</Id>
 					<Name><![CDATA[menuButtonColor2]]></Name>
-					<X>10</X><Y>3605</Y>
+					<X>10</X><Y>3105</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2097,7 +2085,7 @@
 				<Variable Class="Parameter">
 					<Id>1636454762369</Id>
 					<Name><![CDATA[kiloToMega]]></Name>
-					<X>360</X><Y>3680</Y>
+					<X>360</X><Y>3180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2122,7 +2110,7 @@
 				<Variable Class="Parameter">
 					<Id>1636550741439</Id>
 					<Name><![CDATA[gasKWhPerM3]]></Name>
-					<X>360</X><Y>3720</Y>
+					<X>360</X><Y>3220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2147,7 +2135,7 @@
 					<Id>1636633459572</Id>
 					<Name><![CDATA[TJtoMWh]]></Name>
 					<Unit>MWh</Unit> 
-					<X>360</X><Y>3700</Y>
+					<X>360</X><Y>3200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8859,6 +8847,15 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ifChargerAtWork]]></Name>
+						</Parameter>
+						<Parameter>
 							<Name><![CDATA[Evening_trip_prob]]></Name>
 						</Parameter>
 						<Parameter>
@@ -8880,19 +8877,13 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[Working]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[chargingPower]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[batteryCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[averageBatteryCapacity]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[ifChargerAtWork]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[Charger_at_work]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuel]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhPerKm]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -8933,14 +8924,81 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_types]]></ClassName>
 						</TableReference>
 					</InitializationDatabaseTableQuery>
-					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<InitializationDatabaseType>MULTIPLE_AGENTS_PER_RECORD</InitializationDatabaseType>
 					<QuantityColumn>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[vehicle_types]]></ClassName>
+						<ItemName><![CDATA[agent_population_size]]></ItemName>
 					</QuantityColumn>
+					<ParameterToDatabaseColumnMapping>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[ElectricCar]]></ClassName>
+								<ItemName><![CDATA[maxChargingPower]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[vehicle_types]]></ClassName>
+								<ItemName><![CDATA[max_charging_power]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[Car]]></ClassName>
+								<ItemName><![CDATA[fuel]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[vehicle_types]]></ClassName>
+								<ItemName><![CDATA[fuel]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[Car]]></ClassName>
+								<ItemName><![CDATA[kWhPerKm]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[vehicle_types]]></ClassName>
+								<ItemName><![CDATA[k_wh_km]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[Car]]></ClassName>
+								<ItemName><![CDATA[averageDailyDistance]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[vehicle_types]]></ClassName>
+								<ItemName><![CDATA[avg_km_per_day]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[ElectricCar]]></ClassName>
+								<ItemName><![CDATA[batteryCapacity]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[vehicle_types]]></ClassName>
+								<ItemName><![CDATA[avg_battery_capacity_k_wh]]></ItemName>
+							</Value>
+						</Item>	
+					</ParameterToDatabaseColumnMapping>
 				</EmbeddedObject>
 				<EmbeddedObject>
 					<Id>1637005335197</Id>
@@ -9271,7 +9329,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 				<Rectangle>
 					<Id>1636454823448</Id>
 					<Name><![CDATA[rectangle7]]></Name>
-					<X>300</X><Y>3500</Y>
+					<X>300</X><Y>3000</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9293,7 +9351,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 				<Rectangle>
 					<Id>1636408107809</Id>
 					<Name><![CDATA[rectangle6]]></Name>
-					<X>0</X><Y>3500</Y>
+					<X>0</X><Y>3000</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9793,7 +9851,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 				<Text>
 					<Id>1636370480276</Id>
 					<Name><![CDATA[text50]]></Name>
-					<X>0</X><Y>3530</Y>
+					<X>0</X><Y>3030</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10183,7 +10241,7 @@ demand]]></Text>
 				<Text>
 					<Id>1636454809239</Id>
 					<Name><![CDATA[text52]]></Name>
-					<X>330</X><Y>3530</Y>
+					<X>330</X><Y>3030</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10204,7 +10262,7 @@ demand]]></Text>
 				<Rectangle>
 					<Id>1636534707584</Id>
 					<Name><![CDATA[rectangle8]]></Name>
-					<X>600</X><Y>3500</Y>
+					<X>600</X><Y>3000</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10226,7 +10284,7 @@ demand]]></Text>
 				<Text>
 					<Id>1636534715314</Id>
 					<Name><![CDATA[text53]]></Name>
-					<X>640</X><Y>3520</Y>
+					<X>640</X><Y>3020</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10972,6 +11030,48 @@ demand]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>36</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1637573498031</Id>
+					<Name><![CDATA[text54]]></Name>
+					<X>60</X><Y>3340</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Settings]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1637573510988</Id>
+					<Name><![CDATA[text55]]></Name>
+					<X>60</X><Y>3380</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Transport]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
 						<Style>1</Style>
 					</Font>
 					<Alignment>LEFT</Alignment>
@@ -59093,6 +59193,21 @@ main.iterator = 0;
 			<Id>1637005274449</Id>
 			<Name><![CDATA[ElectricCar]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<ExtendsReference>
+				<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+				<ClassName><![CDATA[Car]]></ClassName>
+			</ExtendsReference>
+			<Parameters>
+				<Parameter>
+					<Name><![CDATA[fuel]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[kWhPerKm]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[averageDailyDistance]]></Name>
+				</Parameter>
+			</Parameters>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1637005274447</Id>
@@ -59187,9 +59302,60 @@ main.iterator = 0;
 			<ConnectionsId>1637005274444</ConnectionsId>
 			<Variables>
 				<Variable Class="PlainVariable">
-					<Id>1637066846092</Id>
+					<Id>1637599067543</Id>
+					<Name><![CDATA[Evening_trip_timer]]></Name>
+					<X>910</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1d/0d]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1637599067565</Id>
+					<Name><![CDATA[Trip_duration]]></Name>
+					<X>560</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1637599067567</Id>
+					<Name><![CDATA[Trip_distance]]></Name>
+					<X>420</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1637599067569</Id>
+					<Name><![CDATA[Driving_time]]></Name>
+					<X>790</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1637599249031</Id>
 					<Name><![CDATA[Parked_at_home]]></Name>
-					<X>790</X><Y>210</Y>
+					<X>790</X><Y>790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59203,9 +59369,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846094</Id>
+					<Id>1637599249033</Id>
 					<Name><![CDATA[Parked_at_leisure]]></Name>
-					<X>790</X><Y>240</Y>
+					<X>790</X><Y>820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59218,9 +59384,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846096</Id>
+					<Id>1637599249035</Id>
 					<Name><![CDATA[Parked_at_work]]></Name>
-					<X>790</X><Y>270</Y>
+					<X>790</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59233,9 +59399,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846098</Id>
+					<Id>1637599249037</Id>
 					<Name><![CDATA[On_road]]></Name>
-					<X>790</X><Y>300</Y>
+					<X>790</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59248,9 +59414,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846100</Id>
+					<Id>1637599249039</Id>
 					<Name><![CDATA[Next_trip_countdown]]></Name>
-					<X>1290</X><Y>370</Y>
+					<X>1290</X><Y>950</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59260,9 +59426,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846102</Id>
+					<Id>1637599249041</Id>
 					<Name><![CDATA[trip_type]]></Name>
-					<X>1150</X><Y>220</Y>
+					<X>1150</X><Y>800</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59275,48 +59441,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846104</Id>
-					<Name><![CDATA[Evening_trip_timer]]></Name>
-					<X>1080</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[1d/0d]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1637066846106</Id>
-					<Name><![CDATA[Trip_duration]]></Name>
-					<X>730</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1637066846108</Id>
-					<Name><![CDATA[Trip_distance]]></Name>
-					<X>590</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1637066846110</Id>
+					<Id>1637599249043</Id>
 					<Name><![CDATA[Start_work_time]]></Name>
-					<X>790</X><Y>330</Y>
+					<X>790</X><Y>910</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59329,21 +59456,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846112</Id>
-					<Name><![CDATA[Driving_time]]></Name>
-					<X>960</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1637066846114</Id>
+					<Id>1637599249045</Id>
 					<Name><![CDATA[SOC]]></Name>
-					<X>790</X><Y>180</Y>
+					<X>790</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59356,9 +59471,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846116</Id>
+					<Id>1637599249047</Id>
 					<Name><![CDATA[Connected_to_charger]]></Name>
-					<X>960</X><Y>210</Y>
+					<X>960</X><Y>790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59371,9 +59486,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846118</Id>
+					<Id>1637599249049</Id>
 					<Name><![CDATA[Duration_charging_session]]></Name>
-					<X>960</X><Y>180</Y>
+					<X>960</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59383,9 +59498,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846120</Id>
+					<Id>1637599249051</Id>
 					<Name><![CDATA[Charging]]></Name>
-					<X>960</X><Y>240</Y>
+					<X>960</X><Y>820</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59398,9 +59513,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846122</Id>
+					<Id>1637599249053</Id>
 					<Name><![CDATA[Current_charging_speed]]></Name>
-					<X>960</X><Y>270</Y>
+					<X>960</X><Y>850</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59413,9 +59528,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846124</Id>
+					<Id>1637599249055</Id>
 					<Name><![CDATA[Charging_load]]></Name>
-					<X>1150</X><Y>260</Y>
+					<X>1150</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59425,9 +59540,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846126</Id>
+					<Id>1637599249057</Id>
 					<Name><![CDATA[Hourly_charge]]></Name>
-					<X>1150</X><Y>300</Y>
+					<X>1150</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59437,9 +59552,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846128</Id>
+					<Id>1637599249059</Id>
 					<Name><![CDATA[Validate]]></Name>
-					<X>1160</X><Y>360</Y>
+					<X>1160</X><Y>940</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59449,9 +59564,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637066846130</Id>
+					<Id>1637599249061</Id>
 					<Name><![CDATA[setSOC]]></Name>
-					<X>590</X><Y>210</Y>
+					<X>590</X><Y>790</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59461,9 +59576,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637067109166</Id>
+					<Id>1637599249063</Id>
 					<Name><![CDATA[totalTripDistance]]></Name>
-					<X>80</X><Y>540</Y>
+					<X>80</X><Y>1120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59473,9 +59588,21 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1637138060784</Id>
+					<Id>1637599249065</Id>
 					<Name><![CDATA[charge]]></Name>
-					<X>1150</X><Y>330</Y>
+					<X>1150</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1637617575963</Id>
+					<Name><![CDATA[connectedChargePointChargingPower]]></Name>
+					<X>50</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59485,9 +59612,9 @@ main.iterator = 0;
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846188</Id>
-					<Name><![CDATA[chargingPower]]></Name>
-					<X>80</X><Y>40</Y>
+					<Id>1637599249116</Id>
+					<Name><![CDATA[maxChargingPower]]></Name>
+					<X>50</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59497,7 +59624,7 @@ main.iterator = 0;
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
-							<Id>1637066846186</Id>
+							<Id>1637599249114</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59506,9 +59633,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846191</Id>
+					<Id>1637599249119</Id>
 					<Name><![CDATA[batteryCapacity]]></Name>
-					<X>80</X><Y>70</Y>
+					<X>50</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59521,7 +59648,7 @@ main.iterator = 0;
 							<Code><![CDATA[normal(17,106,58,5)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846189</Id>
+							<Id>1637599249117</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59530,34 +59657,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846194</Id>
-					<Name><![CDATA[averageBatteryCapacity]]></Name>
-					<Description><![CDATA[https://ev-database.org/cheatsheet/useable-battery-capacity-electric-car]]></Description>
-					<X>80</X><Y>440</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[58 //kWh]]></Code>
-						</DefaultValue>
-						<ParameterEditor>
-							<Id>1637066846192</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1637066846197</Id>
+					<Id>1637599249125</Id>
 					<Name><![CDATA[ifChargerAtWork]]></Name>
-					<X>80</X><Y>470</Y>
+					<X>50</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59570,7 +59672,7 @@ main.iterator = 0;
 							<Code><![CDATA[uniform(0,1) < 0.5 ? true:false]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846195</Id>
+							<Id>1637599249123</Id>
 							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59579,9 +59681,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846200</Id>
+					<Id>1637599249128</Id>
 					<Name><![CDATA[Evening_trip_prob]]></Name>
-					<X>310</X><Y>130</Y>
+					<X>50</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59594,7 +59696,7 @@ main.iterator = 0;
 							<Code><![CDATA[uniform(0.3,0.6)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846198</Id>
+							<Id>1637599249126</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59603,9 +59705,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846203</Id>
+					<Id>1637599249131</Id>
 					<Name><![CDATA[Weekend_trip_prob]]></Name>
-					<X>310</X><Y>160</Y>
+					<X>50</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59618,7 +59720,7 @@ main.iterator = 0;
 							<Code><![CDATA[uniform(0.5,1)]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846201</Id>
+							<Id>1637599249129</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59627,9 +59729,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846206</Id>
+					<Id>1637599249134</Id>
 					<Name><![CDATA[Day_trip_prob]]></Name>
-					<X>310</X><Y>190</Y>
+					<X>50</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59642,7 +59744,7 @@ main.iterator = 0;
 							<Code><![CDATA[0.8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846204</Id>
+							<Id>1637599249132</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59651,9 +59753,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846209</Id>
+					<Id>1637599249137</Id>
 					<Name><![CDATA[Perc_working]]></Name>
-					<X>80</X><Y>320</Y>
+					<X>50</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59666,7 +59768,7 @@ main.iterator = 0;
 							<Code><![CDATA[0.7]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846207</Id>
+							<Id>1637599249135</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59675,9 +59777,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846212</Id>
+					<Id>1637599249140</Id>
 					<Name><![CDATA[Avg_driving_speed]]></Name>
-					<X>310</X><Y>220</Y>
+					<X>50</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59690,7 +59792,7 @@ main.iterator = 0;
 							<Code><![CDATA[50]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846210</Id>
+							<Id>1637599249138</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59699,9 +59801,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846215</Id>
+					<Id>1637599249143</Id>
 					<Name><![CDATA[fuelEfficiency]]></Name>
-					<X>310</X><Y>250</Y>
+					<X>50</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59714,7 +59816,7 @@ main.iterator = 0;
 							<Code><![CDATA[0.2]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846213</Id>
+							<Id>1637599249141</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59723,9 +59825,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846222</Id>
+					<Id>1637599249146</Id>
 					<Name><![CDATA[Working]]></Name>
-					<X>310</X><Y>100</Y>
+					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59738,7 +59840,7 @@ main.iterator = 0;
 							<Code><![CDATA[uniform(0,1) < Perc_working ? true:false]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846220</Id>
+							<Id>1637599249144</Id>
 							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59747,9 +59849,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1637066846225</Id>
+					<Id>1637599249149</Id>
 					<Name><![CDATA[Charger_at_work]]></Name>
-					<X>80</X><Y>410</Y>
+					<X>50</X><Y>520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59762,7 +59864,7 @@ main.iterator = 0;
 							<Code><![CDATA[uniform(0,1) < 0.5 ? true:false]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1637066846223</Id>
+							<Id>1637599249147</Id>
 							<EditorContolType>CHECK_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -59771,9 +59873,9 @@ main.iterator = 0;
 					</Properties>                 
 				</Variable>
 				<Variable Class="CollectionVariable">
-					<Id>1637066846085</Id>
+					<Id>1637599249029</Id>
 					<Name><![CDATA[chargeSchedule]]></Name>
-					<X>960</X><Y>300</Y>
+					<X>960</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59788,33 +59890,9 @@ main.iterator = 0;
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846227</Id>
-					<Name><![CDATA[Idle]]></Name>
-					<X>1280</X><Y>220</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846229</Id>
-					<Name><![CDATA[Countdown]]></Name>
-					<X>1280</X><Y>310</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846231</Id>
+					<Id>1637599067571</Id>
 					<Name><![CDATA[At_home]]></Name>
-					<X>550</X><Y>470</Y>
+					<X>380</X><Y>200</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59837,9 +59915,9 @@ Duration_charging_session = 0;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846233</Id>
+					<Id>1637599067573</Id>
 					<Name><![CDATA[At_work]]></Name>
-					<X>550</X><Y>710</Y>
+					<X>380</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59861,9 +59939,9 @@ Duration_charging_session = 0;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846235</Id>
+					<Id>1637599067575</Id>
 					<Name><![CDATA[Going_to_work]]></Name>
-					<X>550</X><Y>630</Y>
+					<X>380</X><Y>360</Y>
 					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59873,9 +59951,9 @@ Duration_charging_session = 0;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846237</Id>
+					<Id>1637599067577</Id>
 					<Name><![CDATA[On_evening_trip]]></Name>
-					<X>720</X><Y>710</Y>
+					<X>550</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59891,9 +59969,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846239</Id>
+					<Id>1637599067579</Id>
 					<Name><![CDATA[Driving_home_from_work]]></Name>
-					<X>610</X><Y>590</Y>
+					<X>440</X><Y>320</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59903,9 +59981,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846241</Id>
+					<Id>1637599067581</Id>
 					<Name><![CDATA[Driving_home_from_evening_trip]]></Name>
-					<X>780</X><Y>590</Y>
+					<X>610</X><Y>320</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59915,9 +59993,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846243</Id>
+					<Id>1637599067583</Id>
 					<Name><![CDATA[Driving_to_leisure1]]></Name>
-					<X>720</X><Y>630</Y>
+					<X>550</X><Y>360</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59927,9 +60005,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846245</Id>
+					<Id>1637599067585</Id>
 					<Name><![CDATA[Driving_to_weekend_trip]]></Name>
-					<X>890</X><Y>630</Y>
+					<X>720</X><Y>360</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59939,9 +60017,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846247</Id>
+					<Id>1637599067587</Id>
 					<Name><![CDATA[Driving_from_weekend_trip]]></Name>
-					<X>950</X><Y>590</Y>
+					<X>780</X><Y>320</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59951,9 +60029,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846249</Id>
+					<Id>1637599067589</Id>
 					<Name><![CDATA[On_weekend_trip]]></Name>
-					<X>890</X><Y>710</Y>
+					<X>720</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59969,9 +60047,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846251</Id>
+					<Id>1637599067591</Id>
 					<Name><![CDATA[Driving_to_day_trip]]></Name>
-					<X>1060</X><Y>630</Y>
+					<X>890</X><Y>360</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59981,9 +60059,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846253</Id>
+					<Id>1637599067593</Id>
 					<Name><![CDATA[Driving_home_from_day_trip]]></Name>
-					<X>1120</X><Y>590</Y>
+					<X>950</X><Y>320</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -59993,9 +60071,9 @@ Parked_at_leisure = false;]]></ExitAction>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1637066846255</Id>
+					<Id>1637599067595</Id>
 					<Name><![CDATA[On_day_trip]]></Name>
-					<X>1060</X><Y>710</Y>
+					<X>890</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60010,94 +60088,34 @@ Parked_at_leisure = false;]]></ExitAction>
 						<FillColor>-3308225</FillColor>
 					</Properties>
 				</StatechartElement>
-				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
-					<Id>1637066846257</Id>
-					<Name><![CDATA[Trip_timer]]></Name>
-					<X>1330</X><Y>180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1637599249151</Id>
+					<Name><![CDATA[Idle]]></Name>
+					<X>1280</X><Y>800</Y>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>40</Y></Point>
-					</Points>
-					<Properties Target="1637066846227">
-					</Properties>	
+					<Properties Width="100" Height="30">
+						<FillColor/>
+					</Properties>
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846259</Id>
-					<Name><![CDATA[transition16]]></Name>
-					<X>1300</X><Y>250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1637599249153</Id>
+					<Name><![CDATA[Countdown]]></Name>
+					<X>1280</X><Y>890</Y>
+					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
-					</Points>
-					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846227" Target="1637066846229" Trigger="message">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[equalsTo]]></FilterType>
-						<EqualsExpression><![CDATA["trip countdown"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846261</Id>
-					<Name><![CDATA[transition18]]></Name>
-					<X>1360</X><Y>310</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-60</Y></Point>
-					</Points>
-					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846229" Target="1637066846227" Trigger="timeout">
-						<Action><![CDATA[if (trip_type == "day") { 
-	send("go on daytrip",this);
-	}
-if (trip_type == "work") {	
-		send("go to work",this); 
-		}
-if (trip_type == "weekend") {
-	send("go on weekend trip",this);
-	}]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[Next_trip_countdown]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor/>
+					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
-					<Id>1637066846263</Id>
+					<Id>1637599067597</Id>
 					<Name><![CDATA[Trip_chart]]></Name>
-					<X>870</X><Y>440</Y>
+					<X>700</X><Y>170</Y>
 					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60106,13 +60124,13 @@ if (trip_type == "weekend") {
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>30</Y></Point>
 					</Points>
-					<Properties Target="1637066846231">
+					<Properties Target="1637599067571">
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846265</Id>
+					<Id>1637599067599</Id>
 					<Name><![CDATA[StartPreparing]]></Name>
-					<X>600</X><Y>510</Y>
+					<X>430</X><Y>240</Y>
 					<Label><X>5</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60122,7 +60140,7 @@ if (trip_type == "weekend") {
 						<Point><X>0</X><Y>120</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846231" Target="1637066846235" Trigger="message">
+					<Properties Source="1637599067571" Target="1637599067575" Trigger="message">
 						<Action><![CDATA[Trip_distance = 1 * dailyCommutingDistanceDistribution();
 Trip_duration = uniform(8,9);
 Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
@@ -60143,9 +60161,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846267</Id>
+					<Id>1637599067601</Id>
 					<Name><![CDATA[transition8]]></Name>
-					<X>600</X><Y>660</Y>
+					<X>430</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60155,7 +60173,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1637066846235" Target="1637066846233" Trigger="timeout">
+					<Properties Source="1637599067575" Target="1637599067573" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Driving_time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60173,9 +60191,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846269</Id>
+					<Id>1637599067603</Id>
 					<Name><![CDATA[OnderwegNaarHuis]]></Name>
-					<X>660</X><Y>710</Y>
+					<X>490</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60185,7 +60203,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846233" Target="1637066846239" Trigger="timeout">
+					<Properties Source="1637599067573" Target="1637599067579" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Trip_duration]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60203,9 +60221,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846271</Id>
+					<Id>1637599067605</Id>
 					<Name><![CDATA[transition9]]></Name>
-					<X>770</X><Y>510</Y>
+					<X>600</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60215,7 +60233,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>120</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846231" Target="1637066846243" Trigger="timeout">
+					<Properties Source="1637599067571" Target="1637599067583" Trigger="timeout">
 						<Action><![CDATA[Trip_distance = 1 * Evening_trip_distance();
 Trip_duration = uniform(0.5,3);
 Driving_time = Trip_distance / Avg_driving_speed;
@@ -60237,9 +60255,9 @@ Driving_time = Trip_distance / Avg_driving_speed;
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846273</Id>
+					<Id>1637599067607</Id>
 					<Name><![CDATA[transition10]]></Name>
-					<X>830</X><Y>710</Y>
+					<X>660</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60249,7 +60267,7 @@ Driving_time = Trip_distance / Avg_driving_speed;
 						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846237" Target="1637066846241" Trigger="timeout">
+					<Properties Source="1637599067577" Target="1637599067581" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Trip_duration]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60267,9 +60285,9 @@ Driving_time = Trip_distance / Avg_driving_speed;
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846275</Id>
+					<Id>1637599067609</Id>
 					<Name><![CDATA[Arriving_home]]></Name>
-					<X>660</X><Y>590</Y>
+					<X>490</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60279,7 +60297,7 @@ Driving_time = Trip_distance / Avg_driving_speed;
 						<Point><X>0</X><Y>-80</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846239" Target="1637066846231" Trigger="timeout">
+					<Properties Source="1637599067579" Target="1637599067571" Trigger="timeout">
 						<Action><![CDATA[double z = uniform(0,1);
 //traceln(getName() + " " + z + " <- x, prob= " + (z < Evening_trip_prob));
 if (z < Evening_trip_prob){
@@ -60324,9 +60342,9 @@ else {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846277</Id>
+					<Id>1637599067611</Id>
 					<Name><![CDATA[transition11]]></Name>
-					<X>830</X><Y>590</Y>
+					<X>660</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60336,7 +60354,7 @@ else {
 						<Point><X>0</X><Y>-80</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846241" Target="1637066846231" Trigger="timeout">
+					<Properties Source="1637599067581" Target="1637599067571" Trigger="timeout">
 						<Action><![CDATA[Evening_trip_timer = 1d/0d;
 if (!(getDayOfWeek() == FRIDAY)){
 	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
@@ -60374,9 +60392,9 @@ else {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846279</Id>
+					<Id>1637599067613</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>770</X><Y>660</Y>
+					<X>600</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60386,7 +60404,7 @@ else {
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1637066846243" Target="1637066846237" Trigger="timeout">
+					<Properties Source="1637599067583" Target="1637599067577" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Driving_time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60404,9 +60422,9 @@ else {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846281</Id>
+					<Id>1637599067615</Id>
 					<Name><![CDATA[transition13]]></Name>
-					<X>940</X><Y>510</Y>
+					<X>770</X><Y>240</Y>
 					<Label><X>-40</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60416,7 +60434,7 @@ else {
 						<Point><X>0</X><Y>120</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846231" Target="1637066846245" Trigger="message">
+					<Properties Source="1637599067571" Target="1637599067585" Trigger="message">
 						<Action><![CDATA[Trip_distance = 1 * Weekend_trip_distance();
 Trip_duration = uniform(3,8);
 Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
@@ -60437,9 +60455,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846283</Id>
+					<Id>1637599067617</Id>
 					<Name><![CDATA[transition14]]></Name>
-					<X>940</X><Y>660</Y>
+					<X>770</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60449,7 +60467,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1637066846245" Target="1637066846249" Trigger="timeout">
+					<Properties Source="1637599067585" Target="1637599067589" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Driving_time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60467,9 +60485,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846285</Id>
+					<Id>1637599067619</Id>
 					<Name><![CDATA[transition15]]></Name>
-					<X>1000</X><Y>710</Y>
+					<X>830</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60479,7 +60497,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846249" Target="1637066846247" Trigger="timeout">
+					<Properties Source="1637599067589" Target="1637599067587" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Trip_duration]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60497,9 +60515,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846287</Id>
+					<Id>1637599067621</Id>
 					<Name><![CDATA[transition17]]></Name>
-					<X>1000</X><Y>590</Y>
+					<X>830</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60509,7 +60527,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>-80</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846247" Target="1637066846231" Trigger="timeout">
+					<Properties Source="1637599067587" Target="1637599067571" Trigger="timeout">
 						<Action><![CDATA[Evening_trip_timer = 1d/0d;
 if (!(getDayOfWeek() == SUNDAY)){
 	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
@@ -60550,9 +60568,9 @@ else {
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846289</Id>
+					<Id>1637599067623</Id>
 					<Name><![CDATA[transition19]]></Name>
-					<X>1110</X><Y>510</Y>
+					<X>940</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60562,7 +60580,7 @@ else {
 						<Point><X>0</X><Y>120</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846231" Target="1637066846251" Trigger="message">
+					<Properties Source="1637599067571" Target="1637599067591" Trigger="message">
 						<Action><![CDATA[Trip_distance = 1 * Day_trip_distance();
 Trip_duration = uniform(0.5,3.5);
 Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
@@ -60583,9 +60601,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846291</Id>
+					<Id>1637599067625</Id>
 					<Name><![CDATA[transition20]]></Name>
-					<X>1110</X><Y>660</Y>
+					<X>940</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60595,7 +60613,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1637066846251" Target="1637066846255" Trigger="timeout">
+					<Properties Source="1637599067591" Target="1637599067595" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Driving_time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60613,9 +60631,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846293</Id>
+					<Id>1637599067627</Id>
 					<Name><![CDATA[transition21]]></Name>
-					<X>1170</X><Y>710</Y>
+					<X>1000</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60625,7 +60643,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>30.0</IconOffset>
-					<Properties Source="1637066846255" Target="1637066846253" Trigger="timeout">
+					<Properties Source="1637599067595" Target="1637599067593" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[Trip_duration]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -60643,9 +60661,9 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1637066846295</Id>
+					<Id>1637599067629</Id>
 					<Name><![CDATA[transition22]]></Name>
-					<X>1170</X><Y>590</Y>
+					<X>1000</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60655,7 +60673,7 @@ Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
 						<Point><X>0</X><Y>-80</Y></Point>
 					</Points>
 					<IconOffset>40.0</IconOffset>
-					<Properties Source="1637066846253" Target="1637066846231" Trigger="timeout">
+					<Properties Source="1637599067593" Target="1637599067571" Trigger="timeout">
 						<Action><![CDATA[if (uniform(0,1) < Evening_trip_prob){
 	Evening_trip_timer = Evening_trip_departure();
 	Duration_charging_session = 0;
@@ -60697,30 +60715,114 @@ else {
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1637599249155</Id>
+					<Name><![CDATA[Trip_timer]]></Name>
+					<X>1330</X><Y>760</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1637599249151">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1637599249157</Id>
+					<Name><![CDATA[transition16]]></Name>
+					<X>1300</X><Y>830</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1637599249151" Target="1637599249153" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["trip countdown"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1637599249159</Id>
+					<Name><![CDATA[transition18]]></Name>
+					<X>1360</X><Y>890</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-60</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1637599249153" Target="1637599249151" Trigger="timeout">
+						<Action><![CDATA[if (trip_type == "day") { 
+	send("go on daytrip",this);
+	}
+if (trip_type == "work") {	
+		send("go to work",this); 
+		}
+if (trip_type == "weekend") {
+	send("go on weekend trip",this);
+	}]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Next_trip_countdown]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
 			</StatechartElements>
 			<ActionChartElements>
 				<ActionChartElement Class="ActionChart">
-					<Id>1637066846297</Id>
+					<Id>1637599080781</Id>
 					<Name><![CDATA[Charge]]></Name>
-					<X>1450</X><Y>180</Y>
+					<X>1300</X><Y>460</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1637066846298" >
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1637599080790" >
 						<FillColor/>
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					</Properties>
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
-					<Id>1637066846298</Id>
+					<Id>1637599080790</Id>
 					<Name><![CDATA[code2]]></Name>
-					<X>1450</X><Y>230</Y>
+					<X>1300</X><Y>510</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30" Previous="1637066846297" Next="1637066846299" >
+					<Properties Width="100" Height="30" Previous="1637599080781" Next="1637599080793" >
 						<FillColor/>
 						<Code><![CDATA[if (getMinute() == 15){
 	traceln(getMinute());
@@ -60742,22 +60844,22 @@ charge += Charging_load;
 					</Properties>	
 				</ActionChartElement>
 				<ActionChartElement Class="Return">
-					<Id>1637066846299</Id>
+					<Id>1637599080793</Id>
 					<Name><![CDATA[returnStatement2]]></Name>
-					<X>1450</X><Y>280</Y>
+					<X>1300</X><Y>560</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1637066846298" >
+					<Properties Width="80" Height="20" Previous="1637599080790" >
 						<FillColor/>
 					</Properties>	
 				</ActionChartElement>
 			</ActionChartElements>
 			<Events>
 				<Event>
-					<Id>1637066846175</Id>
+					<Id>1637599249110</Id>
 					<Name><![CDATA[Trigger_trips]]></Name>
-					<X>1190</X><Y>60</Y>
+					<X>1190</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60850,9 +60952,9 @@ else {
 }]]></Action>
 				</Event>
 				<Event>
-					<Id>1637066846180</Id>
+					<Id>1637599249113</Id>
 					<Name><![CDATA[Trigger_charge]]></Name>
-					<X>1370</X><Y>60</Y>
+					<X>1370</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60884,9 +60986,9 @@ else {
 			</Events>
 			<CustomDistributions>
 				<CustomDistribution>
-					<Id>1637066846136</Id>
+					<Id>1637599249071</Id>
 					<Name><![CDATA[Evening_trip_distance]]></Name>
-					<X>80</X><Y>100</Y>
+					<X>50</X><Y>600</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60954,10 +61056,10 @@ else {
 					<Argument><![CDATA[50.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846142</Id>
+					<Id>1637599249077</Id>
 					<Name><![CDATA[Evening_trip_departure]]></Name>
 					<Description><![CDATA[Amount of time spend at home after coming home from a work trip]]></Description>
-					<X>80</X><Y>130</Y>
+					<X>50</X><Y>630</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61025,9 +61127,9 @@ else {
 					<Argument><![CDATA[3.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846148</Id>
+					<Id>1637599249083</Id>
 					<Name><![CDATA[Weekend_trip_distance]]></Name>
-					<X>80</X><Y>160</Y>
+					<X>50</X><Y>660</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61092,9 +61194,9 @@ else {
 					<Argument><![CDATA[100.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846154</Id>
+					<Id>1637599249089</Id>
 					<Name><![CDATA[Weekend_trip_departure]]></Name>
-					<X>80</X><Y>190</Y>
+					<X>50</X><Y>690</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61162,9 +61264,9 @@ else {
 					<Argument><![CDATA[20.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846160</Id>
+					<Id>1637599249095</Id>
 					<Name><![CDATA[Day_trip_distance]]></Name>
-					<X>80</X><Y>220</Y>
+					<X>50</X><Y>720</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61217,9 +61319,9 @@ else {
 					<Argument><![CDATA[60.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846166</Id>
+					<Id>1637599249101</Id>
 					<Name><![CDATA[Day_trip_departure]]></Name>
-					<X>80</X><Y>250</Y>
+					<X>50</X><Y>750</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61275,9 +61377,9 @@ else {
 					<Argument><![CDATA[14.0]]></Argument>				
 				</CustomDistribution>
 				<CustomDistribution>
-					<Id>1637066846172</Id>
+					<Id>1637599249107</Id>
 					<Name><![CDATA[dailyCommutingDistanceDistribution]]></Name>
-					<X>80</X><Y>280</Y>
+					<X>50</X><Y>780</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -61376,12 +61478,12 @@ else {
 					<StatechartReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 						<ClassName><![CDATA[ElectricCar]]></ClassName>
-						<ItemName><![CDATA[Trip_timer]]></ItemName>
+						<ItemName><![CDATA[Trip_chart]]></ItemName>
 					</StatechartReference>
 					<StatechartReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 						<ClassName><![CDATA[ElectricCar]]></ClassName>
-						<ItemName><![CDATA[Trip_chart]]></ItemName>
+						<ItemName><![CDATA[Trip_timer]]></ItemName>
 					</StatechartReference>
 					<LineStyle>SOLID</LineStyle>
 					<LineWidth>1</LineWidth>
@@ -62608,6 +62710,71 @@ else {
 			</ScaleRuler>
 			<CurrentLevel>1637066183016</CurrentLevel>
 			<ConnectionsId>1637066183012</ConnectionsId>
+			<Variables>
+				<Variable Class="Parameter">
+					<Id>1637616325590</Id>
+					<Name><![CDATA[fuel]]></Name>
+					<X>40</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[String]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1637616325588</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1637616333282</Id>
+					<Name><![CDATA[kWhPerKm]]></Name>
+					<X>40</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1637616333280</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1637618021181</Id>
+					<Name><![CDATA[averageDailyDistance]]></Name>
+					<X>40</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1637618021179</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1637066183012</Id>
@@ -62750,6 +62917,27 @@ else {
 				<Login><![CDATA[]]></Login>
 				<Password><![CDATA[]]></Password>
 			</ExternalConnection>
+			<ExternalConnection>
+				<Id>1637616258470</Id>
+				<Name><![CDATA[database]]></Name>
+				<X>0</X><Y>0</Y>
+				<Label><X>10</X><Y>0</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<DatabaseType>EXCEL_ACCESS</DatabaseType>
+				<ConnectionURL><![CDATA[]]></ConnectionURL>
+				<ConnectOnStartup>true</ConnectOnStartup>
+				<DatabaseName><![CDATA[]]></DatabaseName>
+				<ResourceReference>
+					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+					<ClassName><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/Transport Technology Characteristics.xlsx]]></ClassName>
+				</ResourceReference>
+				<Host><![CDATA[localhost]]></Host>
+				<JdbcDriverClassName><![CDATA[net.sourceforge.jtds.jdbc.Driver]]></JdbcDriverClassName>
+				<Login><![CDATA[]]></Login>
+				<Password><![CDATA[]]></Password>
+			</ExternalConnection>
 			<TableImportSettings>
 				<TableReference>
 					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -62802,6 +62990,15 @@ else {
 				</TableReference>
 				<ConnectionIndex>2</ConnectionIndex>
 				<ExternalTableName><![CDATA["Temperature"]]></ExternalTableName>
+				<AutoImport>false</AutoImport>
+			</TableImportSettings>
+			<TableImportSettings>
+				<TableReference>
+					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+					<ClassName><![CDATA[vehicle_types]]></ClassName>
+				</TableReference>
+				<ConnectionIndex>4</ConnectionIndex>
+				<ExternalTableName><![CDATA["Vehicle types"]]></ExternalTableName>
 				<AutoImport>false</AutoImport>
 			</TableImportSettings>
 			<TableImportSettings>
@@ -63010,6 +63207,10 @@ else {
 		</Resource>
 		<Resource>
 			<Path><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/Weather Data.xlsx]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/Transport Technology Characteristics.xlsx]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
