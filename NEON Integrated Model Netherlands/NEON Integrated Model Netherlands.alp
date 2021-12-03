@@ -14,15 +14,7 @@
 	<OptionLists>
 		<OptionList>
 			<Id>1638453633413</Id>
-			<Name><![CDATA[VehicleEngineTypes]]></Name>
-			<Option>
-				<Id>1638453633414</Id>
-				<Name><![CDATA[BEV]]></Name>
-			</Option>
-			<Option>
-				<Id>1638453633415</Id>
-				<Name><![CDATA[FCEV]]></Name>
-			</Option>
+			<Name><![CDATA[VehicleFuelTypes]]></Name>
 			<Option>
 				<Id>1638453633416</Id>
 				<Name><![CDATA[Benzine]]></Name>
@@ -37,7 +29,11 @@
 			</Option>
 			<Option>
 				<Id>1638454250787</Id>
-				<Name><![CDATA[PHEV]]></Name>
+				<Name><![CDATA[Electricity]]></Name>
+			</Option>
+			<Option>
+				<Id>1638538731199</Id>
+				<Name><![CDATA[Hydrogen]]></Name>
 			</Option>
 		</OptionList>
 	</OptionLists>
@@ -47,6 +43,16 @@
 			<Id>1636370321654</Id>
 			<Name><![CDATA[Main]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<StartupCode><![CDATA[for (int i=0; i<1000; i++){
+	if (carEngineDistribution() == Electricity){
+		add_electricCars();
+	}
+	else{
+		add_cars();
+	}
+}
+
+]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1636370321652</Id>
@@ -1872,6 +1878,18 @@
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638548279380</Id>
+					<Name><![CDATA[carFuelType]]></Name>
+					<X>70</X><Y>3560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[VehicleFuelTypes]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1636370480288</Id>
 					<Name><![CDATA[menuButtonNotSelectedColor]]></Name>
@@ -3164,8 +3182,7 @@ hourlyElectricityDemand = hourlyElectricityDemandCollection.get(0);
 					<Comment><![CDATA[Hourly graphs]]></Comment>
 					<Properties Width="160" Height="30" Previous="1636651163594" >
 						<FillColor/>
-						<Code><![CDATA[hourlyElectricityDemandChart.updateData();
-electricityDemandChart.updateData();
+						<Code><![CDATA[electricityDemandChart.updateData();
 heatSupplyChart.updateData();
 heatDemandChart.updateData();
 
@@ -4137,16 +4154,16 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>PDF</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
@@ -4156,17 +4173,17 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					</Condition>
 						<StartColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[amount_2017]]></ItemName>
 						</StartColumnReference>
 						<EndColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</EndColumnReference>
 						<NumberOfObservationColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</RangesQuery>
@@ -4187,12 +4204,12 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
@@ -4201,23 +4218,18 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Operator>EQUALS</Operator>
 					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[21136.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[42.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[7142431.0]]></Value>
@@ -4233,6 +4245,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
 							<Value><![CDATA[98773.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
 				</CustomDistribution>
@@ -4248,7 +4264,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>HISTOGRAM</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 					</TableReference>
@@ -4276,34 +4292,32 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
-							<Code><![CDATA[technology]]></Code>
+							<Code><![CDATA["van"]]></Code>
 						</Value>
 						<Operator>EQUALS</Operator>
 					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[1519.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[0.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[26134.0]]></Value>
@@ -4318,6 +4332,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
@@ -4334,16 +4352,16 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>PDF</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
@@ -4353,17 +4371,17 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					</Condition>
 						<StartColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[amount_2017]]></ItemName>
 						</StartColumnReference>
 						<EndColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</EndColumnReference>
 						<NumberOfObservationColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</RangesQuery>
@@ -4384,23 +4402,32 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
+					<Condition>
+						<ColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[type]]></ItemName>
+						</ColumnReference>
+						<Value Class="CodeValue">
+							<Code><![CDATA["truck"]]></Code>
+						</Value>
+						<Operator>EQUALS</Operator>
+					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[104.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[0.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
@@ -4415,6 +4442,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
@@ -4431,7 +4462,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>HISTOGRAM</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 					</TableReference>
@@ -4459,34 +4490,32 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
-							<Code><![CDATA[technology]]></Code>
+							<Code><![CDATA["tractorTrailer"]]></Code>
 						</Value>
 						<Operator>EQUALS</Operator>
 					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[8.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[0.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
@@ -4501,6 +4530,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
@@ -4517,7 +4550,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>HISTOGRAM</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 					</TableReference>
@@ -4545,34 +4578,32 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
-							<Code><![CDATA[technology]]></Code>
+							<Code><![CDATA["specialVehicle"]]></Code>
 						</Value>
 						<Operator>EQUALS</Operator>
 					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[10.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[0.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
@@ -4587,6 +4618,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
@@ -4603,7 +4638,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<Type>OPTIONS</Type>
 					<DefinitionType>HISTOGRAM</DefinitionType>
 					<Static>false</Static>
-					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
 					<RangesQuery>
 					<TableReference>
 					</TableReference>
@@ -4631,34 +4666,32 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<OptionQuery>
 					<TableReference>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-						<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+						<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 					</TableReference>
 					<Condition>
 						<ColumnReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-							<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 							<ItemName><![CDATA[type]]></ItemName>
 						</ColumnReference>
 						<Value Class="CodeValue">
-							<Code><![CDATA[technology]]></Code>
+							<Code><![CDATA["bus"]]></Code>
 						</Value>
 						<Operator>EQUALS</Operator>
 					</Condition>
 						<OptionColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[fuel]]></ItemName>
 						</OptionColumnReference>
 						<NumberOfObservationColumnReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
+							<ItemName><![CDATA[share_of_total]]></ItemName>
 						</NumberOfObservationColumnReference>
 					</OptionQuery>										
 					<OptionListID><![CDATA[1638453633413]]></OptionListID>
 					<OptionValues>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633414]]></OptionID>
-							<Value><![CDATA[191.0]]></Value>
-						</OptionValue>
-						<OptionValue>						
-							<OptionID><![CDATA[1638453633415]]></OptionID>
-							<Value><![CDATA[0.0]]></Value>
-						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638453633416]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
@@ -4673,6 +4706,10 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</OptionValue>
 						<OptionValue>						
 							<OptionID><![CDATA[1638454250787]]></OptionID>
+							<Value><![CDATA[0.0]]></Value>
+						</OptionValue>
+						<OptionValue>						
+							<OptionID><![CDATA[1638538731199]]></OptionID>
 							<Value><![CDATA[0.0]]></Value>
 						</OptionValue>				
 					</OptionValues>				
@@ -9428,7 +9465,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[vanEngineDistribution();]]></Code>
 							</Value>
@@ -9542,7 +9579,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[carEngineDistribution();]]></Code>
 							</Value>
@@ -9600,7 +9637,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
-					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+					<InitializationType>EMPTY</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<TableReference>
 							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -9656,7 +9693,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[truckEngineDistribution();]]></Code>
 							</Value>
@@ -9770,7 +9807,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[tractorTrailerEngineDistribution();]]></Code>
 							</Value>
@@ -9884,7 +9921,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[specialVehicleEngineDistribution();]]></Code>
 							</Value>
@@ -9992,7 +10029,7 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 							<Name><![CDATA[technology]]></Name>
 						</Parameter>
 						<Parameter>
-							<Name><![CDATA[engineType]]></Name>
+							<Name><![CDATA[fuel]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[busEngineDistribution();]]></Code>
 							</Value>
@@ -10079,6 +10116,143 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
 						<ClassName><![CDATA[vehicle_types]]></ClassName>
 						<ItemName><![CDATA[agent_population_size]]></ItemName>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1638546915670</Id>
+					<Name><![CDATA[electricCars]]></Name>
+					<X>490</X><Y>1330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1638546915671</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[ElectricCar]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[ElectricCar]]></ClassName>
+							<ItemName><![CDATA[1638546915638]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[chargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[averageBatteryCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[ifChargerAtWork]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Evening_trip_prob]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Weekend_trip_prob]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Day_trip_prob]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Perc_working]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Avg_driving_speed]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Working]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[Charger_at_work]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["car"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[technology]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["BEV"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuel]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[Electricity]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shareOfTotal]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kmPerYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgKmPerDay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhKm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgTankSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>EMPTY</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
 			</EmbeddedObjects>
@@ -11637,7 +11811,8 @@ demand]]></Text>
 				</Text>
     			<TimeStackChart>
 					<Id>1636652184580</Id>
-					<Name><![CDATA[hourlyElectricityDemandChart]]></Name>
+					<Name><![CDATA[fuelDemandChart]]></Name>
+					<ExcludeFromBuild>true</ExcludeFromBuild>
 					<X>1560</X><Y>180</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -11687,33 +11862,17 @@ demand]]></Text>
 					<Id>1636652184574</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-12004916</Color>
-					<Expression2><![CDATA[builtEnvironmentElectricityDemand]]></Expression2>
+					<Expression2><![CDATA[Benzine]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>  
-							<Title><![CDATA[Built environment]]></Title>
+							<Title><![CDATA[Benzine]]></Title>
 					</DatasetExpression>
 					<DatasetExpression>
 					<Id>1636652184575</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8097537</Color>
-					<Expression2><![CDATA[industryElectricityDemand]]></Expression2>
+					<Expression2><![CDATA[Diesel]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>  
-							<Title><![CDATA[Industry]]></Title>
-					</DatasetExpression>
-					<DatasetExpression>
-					<Id>1636652184576</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-60269</Color>
-					<Expression2><![CDATA[agricultureElectricityDemand]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>  
-							<Title><![CDATA[Agriculture]]></Title>
-					</DatasetExpression>
-					<DatasetExpression>
-					<Id>1636652184577</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-29696</Color>
-					<Expression2><![CDATA[transportElectricityDemand]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>  
-							<Title><![CDATA[Transport]]></Title>
+							<Title><![CDATA[Disel]]></Title>
 					</DatasetExpression>
 					<SamplesToKeep>672</SamplesToKeep>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
@@ -11847,6 +12006,107 @@ demand]]></Text>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1638546627452</Id>
+					<Name><![CDATA[text40]]></Name>
+					<X>1610</X><Y>180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Fuel demand]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>16</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<PieChart>
+					<Id>1638549129746</Id>
+					<Name><![CDATA[vehicleDistribution]]></Name>
+					<X>-560</X><Y>3440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1638604800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[YEAR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>60</XOffset>
+						<YOffset>10</YOffset>
+						<Width>140</Width>
+						<Height>140</Height>
+						<BorderColor/>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Id>0</Id>
+					<Expression><![CDATA[count(cars, c -> c.fuel == Benzine)]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Bezine]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>0</Id>
+					<Expression><![CDATA[count(cars, c -> c.fuel == Diesel)]]></Expression>
+					<Color>-23296</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Diesel]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>0</Id>
+					<Expression><![CDATA[count(cars, c -> c.fuel == Hydrogen)]]></Expression>
+					<Color>-4343957</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Hydrogen]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>0</Id>
+					<Expression><![CDATA[count(electricCars, c -> c.fuel == Electricity)]]></Expression>
+					<Color>-12004916</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Electricity]]></Title>
+					</DataItem>
+					<DataItem>
+					<Id>0</Id>
+					<Expression><![CDATA[count(cars, c -> c.fuel == Other)]]></Expression>
+					<Color>-8097537</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Other]]></Title>
+					</DataItem>
+    			</PieChart>
 			</Presentation>
 
 				</Level>
@@ -50453,6 +50713,25 @@ demand]]></Text>
 					<Latitude>52.58637770430901</Latitude>
 					<Longitude>4.342307784538929</Longitude>
 				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1638546915671</Id>
+					<Name><![CDATA[electricCars_presentation]]></Name>
+					<X>590</X><Y>1330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>52.58637770430901</Latitude>
+					<Longitude>4.342307784538929</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 			<Areas>
 				<Area>
@@ -59976,7 +60255,7 @@ main.iterator = 0;
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -60000,37 +60279,37 @@ main.iterator = 0;
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.vanEngineDistribution();
+			<StartupCode><![CDATA[//fuel = main.vanEngineDistribution();
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("van"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("van"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -60237,7 +60516,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -60261,37 +60540,40 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.carEngineDistribution();
+			<StartupCode><![CDATA[fuel = main.carEngineDistribution();
+while (fuel == Electricity){
+	fuel = main.carEngineDistribution();
+}
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("car"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -60465,6 +60747,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 						<ColorMapping>
 							<Name><![CDATA[Material__4__Surf]]></Name>
 							<OriginalColor>-13138595</OriginalColor>
+							<Color>-5952982</Color>
 						</ColorMapping>
 						<ColorMapping>
 							<Name><![CDATA[Material__3__Surf]]></Name>
@@ -60502,7 +60785,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -60526,37 +60809,37 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.truckEngineDistribution();
+			<StartupCode><![CDATA[//fuel = main.truckEngineDistribution();
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("truck"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("truck"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -60775,7 +61058,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -60799,37 +61082,37 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.tractorTrailerEngineDistribution();
+			<StartupCode><![CDATA[//fuel = main.tractorTrailerEngineDistribution();
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("tractorTrailer"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("tractorTrailer"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -61036,7 +61319,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -61060,37 +61343,37 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.specialVehicleEngineDistribution();
+			<StartupCode><![CDATA[//fuel = main.specialVehicleEngineDistribution();
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("specialVehicle"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("specialVehicle"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -61423,7 +61706,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[VehicleEngineTypes]]></Type>
+						<Type><![CDATA[String]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -61437,14 +61720,14 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1638453046201</Id>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 					<X>60</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[VehicleEngineTypes]]></Type>
+						<Type><![CDATA[VehicleFuelTypes]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<ParameterEditor>
@@ -61663,7 +61946,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[technology]]></Name>
 				</Parameter>
 				<Parameter>
-					<Name><![CDATA[engineType]]></Name>
+					<Name><![CDATA[fuel]]></Name>
 				</Parameter>
 				<Parameter>
 					<Name><![CDATA[shareOfTotal]]></Name>
@@ -61687,37 +61970,37 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[//engineType = main.busEngineDistribution();
+			<StartupCode><![CDATA[//fuel.busEngineDistribution();
 
-kmPerYear = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.km_per_year);
+kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
 	
-avgKmPerDay = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_km_per_day);
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
 
-kWhKm = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.k_wh_km);
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
 
-avgTankSize = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_tank_size);
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
 
-avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
 	
-maxChargingPower = (double) selectFrom(vehicle_engine_types)
-	.where(vehicle_engine_types.type.eq("bus"))
-	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
-	.firstResult(vehicle_engine_types.max_charging_power);
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("bus"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
 	
 	]]></StartupCode>
 			<Generic>false</Generic>
@@ -61905,6 +62188,2440 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Scale>1.0</Scale>
 					<Rotation>0.0</Rotation>
 					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+					<InternalLighting>OFF</InternalLighting>
+					<IgnoreSceneLights>false</IgnoreSceneLights>
+				</Figure3D>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1638546915640</Id>
+			<Name><![CDATA[ElectricCar]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<ExtendsReference>
+				<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+				<ClassName><![CDATA[Vehicle]]></ClassName>
+			</ExtendsReference>
+			<Parameters>
+				<Parameter>
+					<Name><![CDATA[type]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[technology]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[fuel]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[shareOfTotal]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[kmPerYear]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[avgKmPerDay]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[kWhKm]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[avgTankSize]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[maxChargingPower]]></Name>
+				</Parameter>
+				<Parameter>
+					<Name><![CDATA[avgBatteryCapacity]]></Name>
+				</Parameter>
+			</Parameters>
+			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.km_per_year);
+	
+avgKmPerDay = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_km_per_day);
+
+kWhKm = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.k_wh_km);
+
+avgTankSize = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_tank_size);
+
+avgBatteryCapacity = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.avg_battery_capacity_k_wh);
+	
+maxChargingPower = (double) selectFrom(vehicle_fuel_types)
+	.where(vehicle_fuel_types.type.eq("car"))
+	.where(vehicle_fuel_types.fuel.eq(fuel))
+	.firstResult(vehicle_fuel_types.max_charging_power);
+	
+]]></StartupCode>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1638546915638</Id>
+				<Name><![CDATA[1638546915638]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1638604800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1638546915636</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1638546915639</CurrentLevel>
+			<ConnectionsId>1638546915635</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1638546994866</Id>
+					<Name><![CDATA[Parked_at_home]]></Name>
+					<X>950</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[true
+]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994868</Id>
+					<Name><![CDATA[Parked_at_leisure]]></Name>
+					<X>950</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994870</Id>
+					<Name><![CDATA[Parked_at_work]]></Name>
+					<X>950</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994872</Id>
+					<Name><![CDATA[On_road]]></Name>
+					<X>950</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994874</Id>
+					<Name><![CDATA[Next_trip_countdown]]></Name>
+					<X>1450</X><Y>410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994876</Id>
+					<Name><![CDATA[trip_type]]></Name>
+					<X>1310</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[String]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[null]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994878</Id>
+					<Name><![CDATA[Evening_trip_timer]]></Name>
+					<X>1240</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1d/0d]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994880</Id>
+					<Name><![CDATA[Trip_duration]]></Name>
+					<X>890</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994882</Id>
+					<Name><![CDATA[Trip_distance]]></Name>
+					<X>750</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994884</Id>
+					<Name><![CDATA[Start_work_time]]></Name>
+					<X>950</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[uniform(7,8.5)]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994886</Id>
+					<Name><![CDATA[Driving_time]]></Name>
+					<X>1120</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994888</Id>
+					<Name><![CDATA[SOC]]></Name>
+					<X>950</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[normal(0.2*batteryCapacity,batteryCapacity,0.8*batteryCapacity,10)]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994890</Id>
+					<Name><![CDATA[Connected_to_charger]]></Name>
+					<X>1120</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[true]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994892</Id>
+					<Name><![CDATA[Duration_charging_session]]></Name>
+					<X>1120</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994894</Id>
+					<Name><![CDATA[Charging]]></Name>
+					<X>1120</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994896</Id>
+					<Name><![CDATA[Current_charging_speed]]></Name>
+					<X>1120</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[chargingPower]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994898</Id>
+					<Name><![CDATA[Charging_load]]></Name>
+					<X>1310</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994900</Id>
+					<Name><![CDATA[Hourly_charge]]></Name>
+					<X>1310</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994902</Id>
+					<Name><![CDATA[Validate]]></Name>
+					<X>1320</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994904</Id>
+					<Name><![CDATA[setSOC]]></Name>
+					<X>750</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1638546994906</Id>
+					<Name><![CDATA[totalTripDistance]]></Name>
+					<X>500</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994976</Id>
+					<Name><![CDATA[chargingPower]]></Name>
+					<X>240</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1638546994974</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994979</Id>
+					<Name><![CDATA[batteryCapacity]]></Name>
+					<X>240</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[normal(17,106,58,5)]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994977</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994982</Id>
+					<Name><![CDATA[averageBatteryCapacity]]></Name>
+					<Description><![CDATA[https://ev-database.org/cheatsheet/useable-battery-capacity-electric-car]]></Description>
+					<X>240</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[58 //kWh]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994980</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994985</Id>
+					<Name><![CDATA[ifChargerAtWork]]></Name>
+					<X>240</X><Y>510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[uniform(0,1) < 0.5 ? true:false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994983</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994989</Id>
+					<Name><![CDATA[Evening_trip_prob]]></Name>
+					<X>240</X><Y>570</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[uniform(0.3,0.6)]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994987</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994992</Id>
+					<Name><![CDATA[Weekend_trip_prob]]></Name>
+					<X>240</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[uniform(0.5,1)]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994990</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994995</Id>
+					<Name><![CDATA[Day_trip_prob]]></Name>
+					<X>240</X><Y>630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.8]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994993</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546994998</Id>
+					<Name><![CDATA[Perc_working]]></Name>
+					<X>240</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.7]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994996</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546995001</Id>
+					<Name><![CDATA[Avg_driving_speed]]></Name>
+					<X>240</X><Y>660</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[50]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546994999</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546995005</Id>
+					<Name><![CDATA[fuelEfficiency]]></Name>
+					<X>240</X><Y>690</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546995003</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546995008</Id>
+					<Name><![CDATA[Working]]></Name>
+					<X>240</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[uniform(0,1) < Perc_working ? true:false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546995006</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1638546995011</Id>
+					<Name><![CDATA[Charger_at_work]]></Name>
+					<X>240</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[uniform(0,1) < 0.5 ? true:false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1638546995009</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1638546994856</Id>
+					<Name><![CDATA[chargeSchedule]]></Name>
+					<X>1120</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+			</Variables>
+			<StatechartElements>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995014</Id>
+					<Name><![CDATA[Idle]]></Name>
+					<X>1440</X><Y>260</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995016</Id>
+					<Name><![CDATA[Countdown]]></Name>
+					<X>1440</X><Y>350</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995018</Id>
+					<Name><![CDATA[At_home]]></Name>
+					<X>710</X><Y>510</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="670" Height="40">
+						<EntryAction><![CDATA[On_road = false;
+Parked_at_home = true;
+SOC = SOC - fuelEfficiency * 0.5 * Trip_distance;
+Connected_to_charger = true;
+totalTripDistance += 0.5 * Trip_distance; 
+//main.CP.Current_ev_scheduling = this;
+//main.CP.Make_charge_schedule();
+Trip_distance = 0;
+Trip_duration = 0;]]></EntryAction>
+						<ExitAction><![CDATA[On_road = true;
+Parked_at_home = false;
+Connected_to_charger = false;
+Duration_charging_session = 0;]]></ExitAction>
+						<FillColor>-16711936</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995020</Id>
+					<Name><![CDATA[At_work]]></Name>
+					<X>710</X><Y>750</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="160" Height="30">
+						<EntryAction><![CDATA[SOC = SOC - fuelEfficiency * 0.5 * Trip_distance;
+totalTripDistance += 0.5 * Trip_distance; 
+Duration_charging_session = Trip_duration;
+On_road = false;
+Parked_at_work = true;
+if (Charger_at_work) {
+	Connected_to_charger = true;
+}]]></EntryAction>
+						<ExitAction><![CDATA[On_road = true;
+Parked_at_work = false;
+Connected_to_charger = false;
+Duration_charging_session = 0;]]></ExitAction>
+						<FillColor>-16711681</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995022</Id>
+					<Name><![CDATA[Going_to_work]]></Name>
+					<X>710</X><Y>670</Y>
+					<Label><X>10</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995024</Id>
+					<Name><![CDATA[On_evening_trip]]></Name>
+					<X>880</X><Y>750</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="160" Height="30">
+						<EntryAction><![CDATA[SOC = SOC - fuelEfficiency * 0.5 * Trip_distance;
+totalTripDistance += 0.5 * Trip_distance; 
+On_road = false;
+Parked_at_leisure = true;]]></EntryAction>
+						<ExitAction><![CDATA[On_road = true; 
+Parked_at_leisure = false;]]></ExitAction>
+						<FillColor>-256</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995026</Id>
+					<Name><![CDATA[Driving_home_from_work]]></Name>
+					<X>770</X><Y>630</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995028</Id>
+					<Name><![CDATA[Driving_home_from_evening_trip]]></Name>
+					<X>940</X><Y>630</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995030</Id>
+					<Name><![CDATA[Driving_to_leisure1]]></Name>
+					<X>880</X><Y>670</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995032</Id>
+					<Name><![CDATA[Driving_to_weekend_trip]]></Name>
+					<X>1050</X><Y>670</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995034</Id>
+					<Name><![CDATA[Driving_from_weekend_trip]]></Name>
+					<X>1110</X><Y>630</Y>
+					<Label><X>5</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995036</Id>
+					<Name><![CDATA[On_weekend_trip]]></Name>
+					<X>1050</X><Y>750</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="160" Height="30">
+						<EntryAction><![CDATA[SOC = SOC - fuelEfficiency * 0.5 * Trip_distance;
+totalTripDistance += 0.5 * Trip_distance; 
+On_road = false;
+Parked_at_leisure = true;]]></EntryAction>
+						<ExitAction><![CDATA[On_road = true;
+Parked_at_leisure = false;]]></ExitAction>
+						<FillColor>-65281</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995038</Id>
+					<Name><![CDATA[Driving_to_day_trip]]></Name>
+					<X>1220</X><Y>670</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995040</Id>
+					<Name><![CDATA[Driving_home_from_day_trip]]></Name>
+					<X>1280</X><Y>630</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties Width="100" Height="30">
+						<FillColor>-1644806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1638546995042</Id>
+					<Name><![CDATA[On_day_trip]]></Name>
+					<X>1220</X><Y>750</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="160" Height="30">
+						<EntryAction><![CDATA[SOC = SOC - fuelEfficiency * 0.5 * Trip_distance;
+totalTripDistance += 0.5 * Trip_distance; 
+On_road = false;
+Parked_at_leisure = true;]]></EntryAction>
+						<ExitAction><![CDATA[On_road = true;
+Parked_at_leisure = false;]]></ExitAction>
+						<FillColor>-3308225</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1638546995044</Id>
+					<Name><![CDATA[Trip_timer]]></Name>
+					<X>1490</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1638546995014">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995046</Id>
+					<Name><![CDATA[transition16]]></Name>
+					<X>1460</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995014" Target="1638546995016" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["trip countdown"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995048</Id>
+					<Name><![CDATA[transition18]]></Name>
+					<X>1520</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-60</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995016" Target="1638546995014" Trigger="timeout">
+						<Action><![CDATA[if (trip_type == "day") { 
+	send("go on daytrip",this);
+	}
+if (trip_type == "work") {	
+		send("go to work",this); 
+		}
+if (trip_type == "weekend") {
+	send("go on weekend trip",this);
+	}]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Next_trip_countdown]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1638546995050</Id>
+					<Name><![CDATA[Trip_chart]]></Name>
+					<X>1030</X><Y>480</Y>
+					<Label><X>-25</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>30</Y></Point>
+					</Points>
+					<Properties Target="1638546995018">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995052</Id>
+					<Name><![CDATA[StartPreparing]]></Name>
+					<X>760</X><Y>550</Y>
+					<Label><X>5</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>120</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995018" Target="1638546995022" Trigger="message">
+						<Action><![CDATA[Trip_distance = 1 * dailyCommutingDistanceDistribution();
+Trip_duration = uniform(8,9);
+Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[getHourOfDay() == StartWorkTime]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["go to work"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995054</Id>
+					<Name><![CDATA[transition8]]></Name>
+					<X>760</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1638546995022" Target="1638546995020" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995056</Id>
+					<Name><![CDATA[OnderwegNaarHuis]]></Name>
+					<X>820</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995020" Target="1638546995026" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Trip_duration]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995058</Id>
+					<Name><![CDATA[transition9]]></Name>
+					<X>930</X><Y>550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>120</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995018" Target="1638546995030" Trigger="timeout">
+						<Action><![CDATA[Trip_distance = 1 * Evening_trip_distance();
+Trip_duration = uniform(0.5,3);
+Driving_time = Trip_distance / Avg_driving_speed;
+]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Evening_trip_timer]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[false]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["go on evening trip"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995060</Id>
+					<Name><![CDATA[transition10]]></Name>
+					<X>990</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995024" Target="1638546995028" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Trip_duration]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995062</Id>
+					<Name><![CDATA[Arriving_home]]></Name>
+					<X>820</X><Y>630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-80</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995026" Target="1638546995018" Trigger="timeout">
+						<Action><![CDATA[double z = uniform(0,1);
+//traceln(getName() + " " + z + " <- x, prob= " + (z < Evening_trip_prob));
+if (z < Evening_trip_prob){
+	Evening_trip_timer = Evening_trip_departure();
+	Duration_charging_session = 0;
+}
+else {
+	Evening_trip_timer = 1d/0d;
+	if (!(getDayOfWeek() == FRIDAY)){
+		double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
+		if (x < 0){
+			Duration_charging_session = (24*60 + x)/60;
+		}
+		else {
+			Duration_charging_session = x/60;
+		}
+	}
+	else {
+		double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), 6.9*60)/60;
+		if (x < 0){
+			Duration_charging_session = (24*60 + x)/60;
+		}
+		else {
+			Duration_charging_session = x/60;
+		}	
+	}
+}]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995064</Id>
+					<Name><![CDATA[transition11]]></Name>
+					<X>990</X><Y>630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-80</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995028" Target="1638546995018" Trigger="timeout">
+						<Action><![CDATA[Evening_trip_timer = 1d/0d;
+if (!(getDayOfWeek() == FRIDAY)){
+	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
+	if (x < 0){
+		Duration_charging_session = (24*60 + x)/60;
+	}
+	else {
+		Duration_charging_session = x/60;
+	}
+}
+else {
+	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), 6.9*60)/60;
+	if (x < 0){
+		Duration_charging_session = (24*60 + x)/60;
+	}
+	else {
+		Duration_charging_session = x/60;
+	}	
+}
+]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995066</Id>
+					<Name><![CDATA[transition12]]></Name>
+					<X>930</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1638546995030" Target="1638546995024" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995068</Id>
+					<Name><![CDATA[transition13]]></Name>
+					<X>1100</X><Y>550</Y>
+					<Label><X>-40</X><Y>15</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>120</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995018" Target="1638546995032" Trigger="message">
+						<Action><![CDATA[Trip_distance = 1 * Weekend_trip_distance();
+Trip_duration = uniform(3,8);
+Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Weekend_trip_timer]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["go on weekend trip"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995070</Id>
+					<Name><![CDATA[transition14]]></Name>
+					<X>1100</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1638546995032" Target="1638546995036" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995072</Id>
+					<Name><![CDATA[transition15]]></Name>
+					<X>1160</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995036" Target="1638546995034" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Trip_duration]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995074</Id>
+					<Name><![CDATA[transition17]]></Name>
+					<X>1160</X><Y>630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-80</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995034" Target="1638546995018" Trigger="timeout">
+						<Action><![CDATA[Evening_trip_timer = 1d/0d;
+if (!(getDayOfWeek() == SUNDAY)){
+	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
+	if (x < 0){
+		Duration_charging_session = (24*60 + x)/60;
+	}
+	else {
+		Duration_charging_session = x/60;
+	}
+}
+
+else {
+	double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), 6.9*60)/60;
+	if (x < 0){
+		Duration_charging_session = (24*60 + x)/60;
+	}
+	else {
+		Duration_charging_session = x/60;
+	}		
+}
+
+
+]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995076</Id>
+					<Name><![CDATA[transition19]]></Name>
+					<X>1270</X><Y>550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>120</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995018" Target="1638546995038" Trigger="message">
+						<Action><![CDATA[Trip_distance = 1 * Day_trip_distance();
+Trip_duration = uniform(0.5,3.5);
+Driving_time = Trip_distance / Avg_driving_speed;]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[false]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["go on daytrip"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995078</Id>
+					<Name><![CDATA[transition20]]></Name>
+					<X>1270</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1638546995038" Target="1638546995042" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995080</Id>
+					<Name><![CDATA[transition21]]></Name>
+					<X>1330</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
+					</Points>
+					<IconOffset>30.0</IconOffset>
+					<Properties Source="1638546995042" Target="1638546995040" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Trip_duration]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1638546995082</Id>
+					<Name><![CDATA[transition22]]></Name>
+					<X>1330</X><Y>630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-80</Y></Point>
+					</Points>
+					<IconOffset>40.0</IconOffset>
+					<Properties Source="1638546995040" Target="1638546995018" Trigger="timeout">
+						<Action><![CDATA[if (uniform(0,1) < Evening_trip_prob){
+	Evening_trip_timer = Evening_trip_departure();
+	Duration_charging_session = 0;
+}
+else {
+	Evening_trip_timer = 1d/0d;
+	if (!(getDayOfWeek() == FRIDAY)){
+		double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), Start_work_time*60)/60;
+		if (x < 0){
+			Duration_charging_session = (24*60 + x)/60;
+		}
+		else {
+			Duration_charging_session = x/60;
+		}	
+	}
+	else {
+		double x = differenceInCalendarUnits(MINUTE, getHourOfDay() * 60 + getMinute(), 6.9*60)/60;
+		if (x < 0){
+			Duration_charging_session = (24*60 + x)/60;
+		}
+		else {
+			Duration_charging_session = x/60;
+		}	
+	}
+}]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[Driving_time]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+			</StatechartElements>
+			<ActionChartElements>
+				<ActionChartElement Class="ActionChart">
+					<Id>1638546995084</Id>
+					<Name><![CDATA[Charge]]></Name>
+					<X>1610</X><Y>220</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1638546995085" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1638546995085</Id>
+					<Name><![CDATA[code2]]></Name>
+					<X>1610</X><Y>270</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30" Previous="1638546995084" Next="1638546995086" >
+						<FillColor/>
+						<Code><![CDATA[if (SOC < batteryCapacity && Connected_to_charger) {
+	Charging = true;
+	Charging_load = Current_charging_speed/60;
+	SOC = SOC + Current_charging_speed /60;
+}
+else {
+	Charging = false;
+	Charging_load = 0.0;
+}
+
+
+Hourly_charge = Hourly_charge + Charging_load;
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1638546995086</Id>
+					<Name><![CDATA[returnStatement2]]></Name>
+					<X>1610</X><Y>320</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1638546995085" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+			</ActionChartElements>
+			<Events>
+				<Event>
+					<Id>1638546994962</Id>
+					<Name><![CDATA[Trigger_trips]]></Name>
+					<X>1350</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1524556800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (time() == 0){
+	if (!(getDayOfWeek() == SATURDAY || getDayOfWeek() == SUNDAY)) {
+		if (Working == true) {
+			Next_trip_countdown = Start_work_time + uniform(0,0.5);
+   			Trip_duration = uniform(8,9);
+   			Trip_distance = dailyCommutingDistanceDistribution();
+   		}
+		else {
+   			Next_trip_countdown = Day_trip_departure();
+   			Trip_duration = uniform(0.5,3.5);
+   			Trip_distance = Day_trip_distance();
+   		}
+   	}
+   	else {
+   		Next_trip_countdown = Weekend_trip_departure();
+   		Trip_duration = uniform(3,8);
+   		Trip_distance = Weekend_trip_distance();
+   	}
+	
+	
+	setSOC = true;
+	for (int i=0; i<24; i++){
+		chargeSchedule.add(0.0);
+		Next_trip_countdown = Start_work_time + uniform(0,0.5);
+		if (i > Next_trip_countdown + Trip_duration){
+			if (setSOC == true){
+				SOC = SOC - Trip_distance * fuelEfficiency;
+				setSOC = false;
+			}
+			if (SOC + chargingPower > batteryCapacity){
+				chargeSchedule.set(i, batteryCapacity - SOC);
+				SOC = batteryCapacity;
+			}
+			else {
+				chargeSchedule.set(i, chargingPower);
+				SOC += chargingPower;
+			}
+		}
+	}
+}
+				
+				
+		
+		
+if (!(getDayOfWeek() == SUNDAY || getDayOfWeek() == MONDAY)) {
+	if (Working == true) {
+		Next_trip_countdown = Start_work_time + uniform(0,0.5);
+   		trip_type = "work";
+   		send("trip countdown",this);
+   	}
+   	else {
+   		if (uniform(0,1) < Day_trip_prob) {
+   			Next_trip_countdown = Day_trip_departure();
+   			trip_type = "day";
+   			send("trip countdown", this);
+   		}
+   	}
+}
+else {
+	if (uniform(0,1) < Weekend_trip_prob){
+		Next_trip_countdown = Weekend_trip_departure();
+		trip_type = "weekend";
+		send("trip countdown",this);
+	}
+}]]></Action>
+				</Event>
+				<Event>
+					<Id>1638546994969</Id>
+					<Name><![CDATA[Trigger_charge]]></Name>
+					<X>1530</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1529481600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[Charge();]]></Action>
+					<Logging>false</Logging>
+				</Event>
+			</Events>
+			<CustomDistributions>
+				<CustomDistribution>
+					<Id>1638546994912</Id>
+					<Name><![CDATA[Evening_trip_distance]]></Name>
+					<X>240</X><Y>140</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
+					<Argument><![CDATA[30.0]]></Argument>
+					<Argument><![CDATA[35.0]]></Argument>
+					<Argument><![CDATA[40.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
+					<Argument><![CDATA[30.0]]></Argument>
+					<Argument><![CDATA[35.0]]></Argument>
+					<Argument><![CDATA[40.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994918</Id>
+					<Name><![CDATA[Evening_trip_departure]]></Name>
+					<Description><![CDATA[Amount of time spend at home after coming home from a work trip]]></Description>
+					<X>240</X><Y>170</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[0.1]]></Argument>
+					<Argument><![CDATA[0.5]]></Argument>
+					<Argument><![CDATA[1.0]]></Argument>
+					<Argument><![CDATA[1.5]]></Argument>
+					<Argument><![CDATA[2.0]]></Argument>
+					<Argument><![CDATA[2.5]]></Argument>
+					<Argument><![CDATA[3.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.3]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.6]]></Value>
+					<Value><![CDATA[0.5]]></Value>
+					<Value><![CDATA[0.2]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[0.1]]></Argument>
+					<Argument><![CDATA[0.5]]></Argument>
+					<Argument><![CDATA[1.0]]></Argument>
+					<Argument><![CDATA[1.5]]></Argument>
+					<Argument><![CDATA[2.0]]></Argument>
+					<Argument><![CDATA[2.5]]></Argument>
+					<Argument><![CDATA[3.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994927</Id>
+					<Name><![CDATA[Weekend_trip_distance]]></Name>
+					<X>240</X><Y>200</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[25.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>
+					<Argument><![CDATA[100.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[25.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>
+					<Argument><![CDATA[100.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994935</Id>
+					<Name><![CDATA[Weekend_trip_departure]]></Name>
+					<X>240</X><Y>230</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[7.0]]></Argument>
+					<Argument><![CDATA[9.0]]></Argument>
+					<Argument><![CDATA[11.0]]></Argument>
+					<Argument><![CDATA[13.0]]></Argument>
+					<Argument><![CDATA[15.0]]></Argument>
+					<Argument><![CDATA[18.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[7.0]]></Argument>
+					<Argument><![CDATA[9.0]]></Argument>
+					<Argument><![CDATA[11.0]]></Argument>
+					<Argument><![CDATA[13.0]]></Argument>
+					<Argument><![CDATA[15.0]]></Argument>
+					<Argument><![CDATA[18.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994943</Id>
+					<Name><![CDATA[Day_trip_distance]]></Name>
+					<X>240</X><Y>260</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[60.0]]></Argument>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[60.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994951</Id>
+					<Name><![CDATA[Day_trip_departure]]></Name>
+					<X>240</X><Y>290</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[8.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[14.0]]></Argument>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.5]]></Value>
+					<Value><![CDATA[0.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[8.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[14.0]]></Argument>				
+				</CustomDistribution>
+				<CustomDistribution>
+					<Id>1638546994958</Id>
+					<Name><![CDATA[dailyCommutingDistanceDistribution]]></Name>
+					<X>240</X><Y>320</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>NONE</InterpolationMethod>
+					<Type>CONTINUOUS</Type>
+					<DefinitionType>HISTOGRAM</DefinitionType>
+					<Static>false</Static>
+					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
+					<RangesQuery>
+					<TableReference>
+					</TableReference>
+						<StartColumnReference>
+						</StartColumnReference>
+						<EndColumnReference>
+						</EndColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</RangesQuery>
+					<FrequencyQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
+					</FrequencyQuery>
+					<SampleQuery>
+					<TableReference>
+					</TableReference>
+						<ValueColumnReference>
+						</ValueColumnReference>
+					</SampleQuery>
+					<OptionQuery>
+					<TableReference>
+					</TableReference>
+						<OptionColumnReference>
+						</OptionColumnReference>
+						<NumberOfObservationColumnReference>
+						</NumberOfObservationColumnReference>
+					</OptionQuery>					
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[1.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[15.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
+					<Argument><![CDATA[25.0]]></Argument>
+					<Argument><![CDATA[35.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>
+					<Argument><![CDATA[60.0]]></Argument>
+					<Argument><![CDATA[80.0]]></Argument>
+					<Argument><![CDATA[100.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.0]]></Value>
+					<Value><![CDATA[0.5]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[2.0]]></Value>
+					<Value><![CDATA[2.0]]></Value>
+					<Value><![CDATA[2.0]]></Value>
+					<Value><![CDATA[1.0]]></Value>
+					<Value><![CDATA[0.4]]></Value>
+					<Value><![CDATA[0.1]]></Value>
+					<Value><![CDATA[0.02]]></Value>
+					<Value><![CDATA[2.0]]></Value>					
+					<OptionListID><![CDATA[0]]></OptionListID>
+					<OptionValues>				
+					</OptionValues>
+					<Argument><![CDATA[0.0]]></Argument>
+					<Argument><![CDATA[1.0]]></Argument>
+					<Argument><![CDATA[5.0]]></Argument>
+					<Argument><![CDATA[10.0]]></Argument>
+					<Argument><![CDATA[15.0]]></Argument>
+					<Argument><![CDATA[20.0]]></Argument>
+					<Argument><![CDATA[25.0]]></Argument>
+					<Argument><![CDATA[35.0]]></Argument>
+					<Argument><![CDATA[50.0]]></Argument>
+					<Argument><![CDATA[60.0]]></Argument>
+					<Argument><![CDATA[80.0]]></Argument>
+					<Argument><![CDATA[100.0]]></Argument>				
+				</CustomDistribution>		
+			</CustomDistributions>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1638546915635</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<StatechartReference>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[ElectricCar]]></ClassName>
+						<ItemName><![CDATA[Trip_timer]]></ItemName>
+					</StatechartReference>
+					<StatechartReference>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[ElectricCar]]></ClassName>
+						<ItemName><![CDATA[Trip_chart]]></ItemName>
+					</StatechartReference>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1638546915700</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1638546915639</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<Figure3D>
+					<Id>1638546915648</Id>
+					<Name><![CDATA[electricCarVisual]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>0</X><Y>0</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<ResourceReference>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[3d/car.dae]]></ClassName>
+					</ResourceReference>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[Material__1__Surf]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__2__Surf]]></Name>
+							<OriginalColor>-3403008</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__4__Surf]]></Name>
+							<OriginalColor>-13138595</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__3__Surf]]></Name>
+							<OriginalColor>-11908534</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>YZX_AXIS_ORDER</AxisOrder>
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
@@ -62103,7 +64820,7 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 			<TableImportSettings>
 				<TableReference>
 					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
-					<ClassName><![CDATA[vehicle_engine_types]]></ClassName>
+					<ClassName><![CDATA[vehicle_fuel_types]]></ClassName>
 				</TableReference>
 				<ConnectionIndex>4</ConnectionIndex>
 				<ExternalTableName><![CDATA["Vehicle engine types"]]></ExternalTableName>
