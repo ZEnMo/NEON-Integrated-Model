@@ -9451,6 +9451,9 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[maxChargingPower]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -9529,6 +9532,42 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["car"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[technology]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[engineType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[carEngineDistribution();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shareOfTotal]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kmPerYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgKmPerDay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhKm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgTankSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -9607,6 +9646,42 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["truck"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[technology]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[engineType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[truckEngineDistribution();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shareOfTotal]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kmPerYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgKmPerDay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhKm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgTankSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -9685,6 +9760,42 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["tractorTrailer"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[technology]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[engineType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[tractorTrailerEngineDistribution();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shareOfTotal]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kmPerYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgKmPerDay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhKm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgTankSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -9763,6 +9874,42 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["specialVehicle"]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[technology]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[engineType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[specialVehicleEngineDistribution();]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[shareOfTotal]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kmPerYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgKmPerDay]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[kWhKm]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgTankSize]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxChargingPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -9870,6 +10017,12 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[avgBatteryCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA["bus"]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -59847,7 +60000,9 @@ main.iterator = 0;
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_engine_types)
+			<StartupCode><![CDATA[//engineType = main.vanEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
 	.where(vehicle_engine_types.type.eq("van"))
 	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
 	.firstResult(vehicle_engine_types.km_per_year);
@@ -60106,7 +60261,9 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_engine_types)
+			<StartupCode><![CDATA[//engineType = main.carEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
 	.where(vehicle_engine_types.type.eq("car"))
 	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
 	.firstResult(vehicle_engine_types.km_per_year);
@@ -60369,7 +60526,9 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_engine_types)
+			<StartupCode><![CDATA[//engineType = main.truckEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
 	.where(vehicle_engine_types.type.eq("truck"))
 	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
 	.firstResult(vehicle_engine_types.km_per_year);
@@ -60640,7 +60799,9 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_engine_types)
+			<StartupCode><![CDATA[//engineType = main.tractorTrailerEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
 	.where(vehicle_engine_types.type.eq("tractorTrailer"))
 	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
 	.firstResult(vehicle_engine_types.km_per_year);
@@ -60899,6 +61060,39 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
+			<StartupCode><![CDATA[//engineType = main.specialVehicleEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.km_per_year);
+	
+avgKmPerDay = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.avg_km_per_day);
+
+kWhKm = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.k_wh_km);
+
+avgTankSize = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.avg_tank_size);
+
+avgBatteryCapacity = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.avg_battery_capacity_k_wh);
+	
+maxChargingPower = (double) selectFrom(vehicle_engine_types)
+	.where(vehicle_engine_types.type.eq("specialVehicle"))
+	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
+	.firstResult(vehicle_engine_types.max_charging_power);
+	
+	]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1638452314297</Id>
@@ -61493,7 +61687,9 @@ maxChargingPower = (double) selectFrom(vehicle_engine_types)
 					<Name><![CDATA[avgBatteryCapacity]]></Name>
 				</Parameter>
 			</Parameters>
-			<StartupCode><![CDATA[kmPerYear = (double) selectFrom(vehicle_engine_types)
+			<StartupCode><![CDATA[//engineType = main.busEngineDistribution();
+
+kmPerYear = (double) selectFrom(vehicle_engine_types)
 	.where(vehicle_engine_types.type.eq("bus"))
 	.where(vehicle_engine_types.fuel.eq(engineType.toString()))
 	.firstResult(vehicle_engine_types.km_per_year);
