@@ -1796,7 +1796,7 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1638804832779</Id>
-					<Name><![CDATA[electricitySupply]]></Name>
+					<Name><![CDATA[onshoreWindElectricitySupply]]></Name>
 					<X>950</X><Y>5085</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1808,7 +1808,7 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1638804832781</Id>
-					<Name><![CDATA[industryHourlyElectricityDemand1]]></Name>
+					<Name><![CDATA[offshoreWindElectricitySupply]]></Name>
 					<X>950</X><Y>5105</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1820,7 +1820,7 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1638804832783</Id>
-					<Name><![CDATA[agricultureHourlyElectricityDemand1]]></Name>
+					<Name><![CDATA[rooftopPVElectricitySupply]]></Name>
 					<X>950</X><Y>5125</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1832,20 +1832,8 @@
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1638804832785</Id>
-					<Name><![CDATA[transportHourlyElectricityDemand1]]></Name>
+					<Name><![CDATA[utilityScalePVElectricitySupply]]></Name>
 					<X>950</X><Y>5145</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1638804832787</Id>
-					<Name><![CDATA[hourlyElectricityDemand1]]></Name>
-					<X>950</X><Y>5165</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1857,13 +1845,61 @@
 				<Variable Class="PlainVariable">
 					<Id>1638807675285</Id>
 					<Name><![CDATA[rankInMeritOrder]]></Name>
-					<X>1450</X><Y>4150</Y>
+					<X>1170</X><Y>4370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639689913597</Id>
+					<Name><![CDATA[hourlyWindCurtailed]]></Name>
+					<X>950</X><Y>5260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639689913599</Id>
+					<Name><![CDATA[hourlyPVCurtailed]]></Name>
+					<X>950</X><Y>5280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639689913601</Id>
+					<Name><![CDATA[hourlyCurtailed]]></Name>
+					<X>950</X><Y>5300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639690682029</Id>
+					<Name><![CDATA[currentTime]]></Name>
+					<X>950</X><Y>5010</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -2769,54 +2805,9 @@
 
 				</Variable>
 				<Variable Class="CollectionVariable">
-					<Id>1638804832747</Id>
-					<Name><![CDATA[industryHourlyElectricityDemandCollection1]]></Name>
-					<X>1250</X><Y>5105</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
-						<ElementClass><![CDATA[Double]]></ElementClass>
-						<ValueElementClass><![CDATA[String]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
-					<Id>1638804832753</Id>
-					<Name><![CDATA[builtEnvironmentHourlyElectricityDemandCollection1]]></Name>
-					<X>1250</X><Y>5085</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
-						<ElementClass><![CDATA[Double]]></ElementClass>
-						<ValueElementClass><![CDATA[String]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
-					<Id>1638804832760</Id>
-					<Name><![CDATA[agricultureHourlyElectricityDemandCollection1]]></Name>
-					<X>1250</X><Y>5125</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
-						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
-						<ElementClass><![CDATA[Double]]></ElementClass>
-						<ValueElementClass><![CDATA[String]]></ValueElementClass>
-					</Properties>
-
-				</Variable>
-				<Variable Class="CollectionVariable">
 					<Id>1638804832766</Id>
 					<Name><![CDATA[hourlyElectricityImbalanceCollection]]></Name>
-					<X>1250</X><Y>5190</Y>
+					<X>1250</X><Y>5170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2831,13 +2822,118 @@
 				<Variable Class="CollectionVariable">
 					<Id>1638804832773</Id>
 					<Name><![CDATA[hourlyElectricitySupplyCollection]]></Name>
-					<X>1250</X><Y>5165</Y>
+					<X>1250</X><Y>5150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
 						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689369251</Id>
+					<Name><![CDATA[offshoreWindElectricitySupplyCollection]]></Name>
+					<X>1250</X><Y>5095</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689369263</Id>
+					<Name><![CDATA[onshoreWindElectricitySupplyCollection]]></Name>
+					<X>1250</X><Y>5075</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689417047</Id>
+					<Name><![CDATA[pvElectricitySupplyCollection]]></Name>
+					<X>1250</X><Y>5115</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689913564</Id>
+					<Name><![CDATA[hourlyCurtailmentRequiredCollection]]></Name>
+					<X>1250</X><Y>5310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689913572</Id>
+					<Name><![CDATA[hourlyPVCurtailmentCollection]]></Name>
+					<X>1250</X><Y>5270</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689913581</Id>
+					<Name><![CDATA[hourlyWindCurtailmentCollection]]></Name>
+					<X>1250</X><Y>5250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639689913589</Id>
+					<Name><![CDATA[hourlyCurtailmentCollection]]></Name>
+					<X>1250</X><Y>5290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
 						<ElementClass><![CDATA[Double]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 					</Properties>
@@ -3309,9 +3405,6 @@ industryElectricityDemand = industryElectricityDemandCollection.get(0);
 //Agriculture
 agricultureElectricityDemand = agricultureElectricityDemandCollection.get(0);
 
-//Transport
-transportElectricityDemand = transportElectricityDemandCollection.get(0);
-
 //Total
 electricityDemand = electricityDemandCollection.get(0);
 
@@ -3333,6 +3426,119 @@ electricityDemand = electricityDemandCollection.get(0);
 					</Properties>
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
+					<Id>1639689862241</Id>
+					<Name><![CDATA[code9]]></Name>
+					<X>1230</X><Y>4195</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Curtailment]]></Comment>
+					<Properties Width="180" Height="30" Previous="1638799920730" Next="1638799959608" >
+						<FillColor/>
+						<Code><![CDATA[
+
+//----CURTAILMENT----
+//Only in case of energy surplus after storage and export
+if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	iterator = 0;
+	currentTime = time;
+	hourlyCurtailmentCollection.clear();
+	hourlyPVCurtailmentCollection.clear();
+	hourlyWindCurtailmentCollection.clear();
+	
+	for (WindFarm x : windFarms){
+		x.curtailmentCollection.clear();
+	}
+	for (PVSystem x : pVSystems){
+		x.curtailmentCollection.clear();
+	}
+	
+	for (int i=0; i<24; i++){	
+		time = currentTime + i;
+		//traceln(time + " Time for export and curtailment calculations");
+		hourlyCurtailed = 0.0;
+		hourlyPVCurtailed = 0.0;
+		hourlyWindCurtailed = 0.0;
+
+		for (WindFarm x : windFarms){
+			x.curtailmentCollection.add(0.0);
+			x.currentlyCurtailing = false;
+		}
+		for (PVSystem x : pVSystems){	
+			x.curtailmentCollection.add(0.0);
+			x.currentlyCurtailing = false;	
+		}
+		
+		
+		if (hourlyCurtailmentRequiredCollection.get(i) > 0){
+		//Curtailment required, find PV or Wind power to curtail
+		
+			while(hourlyCurtailmentRequiredCollection.get(i) > hourlyCurtailed && count(pVSystems, p->p.electricitySupplyWithoutCurtailmentCollection.get(iterator) > 0 && p.currentlyCurtailing == false) > 0){
+				PVSystem pvToCurtail = randomWhere(pVSystems, p -> p.electricitySupplyWithoutCurtailmentCollection.get(iterator) > 0 && p.currentlyCurtailing == false);
+				
+				if (pvToCurtail.electricitySupplyWithoutCurtailmentCollection.get(iterator) > (hourlyCurtailmentRequiredCollection.get(i) - hourlyCurtailed)){
+					pvToCurtail.curtailmentCollection.set(iterator, hourlyCurtailmentRequiredCollection.get(i) - hourlyCurtailed);
+					pvToCurtail.currentlyCurtailing = true;
+				}
+				else {
+					pvToCurtail.curtailmentCollection.set(iterator, pvToCurtail.electricitySupplyWithoutCurtailmentCollection.get(iterator));
+					pvToCurtail.currentlyCurtailing = true;
+				}
+				
+				hourlyCurtailed += pvToCurtail.curtailmentCollection.get(iterator);
+				hourlyPVCurtailed += pvToCurtail.curtailmentCollection.get(iterator);
+			}
+			
+			while(hourlyCurtailmentRequiredCollection.get(i) > hourlyCurtailed && count(windFarms, p->p.electricitySupplyWithoutCurtailmentCollection.get(iterator) > 0 && p.currentlyCurtailing == false) > 0){
+				WindFarm windToCurtail = randomWhere(windFarms, p -> p.electricitySupplyWithoutCurtailmentCollection.get(iterator) > 0 && p.currentlyCurtailing == false);
+				
+				if (windToCurtail.electricitySupplyWithoutCurtailmentCollection.get(iterator) > (hourlyCurtailmentRequiredCollection.get(i) - hourlyCurtailed)){
+					windToCurtail.curtailmentCollection.set(iterator, hourlyCurtailmentRequiredCollection.get(i) - hourlyCurtailed);
+					windToCurtail.currentlyCurtailing = true;
+				}
+				else {
+					windToCurtail.curtailmentCollection.set(iterator, windToCurtail.electricitySupplyWithoutCurtailmentCollection.get(iterator));
+					windToCurtail.currentlyCurtailing = true;
+				}
+				
+				hourlyCurtailed += windToCurtail.curtailmentCollection.get(iterator);
+				hourlyWindCurtailed += windToCurtail.curtailmentCollection.get(iterator);
+			}			
+				
+		}
+		
+		hourlyCurtailmentCollection.add(hourlyCurtailed);
+		hourlyPVCurtailmentCollection.add(hourlyPVCurtailed);
+		hourlyWindCurtailmentCollection.add(hourlyWindCurtailed);
+		
+		for (WindFarm x : windFarms){
+			x.electricitySupplyCollection.add(x.electricitySupplyWithoutCurtailmentCollection.get(iterator) - x.curtailmentCollection.get(iterator));
+		}
+		for (PVSystem x : pVSystems){	
+			x.electricitySupplyCollection.add(x.electricitySupplyWithoutCurtailmentCollection.get(iterator) - x.curtailmentCollection.get(iterator));
+		}
+		
+		
+		hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) - hourlyCurtailmentCollection.get(i));
+		iterator++;
+	}
+	time = currentTime;
+}	
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1638799959608</Id>
+					<Name><![CDATA[returnStatement1]]></Name>
+					<X>1230</X><Y>4245</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1639689862241" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
 					<Id>1638799920730</Id>
 					<Name><![CDATA[code31]]></Name>
 					<X>1230</X><Y>4120</Y>
@@ -3340,7 +3546,7 @@ electricityDemand = electricityDemandCollection.get(0);
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Comment><![CDATA[Volatile (intermittent) supply]]></Comment>
-					<Properties Width="180" Height="55" Previous="1638799957663" Next="1638799959608" >
+					<Properties Width="180" Height="55" Previous="1638799957663" Next="1639689862241" >
 						<FillColor/>
 						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
 
@@ -3417,14 +3623,46 @@ if (getHourOfDay() == 0 && hourlyElectricityDemandCollection.size() == 24){
 ]]></Code>
 					</Properties>	
 				</ActionChartElement>
-				<ActionChartElement Class="Return">
-					<Id>1638799959608</Id>
-					<Name><![CDATA[returnStatement1]]></Name>
-					<X>1230</X><Y>4195</Y>
+				<ActionChartElement Class="ActionChart">
+					<Id>1639689608326</Id>
+					<Name><![CDATA[currentElectricitySupply]]></Name>
+					<X>1520</X><Y>4070</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1638799920730" >
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1639689619044" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639689619044</Id>
+					<Name><![CDATA[code3]]></Name>
+					<X>1520</X><Y>4120</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Volatile (intermittent) supply]]></Comment>
+					<Properties Width="180" Height="60" Previous="1639689608326" Next="1639689610258" >
+						<FillColor/>
+						<Code><![CDATA[//----WIND----
+onshoreWindElectricitySupply = onshoreWindElectricitySupplyCollection.get(getHourOfDay());
+offshoreWindElectricitySupply = offshoreWindElectricitySupplyCollection.get(getHourOfDay());
+
+//----SOLAR----
+//rooftopPVElectricitySupply]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1639689610258</Id>
+					<Name><![CDATA[returnStatement3]]></Name>
+					<X>1520</X><Y>4200</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1639689619044" >
 						<FillColor/>
 					</Properties>	
 				</ActionChartElement>
@@ -5275,6 +5513,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -5749,6 +6017,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[energyDensityCoal]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -6221,6 +6519,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -6656,6 +6984,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -7116,6 +7474,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -7546,6 +7934,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[terrainRoughnessExponentOnshore]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -7957,6 +8375,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
 						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
+						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -8252,6 +8700,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -8722,6 +9200,36 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[gppdIdnr]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electricEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[thermalEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelProductionEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[FOMannualCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[VOMMWhCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[investmentCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installationCosts]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[lifetime]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[currentFLH]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[availabilityFactor]]></Name>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
@@ -11704,7 +12212,7 @@ demand]]></Text>
 					<Id>1636648521789</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-29696</Color>
-					<Expression2><![CDATA[transportElectricityDemand]]></Expression2>
+					<Expression2><![CDATA[transportHourlyElectricityDemand]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>  
 							<Title><![CDATA[Transport]]></Title>
 					</DatasetExpression>
@@ -12481,6 +12989,48 @@ demand]]></Text>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
 					<Text><![CDATA[Hourly electricity supply]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>16</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1639689913550</Id>
+					<Name><![CDATA[text43]]></Name>
+					<X>940</X><Y>5210</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Hourly electricity curtailment]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>16</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1639689913553</Id>
+					<Name><![CDATA[text44]]></Name>
+					<X>1240</X><Y>5210</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Day-ahead hourly electricity curtailment]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>16</Size>
@@ -54786,7 +55336,7 @@ currentFLH = (double) selectFrom(general_technologies)
 				<Variable Class="PlainVariable">
 					<Id>1638811065195</Id>
 					<Name><![CDATA[solarIrradiance]]></Name>
-					<X>1140</X><Y>240</Y>
+					<X>1140</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54795,10 +55345,37 @@ currentFLH = (double) selectFrom(general_technologies)
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639690390606</Id>
+					<Name><![CDATA[currentlyCurtailing]]></Name>
+					<X>1140</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1638807301282</Id>
 					<Name><![CDATA[electricitySupplyWithoutCurtailmentCollection]]></Name>
 					<X>1140</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639690100999</Id>
+					<Name><![CDATA[curtailmentCollection]]></Name>
+					<X>1140</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -60964,7 +61541,7 @@ if (builtEnvironmentHourlyElectricityDemandCollection.size() > 24){
 						<Code><![CDATA[//To make charge schedules 24 hour arrays are required. Daily charge schedule is thus updated on a daily basis
 
 if(time() >= 24){
-	passengerVehiclesHourlyElectricityDemandCollection.add(sum(main.electricCars, x->x.chargeSchedule.get(0) * cars/main.carPopulationSize));
+	passengerVehiclesHourlyElectricityDemandCollection.add(sum(main.electricCars, x->x.chargeSchedule.get(0) * cars/main.carPopulationSize / 1000));
 	transportHourlyElectricityDemandCollection.add(passengerVehiclesHourlyElectricityDemandCollection.get(0));
 }
 else {
