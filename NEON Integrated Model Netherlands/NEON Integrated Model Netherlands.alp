@@ -1845,7 +1845,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1638807675285</Id>
 					<Name><![CDATA[rankInMeritOrder]]></Name>
-					<X>1170</X><Y>4370</Y>
+					<X>1200</X><Y>4020</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2939,6 +2939,126 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099447586</Id>
+					<Name><![CDATA[fuelCellElectricityProductionCollection]]></Name>
+					<X>2360</X><Y>5530</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099466434</Id>
+					<Name><![CDATA[fuelCellHydrogenConsumptionSchedule]]></Name>
+					<X>2360</X><Y>5550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099661290</Id>
+					<Name><![CDATA[electrolyzerElectricityDemandCollection]]></Name>
+					<X>2360</X><Y>5490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099661298</Id>
+					<Name><![CDATA[electrolyzerelectrolyzerHydrogenSupplyCollection]]></Name>
+					<X>2360</X><Y>5510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099708776</Id>
+					<Name><![CDATA[batteryDischargeSchedule]]></Name>
+					<X>2360</X><Y>5620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099708786</Id>
+					<Name><![CDATA[batteryStorageSchedule]]></Name>
+					<X>2360</X><Y>5640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099708792</Id>
+					<Name><![CDATA[hydrogenStorageSchedule]]></Name>
+					<X>2360</X><Y>5570</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099708798</Id>
+					<Name><![CDATA[batteryChargeSchedule]]></Name>
+					<X>2360</X><Y>5600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<ActionChartElements>
 				<ActionChartElement Class="ActionChart">
@@ -3426,14 +3546,75 @@ electricityDemand = electricityDemandCollection.get(0);
 					</Properties>
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
+					<Id>1640111659248</Id>
+					<Name><![CDATA[code20]]></Name>
+					<X>1230</X><Y>4245</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Battery storage schedules]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745690895" Next="1639689862241" >
+						<FillColor/>
+						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
+
+//Day ahead market is a merit order based spot market to trade energy based on supply and demand at a specific price.
+//Day ahead market is based on marginal energy cost
+//Energy calculations are split up amongst Volatile sources, storage, and dispatchable merit-order sources
+
+
+
+
+
+//------BATTERIES------
+//New schedule and collection on hour 0 of each day
+if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	//traceln("Battery calculation");
+	
+	iterator = 0;
+	batteryChargeSchedule.clear();
+		
+	for (Battery b : batteries){
+		if (b.operational == true){
+			b.makeBatteryChargeSchedule();
+		}
+		else {
+			b.batteryChargeSchedule.clear();
+			for (iterator = 0; iterator < 24; iterator++){
+				b.batteryChargeSchedule.add(0.0);
+			}
+			iterator = 0;
+		}
+	}
+	
+
+	for (int i=0; i < 24; i++){
+		batteryChargeSchedule.add(sum(batteries, x->x.batteryChargeSchedule.get(iterator)));
+				
+		if (batteryChargeSchedule.get(i) > 0){
+			hourlyElectricityDemandCollection.set(i, (hourlyElectricityDemandCollection.get(i) + batteryChargeSchedule.get(i)));
+			//dayAheadImbalanceCollection.set(i, (dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i)));
+		}
+		else if (batteryChargeSchedule.get(i) < 0){
+			hourlyElectricitySupplyCollection.set(i, (hourlyElectricitySupplyCollection.get(i) + (-batteryChargeSchedule.get(i))));
+			//dayAheadImbalanceCollection.set(i, (dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i)));
+		}
+		iterator++;
+	}
+}	
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
 					<Id>1639689862241</Id>
 					<Name><![CDATA[code9]]></Name>
-					<X>1230</X><Y>4195</Y>
+					<X>1230</X><Y>4295</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Comment><![CDATA[Curtailment]]></Comment>
-					<Properties Width="180" Height="30" Previous="1638799920730" Next="1638799959608" >
+					<Properties Width="180" Height="30" Previous="1640111659248" Next="1638799959608" >
 						<FillColor/>
 						<Code><![CDATA[
 
@@ -3530,12 +3711,39 @@ if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
 				<ActionChartElement Class="Return">
 					<Id>1638799959608</Id>
 					<Name><![CDATA[returnStatement1]]></Name>
-					<X>1230</X><Y>4245</Y>
+					<X>1230</X><Y>4345</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="80" Height="20" Previous="1639689862241" >
 						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745690895</Id>
+					<Name><![CDATA[code19]]></Name>
+					<X>1230</X><Y>4195</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Hydrogen storage schedules]]></Comment>
+					<Properties Width="180" Height="30" Previous="1638799920730" Next="1640111659248" >
+						<FillColor/>
+						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
+
+//Day ahead market is a merit order based spot market to trade energy based on supply and demand at a specific price.
+//Day ahead market is based on marginal energy cost
+//Energy calculations are split up amongst Volatile sources, storage, and dispatchable merit-order sources
+
+
+
+//------HYDORGEN-------
+//New schedule and collection on hour 0 of each day
+if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	for (HydrogenStoragePlant h : hydrogenStoragePlants){
+		h.hydrogenStorageScheduleCalculations();
+	}
+}]]></Code>
 					</Properties>	
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
@@ -3546,13 +3754,25 @@ if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Comment><![CDATA[Volatile (intermittent) supply]]></Comment>
-					<Properties Width="180" Height="55" Previous="1638799957663" Next="1639689862241" >
+					<Properties Width="180" Height="55" Previous="1638799957663" Next="1639745690895" >
 						<FillColor/>
 						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
 
 //Day ahead market is a merit order based spot market to trade energy based on supply and demand at a specific price.
 //Day ahead market is based on marginal energy cost
 //Energy calculations are split up amongst Volatile sources, storage, and dispatchable merit-order sources
+
+
+
+/* TIME
+
+To mimick the day ahead market all energy supply schedules are made at a single point in time per day, making predictions for the entire following day
+This is also required to make optimized storage schedules.
+
+So all code in these blocks start with if (getHourOfDay() == 0 && hourlyElectricityDemandCollection.size() == 24)
+*/ 
+
+
 
 
 //------VOLATILE------
@@ -11102,6 +11322,177 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1639745750516</Id>
+					<Name><![CDATA[batteries]]></Name>
+					<X>90</X><Y>1670</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1639745752665</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Battery]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[Battery]]></ClassName>
+							<ItemName><![CDATA[1639745735643]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryRoundtripEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryMaxPower]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryEfficiency]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0.9 ]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryScheduleLength]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[batteryMinimalCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[operational]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[500]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1640099309286</Id>
+					<Name><![CDATA[hydrogenStoragePlants]]></Name>
+					<X>90</X><Y>1690</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[HydrogenStoragePlant]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[HydrogenStoragePlant]]></ClassName>
+							<ItemName><![CDATA[1640099309283]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[capacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[efficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[startOperatingYear]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[hydrogenStorageCapacity]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[installedCapElectrolyzers]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[electrolyzerEfficiency]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[fuelCellEfficiency]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[1]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -13038,6 +13429,25 @@ demand]]></Text>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<EmbeddedObjectPresentation>
+					<Id>1639745752665</Id>
+					<Name><![CDATA[batteries_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>52.58637770430901</Latitude>
+					<Longitude>4.342307784538929</Longitude>
+				</EmbeddedObjectPresentation>
 			</Presentation>
 
 				</Level>
@@ -71030,6 +71440,3393 @@ Evening_cooking = Evening_cooking - 1;]]></Body>
 			</Presentation>
 
 		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1639745735648</Id>
+			<Name><![CDATA[Battery]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1639745735643</Id>
+				<Name><![CDATA[1639745735643]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1618041600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1639745735644</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1639745735861</CurrentLevel>
+			<ConnectionsId>1639745735939</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1639745735673</Id>
+					<Name><![CDATA[batteryCharge]]></Name>
+					<X>60</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735675</Id>
+					<Name><![CDATA[batteryDischarge]]></Name>
+					<X>60</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735679</Id>
+					<Name><![CDATA[price_array1]]></Name>
+					<X>1270</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735681</Id>
+					<Name><![CDATA[length_time_array]]></Name>
+					<X>1270</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735683</Id>
+					<Name><![CDATA[b_init]]></Name>
+					<X>1270</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735685</Id>
+					<Name><![CDATA[b_des]]></Name>
+					<X>1270</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735687</Id>
+					<Name><![CDATA[nodes_length]]></Name>
+					<X>1440</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735689</Id>
+					<Name><![CDATA[min_bat_pos]]></Name>
+					<X>1440</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735691</Id>
+					<Name><![CDATA[max_bat_pos]]></Name>
+					<X>1440</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735693</Id>
+					<Name><![CDATA[b_min]]></Name>
+					<X>1270</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735695</Id>
+					<Name><![CDATA[nodes_array]]></Name>
+					<X>1440</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Double[]]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[new Double[Nodes.size()]]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735697</Id>
+					<Name><![CDATA[Graph_matrix]]></Name>
+					<X>1440</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[][]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735699</Id>
+					<Name><![CDATA[time_array]]></Name>
+					<X>1440</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735701</Id>
+					<Name><![CDATA[time_array1]]></Name>
+					<X>1270</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735705</Id>
+					<Name><![CDATA[value_array]]></Name>
+					<X>1270</X><Y>520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735707</Id>
+					<Name><![CDATA[optimal_path]]></Name>
+					<X>1270</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735709</Id>
+					<Name><![CDATA[optimal_policy]]></Name>
+					<X>1270</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735711</Id>
+					<Name><![CDATA[trans_values]]></Name>
+					<X>1270</X><Y>560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735713</Id>
+					<Name><![CDATA[trans_policy]]></Name>
+					<X>1270</X><Y>580</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735715</Id>
+					<Name><![CDATA[num_connections]]></Name>
+					<X>1270</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735717</Id>
+					<Name><![CDATA[minimizer]]></Name>
+					<X>1440</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735719</Id>
+					<Name><![CDATA[nodes_in_path]]></Name>
+					<X>1440</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735721</Id>
+					<Name><![CDATA[next_state]]></Name>
+					<X>1440</X><Y>560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735723</Id>
+					<Name><![CDATA[current_state]]></Name>
+					<X>1440</X><Y>520</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735725</Id>
+					<Name><![CDATA[minValue]]></Name>
+					<X>1440</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735727</Id>
+					<Name><![CDATA[optimal_path1]]></Name>
+					<X>1270</X><Y>620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735729</Id>
+					<Name><![CDATA[p]]></Name>
+					<X>1440</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735733</Id>
+					<Name><![CDATA[m]]></Name>
+					<X>1440</X><Y>580</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735737</Id>
+					<Name><![CDATA[path]]></Name>
+					<X>1440</X><Y>620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735741</Id>
+					<Name><![CDATA[node_2]]></Name>
+					<X>1440</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735743</Id>
+					<Name><![CDATA[epsilon]]></Name>
+					<X>1440</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0.001]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735757</Id>
+					<Name><![CDATA[new_length_time_array]]></Name>
+					<X>1270</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735759</Id>
+					<Name><![CDATA[price_array]]></Name>
+					<X>1270</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double[]]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735815</Id>
+					<Name><![CDATA[a]]></Name>
+					<X>1440</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735817</Id>
+					<Name><![CDATA[x]]></Name>
+					<X>1440</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735819</Id>
+					<Name><![CDATA[node_1]]></Name>
+					<X>1270</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735827</Id>
+					<Name><![CDATA[inter1]]></Name>
+					<X>1440</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735835</Id>
+					<Name><![CDATA[additionalChargingCosts]]></Name>
+					<X>1270</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735839</Id>
+					<Name><![CDATA[batterySOC]]></Name>
+					<X>60</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735849</Id>
+					<Name><![CDATA[batteryElectricitySupply]]></Name>
+					<X>60</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735851</Id>
+					<Name><![CDATA[batteryElectricityDemand]]></Name>
+					<X>60</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735853</Id>
+					<Name><![CDATA[totalBatteryCharge]]></Name>
+					<X>60</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1639745735855</Id>
+					<Name><![CDATA[totalBatteryDischarge]]></Name>
+					<X>60</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640107052465</Id>
+					<Name><![CDATA[maxImbalance]]></Name>
+					<X>1270</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640107060967</Id>
+					<Name><![CDATA[minImbalance]]></Name>
+					<X>1270</X><Y>270</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640107319665</Id>
+					<Name><![CDATA[trans_zero_path]]></Name>
+					<X>1270</X><Y>640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double []]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640108066961</Id>
+					<Name><![CDATA[maxChargePerTimeStep]]></Name>
+					<X>1270</X><Y>690</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640108079465</Id>
+					<Name><![CDATA[chargingPower]]></Name>
+					<X>1270</X><Y>710</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640108085541</Id>
+					<Name><![CDATA[kWhScheduled]]></Name>
+					<X>1270</X><Y>730</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640108129856</Id>
+					<Name><![CDATA[predictedSOC]]></Name>
+					<X>1270</X><Y>750</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735886</Id>
+					<Name><![CDATA[capacity]]></Name>
+					<X>60</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735884</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735889</Id>
+					<Name><![CDATA[batteryRoundtripEfficiency]]></Name>
+					<Description><![CDATA[Roundtrip Efficiency IRENA]]></Description>
+					<X>60</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.95 //95% for charging and discharging = 90% in total]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735887</Id>
+							<Label><![CDATA[batteryRoundtripEfficiency]]></Label>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735892</Id>
+					<Name><![CDATA[batteryMaxPower]]></Name>
+					<X>60</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[capacity/2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735890</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735895</Id>
+					<Name><![CDATA[batteryEfficiency]]></Name>
+					<X>60</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.9 //tesla powerwall]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735893</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735898</Id>
+					<Name><![CDATA[batteryScheduleLength]]></Name>
+					<X>60</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[24]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735896</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735901</Id>
+					<Name><![CDATA[batteryMinimalCapacity]]></Name>
+					<X>60</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735899</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1639745735904</Id>
+					<Name><![CDATA[operational]]></Name>
+					<X>60</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[boolean]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1639745735902</Id>
+							<EditorContolType>CHECK_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639745735659</Id>
+					<Name><![CDATA[Nodes]]></Name>
+					<X>1440</X><Y>410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639745735661</Id>
+					<Name><![CDATA[Time_steps]]></Name>
+					<X>1270</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639745735663</Id>
+					<Name><![CDATA[spotmarket_prices]]></Name>
+					<X>1270</X><Y>410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+						<CollectionInitializer Class="CodeValue">
+							<Code><![CDATA[{4.5,5.0,5.5,3.0,2.0,6.5,3.5,2.4,1.2,0.8,0.4,7.8,8.9,5.6,5.5,5.0,4.5,3.4,4.5,2.3,3.3,4.3,5.3}]]></Code>
+						</CollectionInitializer>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639745735667</Id>
+					<Name><![CDATA[spotmarket_prices1]]></Name>
+					<X>1270</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1639745735669</Id>
+					<Name><![CDATA[batteryChargeSchedule]]></Name>
+					<X>1270</X><Y>770</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+			</Variables>
+			<ActionChartElements>
+				<ActionChartElement Class="ActionChart">
+					<Id>1639745735906</Id>
+					<Name><![CDATA[makeBatteryChargeSchedule]]></Name>
+					<X>820</X><Y>100</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1639745735907" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735907</Id>
+					<Name><![CDATA[code109]]></Name>
+					<X>820</X><Y>150</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[VARIABLE INITIALIZATION ]]></Comment>
+					<Properties Width="160" Height="30" Previous="1639745735906" Next="1639745735908" >
+						<FillColor/>
+						<Code><![CDATA[Nodes.clear();
+Time_steps.clear(); 
+spotmarket_prices1.clear();
+spotmarket_prices.clear();
+Graph_matrix = null;
+batteryChargeScheduleDS.reset();
+batteryPriceSchedule.reset();
+inter1 = 0;
+epsilon = 0.001;
+graphMatrixData.reset();
+batteryChargeSchedule.clear();
+spotmarket_prices.clear();
+
+//VARIABLE INITILIZATION 
+b_init = roundToDecimal(batterySOC,2);
+b_des = capacity;
+b_min = batteryMinimalCapacity;
+maxChargePerTimeStep = batteryMaxPower;
+
+//TIME-ARRAY & PRICE-ARRAY INITILIZATION
+time_array = new double[batteryScheduleLength];
+price_array = new double[batteryScheduleLength+1];
+
+
+for (int i=0; i<batteryScheduleLength; i++){
+	time_array[i] = i+1;
+	batteryChargeSchedule.add(0.0);
+} 
+ 
+
+// SET PRICE ARRAY BASED ON MARKET CLEARING PRICE)
+additionalChargingCosts = 0.02; //additionalDegredationCosts was 0.001;
+
+maxImbalance = 0;
+minImbalance = main.hourlyElectricityImbalanceCollection.get(0);
+
+for (int i = 0; i < main.hourlyElectricityImbalanceCollection.size(); i++){
+	if (main.hourlyElectricityImbalanceCollection.get(i) > maxImbalance){
+		maxImbalance = main.hourlyElectricityImbalanceCollection.get(i);
+	}
+	if (main.hourlyElectricityImbalanceCollection.get(i) < minImbalance){
+		minImbalance = main.hourlyElectricityImbalanceCollection.get(i);
+	}
+}
+
+for (int i = 0; i < main.hourlyElectricityImbalanceCollection.size(); i++){
+	if (maxImbalance < 0 || minImbalance < 0){
+		spotmarket_prices.add((main.hourlyElectricityImbalanceCollection.get(i) + abs(minImbalance))/(maxImbalance + abs(minImbalance))/10);
+	}
+	else {
+		spotmarket_prices.add(main.hourlyElectricityImbalanceCollection.get(i)/maxImbalance/10);
+	}
+}
+for (int i=0; i < batteryScheduleLength + 1; i++){
+	if (i >= batteryScheduleLength){
+		price_array[i] = spotmarket_prices.get(23);
+	}
+	else {
+		price_array[i] = spotmarket_prices.get(i);
+	}
+	batteryPriceSchedule.add(i,price_array[i]);
+}
+
+	
+
+
+//Note: additional charging costs are required to stop the algorithm from bouncing up and down on minimalistic price differences
+	/*Explanation: if the requested charging power is added to the price array (see the "assign weights" section) 
+	the EVs wont continuously interact in balancing out the last 10KW. Note that all cars not 
+	necesseary anymore to solve the initial imbalance will create charging schedules 
+	representing 'smart charging' schedules.*/
+
+
+
+	
+
+//NODES & TIME-STEPS COLLECTIONS INITILIZATION 
+
+if (Nodes.isEmpty())
+{
+   Nodes.add(b_init);
+}
+
+if (Time_steps.isEmpty()){
+    
+    Time_steps.add(0.0);
+    //traceln("timesteps: " + Time_steps);
+}
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735908</Id>
+					<Name><![CDATA[code110]]></Name>
+					<X>820</X><Y>200</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[VARIABLE INITIALIZATION 2]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735907" Next="1639745735909" >
+						<FillColor/>
+						<Code><![CDATA[//CHECK ENOUGH POWER AND TIME OR CHANGE B_DES & B_MIN FOR 60-MINUTES GRID
+if ((maxChargePerTimeStep * (batteryScheduleLength) + b_init) < b_des){
+    
+   b_des = (maxChargePerTimeStep * (batteryScheduleLength)) + b_init;
+   //traceln("node_1 bds");
+   b_des = roundToDecimal(b_des,3);
+}
+
+if (b_des - (maxChargePerTimeStep * batteryScheduleLength) > b_min){
+
+    b_min = b_des - (maxChargePerTimeStep * (batteryScheduleLength));
+    b_min = roundToDecimal(b_min,3); 
+} 
+
+//ADD PRICES TO NEW SPOTMARKET COLLECTION
+spotmarket_prices1.add(price_array[0]);  
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735909</Id>
+					<Name><![CDATA[forLoop27]]></Name>
+					<Description><![CDATA[//CHANGE
+
+ time_array.length+1  to lengthEVchargingSession+1]]></Description>
+					<X>820</X><Y>250</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CHANGING B_DES VALUE]]></Comment>
+					<Properties CollectionIterator="false" Width="240" Height="30" Previous="1639745735908" Next="1639745735911" BodyAction="1639745735910" >
+						<FillColor/>
+
+						<Initializer><![CDATA[int i = 1]]></Initializer>
+						<Condition><![CDATA[i < time_array.length + 1]]></Condition>
+						<Counting><![CDATA[i++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735910</Id>
+					<Name><![CDATA[code111]]></Name>
+					<X>820</X><Y>300</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CHECK B DES STEP VALUE DIFFERENCE ]]></Comment>
+					<Properties Width="240" Height="30" Previous="1639745735909" >
+						<FillColor/>
+						<Code><![CDATA[//CHECK B_DES STEP VALUE DIFFERENCE 
+
+if (b_init + maxChargePerTimeStep <= b_des)
+{
+   if (b_init + (maxChargePerTimeStep * i) <= b_des)
+   {
+      max_bat_pos = b_init + (maxChargePerTimeStep * i);
+      if (b_des - max_bat_pos < maxChargePerTimeStep)
+      {
+         b_des =  max_bat_pos;
+         roundToDecimal(b_des,3);
+         //traceln("B-max value: " + b_des);
+         
+      }
+   }
+}
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735911</Id>
+					<Name><![CDATA[forLoop28]]></Name>
+					<Description><![CDATA[same as above]]></Description>
+					<X>820</X><Y>370</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CHANGING B_MIN VALUE]]></Comment>
+					<Properties CollectionIterator="false" Width="260" Height="30" Previous="1639745735909" Next="1639745735913" BodyAction="1639745735912" >
+						<FillColor/>
+
+						<Initializer><![CDATA[int i = 1]]></Initializer>
+						<Condition><![CDATA[i < time_array.length + 1]]></Condition>
+						<Counting><![CDATA[i++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735912</Id>
+					<Name><![CDATA[code112]]></Name>
+					<X>820</X><Y>420</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CHECK B MIN STEP VALUE DIFF. ]]></Comment>
+					<Properties Width="200" Height="30" Previous="1639745735911" >
+						<FillColor/>
+						<Code><![CDATA[//CHECK B_MIN STEP VALUE DIFF. & ENOUGH POWER & TIME
+
+//In case of stationary battery b_min is 0
+
+
+
+/*
+if (b_init - maxChargePerTimeStep >= b_min)
+{
+    if (b_init - (maxChargePerTimeStep * i) >= b_min)
+    {   
+       min_bat_pos = b_init - (maxChargePerTimeStep * i);
+       if (min_bat_pos + ((time_array.length - i)*maxChargePerTimeStep) < b_des)
+       {   
+           b_min = b_init - (maxChargePerTimeStep * (i-1));
+           //traceln("B-min1 value: " + b_min); 
+           b_min = roundToDecimal(b_min,2);
+       }
+       else if (min_bat_pos - b_min <= maxChargePerTimeStep)
+       {   
+           b_min = min_bat_pos; 
+           b_min = roundToDecimal(b_min,3);
+           //traceln("B-min2 value: "+ b_min);
+          
+       }
+     }
+}
+*/
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735913</Id>
+					<Name><![CDATA[forLoop29]]></Name>
+					<Description><![CDATA[same as above]]></Description>
+					<X>820</X><Y>490</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[NODES IN THE GRAPH]]></Comment>
+					<Properties CollectionIterator="false" Width="240" Height="30" Previous="1639745735911" Next="1639745735919" BodyAction="1639745735914" >
+						<FillColor/>
+
+						<Initializer><![CDATA[int i = 1]]></Initializer>
+						<Condition><![CDATA[i < time_array.length + 1]]></Condition>
+						<Counting><![CDATA[i++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735914</Id>
+					<Name><![CDATA[code113]]></Name>
+					<X>820</X><Y>540</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[MAX BAT & MIN BAT POSSIBILITY AT EACH TIME-STEP]]></Comment>
+					<Properties Width="320" Height="30" Previous="1639745735913" Next="1639745735915" >
+						<FillColor/>
+						<Code><![CDATA[//MAX_BAT & MIN_BAT POSSIBILITY EACH TIME-STEP
+
+if (b_init + maxChargePerTimeStep <= b_des)
+{
+   if (b_init + (maxChargePerTimeStep * i) <= b_des)
+   {
+      max_bat_pos = b_init + (maxChargePerTimeStep * i);
+      
+      
+   }
+   else 
+   { 
+      max_bat_pos = b_des;
+      
+   }
+   
+}
+
+else 
+{   
+    
+    max_bat_pos = b_init; 
+    
+    b_des = max_bat_pos; 
+    
+} 
+
+//CHECKING POSSIBLE MINIMUM BATTERY LEVEL AT EVERY TIME STEP   
+
+if (b_init - maxChargePerTimeStep >= b_min)
+{
+    if (b_init - (maxChargePerTimeStep * i) >= b_min)
+    {   
+       min_bat_pos = b_init - (maxChargePerTimeStep * i);
+       min_bat_pos = roundToDecimal(min_bat_pos,3);
+       
+       
+    }
+
+    else 
+    {   
+       
+       if ((((time_array.length) - i) * maxChargePerTimeStep) + b_min <= b_des)
+       { 
+          min_bat_pos = b_des - (((time_array.length) - i) * maxChargePerTimeStep);
+          
+          
+       } 
+       else 
+       {   
+          min_bat_pos = b_min;
+          
+          
+       }
+     }
+}
+
+else 
+{   
+     if ((time_array.length - i) * maxChargePerTimeStep + b_init > b_des)
+     {
+         min_bat_pos = b_init;
+         
+         
+     }
+     else 
+     {
+         min_bat_pos = b_des - ((time_array.length - i) * maxChargePerTimeStep);
+         
+     }
+}
+
+ ]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735915</Id>
+					<Name><![CDATA[code114]]></Name>
+					<X>820</X><Y>590</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[NUMBERS OF NODES AT PARTICULAR TIME-STEP ]]></Comment>
+					<Properties Width="300" Height="30" Previous="1639745735914" Next="1639745735916" >
+						<FillColor/>
+						<Code><![CDATA[//NUMBERS OF NODES AT PARTICULAR TIMESTEP
+
+nodes_length = roundToInt(((max_bat_pos - min_bat_pos)/maxChargePerTimeStep) + 1) ;
+
+//DISPLAY
+//traceln("max battery: "+ max_bat_pos);
+//traceln("min battery: "+ min_bat_pos);
+//traceln("Nodes length: "+ nodes_length);
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735916</Id>
+					<Name><![CDATA[code115]]></Name>
+					<X>820</X><Y>640</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CREATE NODE POINTS AND STORE IT ]]></Comment>
+					<Properties Width="220" Height="30" Previous="1639745735915" Next="1639745735917" >
+						<FillColor/>
+						<Code><![CDATA[//CREAT NODE POINTS AND STORE IT
+
+//CREATING NODE POINTS FROM BATTERY STATE LEVELS & STORE IT IN COLLECTION
+
+for (double j = max_bat_pos; j >= min_bat_pos-0.8; j -= maxChargePerTimeStep){
+     
+     node_1 = j;
+     node_2 = roundToDecimal((max_bat_pos - maxChargePerTimeStep),3);
+     //traceln("node_1: " + node_1);
+     //traceln("max_bat_pos :" + node_2);
+     //traceln("min_bat_pos-1: " + (min_bat_pos - 1));
+     Nodes.add(roundToDecimal(j,3));
+     
+}
+
+//DISPLAY
+//traceln("Nodes: " + Nodes);
+
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735917</Id>
+					<Name><![CDATA[code116]]></Name>
+					<X>820</X><Y>690</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[TIME-STEPS BASED ON NODES ]]></Comment>
+					<Properties Width="200" Height="30" Previous="1639745735916" Next="1639745735918" >
+						<FillColor/>
+						<Code><![CDATA[//TIME-STEPS BASED ON NODES 
+
+//CREATING TIME-STEPS COLLECTION 
+
+for (int j = 0; j < (int) round(nodes_length); j++ ){
+    
+    time_array1 = time_array[i-1];
+    Time_steps.add(time_array1);
+    //traceln("time array node_1: " + time_array1);
+}
+
+//DISPLAY
+//traceln("Time steps: " + Time_steps);
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735918</Id>
+					<Name><![CDATA[code117]]></Name>
+					<X>820</X><Y>740</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[SPOTMARKET PRICES BASED ON NODES ]]></Comment>
+					<Properties Width="260" Height="30" Previous="1639745735917" >
+						<FillColor/>
+						<Code><![CDATA[//SPOTMARKET PRICES BASED ON NODES
+
+for (int j = 0; j < nodes_length; j++ )
+{
+    
+    price_array1 = price_array[i];
+    spotmarket_prices1.add(price_array1);
+}
+
+
+//DISPLAY
+//traceln("spotmarket prices: " + spotmarket_prices1);
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735919</Id>
+					<Name><![CDATA[code118]]></Name>
+					<X>820</X><Y>810</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[TOTAL NODES IN THE GRAPH]]></Comment>
+					<Properties Width="200" Height="30" Previous="1639745735913" Next="1639745735920" >
+						<FillColor>-256</FillColor>
+						<Code><![CDATA[//TOTAL NODES IN THE GRAPH
+
+Graph_matrix = new double[Nodes.size()][Nodes.size()];
+
+//traceln("Node size: "+ Nodes.size()); 
+//traceln("Time steps size: "+ Time_steps.size());
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735920</Id>
+					<Name><![CDATA[forLoop30]]></Name>
+					<X>820</X><Y>860</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[MATRIX ROW ITERATION]]></Comment>
+					<Properties CollectionIterator="false" Width="160" Height="30" Previous="1639745735919" Next="1639745735923" BodyAction="1639745735921" >
+						<FillColor/>
+
+						<Initializer><![CDATA[int k = 0]]></Initializer>
+						<Condition><![CDATA[k < Graph_matrix.length]]></Condition>
+						<Counting><![CDATA[k++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735921</Id>
+					<Name><![CDATA[forLoop31]]></Name>
+					<X>820</X><Y>910</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[MATRIX COLUMN ITERATION]]></Comment>
+					<Properties CollectionIterator="false" Width="200" Height="30" Previous="1639745735920" BodyAction="1639745735922" >
+						<FillColor/>
+
+						<Initializer><![CDATA[int j = 0]]></Initializer>
+						<Condition><![CDATA[j < Graph_matrix.length]]></Condition>
+						<Counting><![CDATA[j++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735922</Id>
+					<Name><![CDATA[code119]]></Name>
+					<X>820</X><Y>960</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[ASSIGN WEIGHTS TO EDGES ]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735921" >
+						<FillColor/>
+						<Code><![CDATA[//GIVE WEIGHT TO EDGES
+//Note: additional charging costs are required to stop the algorithm from bouncing up and down on minimalistic price differences
+
+
+if (Time_steps.get(k) >= Time_steps.get(j)) //to make sure you can only advance in time steps
+{   
+   Graph_matrix[k][j] = Double.NaN;
+} 
+
+else if (Time_steps.get(j) == Time_steps.get(k) + 1) 
+{       
+		//Edge of doing nothing results in 0 costs and 0 benefits
+        if (Nodes.get(j) == Nodes.get(k) + 0.0)
+        {
+             Graph_matrix[k][j] = 0.0;
+             graphMatrixData.add(Graph_matrix[k][j], k);
+                
+        }
+        
+        //Edge of charging results in spotmarket costs at time k + added charging costs (due to degredation)
+        else if (Math.abs(Nodes.get(j) - (Nodes.get(k) + maxChargePerTimeStep)) < epsilon){
+           
+            	Graph_matrix[k][j] = roundToDecimal(1 * (spotmarket_prices1.get(k) + additionalChargingCosts),2); 
+            	graphMatrixData.add(Graph_matrix[k][j], k);
+               //traceln("graph1: " + Graph_matrix[k][j]);
+               //traceln("node_111: ");
+           
+        }
+        
+        //Edge of discharging results in spotmarket benefits at time k - added charging costs (due to degredation)
+        else if (Math.abs(Nodes.get(j) - (Nodes.get(k) - maxChargePerTimeStep)) < epsilon){
+        
+             
+                 Graph_matrix[k][j] = roundToDecimal((-1 * (spotmarket_prices1.get(k)) + additionalChargingCosts),2);
+                 graphMatrixData.add(Graph_matrix[k][j], k);
+                 //traceln("graph2: " + Graph_matrix[k][j]);
+                 //traceln("node_122: ");
+             
+           
+        }
+        
+        else 
+        {
+           Graph_matrix[k][j] = Double.NaN;
+           
+        } 
+}      
+
+else
+{
+    Graph_matrix[k][j] = Double.NaN;
+}
+
+
+	
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735923</Id>
+					<Name><![CDATA[code120]]></Name>
+					<X>820</X><Y>1050</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[MATRIX REPRESENTATION]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735920" Next="1639745735924" >
+						<FillColor/>
+						<Code><![CDATA[//MATRIX REPRESENTATION
+/*
+for (int g = 0; g < Graph_matrix.length; g++){
+
+    for (int h = 0; h < Graph_matrix[g].length; h++){
+    
+        System.out.printf("%5.2f",Graph_matrix[g][h]);
+    }
+    
+    System.out.println();
+}
+*/
+//traceln("node_11212");]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735924</Id>
+					<Name><![CDATA[code121]]></Name>
+					<X>820</X><Y>1100</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[BACKWARD INDUCTION ALGORITHM ]]></Comment>
+					<Properties Width="220" Height="30" Previous="1639745735923" Next="1639745735925" >
+						<FillColor/>
+						<Code><![CDATA[//BACKWARD INDUCTION ALGORITHM
+
+//VARIABLE INTIALIZATION 
+
+value_array = new double[Graph_matrix.length];
+
+optimal_path = new double[Graph_matrix.length];
+
+optimal_policy = new double[Graph_matrix.length-1];
+
+trans_values = new double[Graph_matrix.length];
+
+trans_zero_path = new double[Graph_matrix.length];
+
+trans_policy = new double[Graph_matrix.length -1];
+
+//traceln("CHECK0");]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735925</Id>
+					<Name><![CDATA[code122]]></Name>
+					<X>820</X><Y>1150</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[THE BELLMAN EQUATION ]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735924" Next="1639745735926" >
+						<FillColor>-10496</FillColor>
+						<Code><![CDATA[//THE BELLMAN EQUATION 
+
+value_array[Graph_matrix.length -1] = 0; 
+
+//traceln("CHECK1");
+//traceln("graph matrix length: " + Graph_matrix.length);
+
+for (int s = Graph_matrix.length - 2; s > -1; s--)
+{
+
+    num_connections = 0; // number of connections from s
+    
+    //traceln("CHECK2");
+    
+    for (int n = s+1; n < Graph_matrix.length ; n++)
+    {
+    
+        //traceln("s=" + s + ". n=" + n);
+        
+        if (Graph_matrix[s][n] > -10.0)
+        {
+           //traceln("if node_1: " + "["+s+"]["+n+"]" + Graph_matrix[s][n]);
+           
+           num_connections = num_connections + 1 ;
+       
+           trans_values[num_connections-1] = Graph_matrix[s][n] + value_array[n] ;
+        
+           trans_policy[num_connections-1] = n ;
+           
+           trans_zero_path[num_connections-1] = Graph_matrix[s][n];
+           
+           //traceln("trans_values: " + Arrays.toString(trans_values));
+    
+           //traceln("trans_policy: " + Arrays.toString(trans_policy));
+           
+           
+        }
+       
+    }
+       //traceln("number of connections: " + num_connections);
+       
+      
+      minValue = trans_values[0];
+      m = 0;
+       
+      for (int i=0; i<num_connections; i++)
+      {    
+          if (trans_values[i] < minValue)
+          {   
+              minValue = trans_values[i];
+              m = i;
+     
+          }
+          
+      }
+      
+      for (int i=0; i<num_connections; i++)
+      {    
+           if (trans_zero_path[i] == 0.0)
+           {  
+               if (trans_values[i] <= minValue)
+               {    
+                   minValue = trans_values[i];
+                   m = i; 
+               }   
+           }
+    
+      }
+    
+      value_array[s] = minValue;
+      minimizer = m;
+ 
+      //traceln("value array: " + value_array[s]);
+    
+      //traceln("minimizer: " + minimizer);
+    
+      optimal_policy[s] = trans_policy[minimizer];
+     //traceln("Optimal policy array: " + Arrays.toString(optimal_policy));
+}
+
+//traceln("check3");]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735926</Id>
+					<Name><![CDATA[code123]]></Name>
+					<X>820</X><Y>1200</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[VARIABLE INITIALIZATION ]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735925" Next="1639745735927" >
+						<FillColor/>
+						<Code><![CDATA[//VARIABLE INITIALIZATION
+
+optimal_path[0] = 0.0;
+current_state = 0.0;
+nodes_in_path = 0.0;
+next_state = 0.0; 
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="WhileLoop">
+					<Id>1639745735927</Id>
+					<Name><![CDATA[whileLoop4]]></Name>
+					<X>820</X><Y>1250</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[OPTIMAL PATH]]></Comment>
+					<Properties Width="120" Height="30" Previous="1639745735926" Next="1639745735929" BodyAction="1639745735928" >
+						<FillColor/>
+						<Condition><![CDATA[true]]></Condition>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735928</Id>
+					<Name><![CDATA[code130]]></Name>
+					<X>820</X><Y>1300</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[COMPUTE OPTIMAL PATH ]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735927" >
+						<FillColor/>
+						<Code><![CDATA[// COMPUTE OPTIMAL PATH
+
+if(optimal_policy.length > current_state)
+{
+	next_state = optimal_policy[(int) current_state];
+}
+else
+{
+	traceln("     ");
+	traceln("ERROR IN MAKE V2G SCHEDULE: current_state doesn't match optimal policy in computing optimal path");
+	traceln("     ");
+}
+/*
+if ((int) nodes_in_path + 1 >= optimal_path.length){
+	traceln("Optimal path error in battery " + this.getIndex());
+	break;
+}
+*/
+optimal_path[(int) nodes_in_path + 1] = next_state; 
+
+nodes_in_path = nodes_in_path + 1;
+
+if (next_state == Graph_matrix.length - 1) break;
+
+current_state = next_state; 
+
+//traceln("nodes in path: " + nodes_in_path);
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735929</Id>
+					<Name><![CDATA[code131]]></Name>
+					<X>820</X><Y>1370</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[OPTIMAL PATH ARRAY ]]></Comment>
+					<Properties Width="160" Height="30" Previous="1639745735927" Next="1639745735930" >
+						<FillColor/>
+						<Code><![CDATA[//OPTIMAL PATH ARRAY 
+
+optimal_path1 = new double[(int) nodes_in_path + 1];
+//traceln("nodes in the path: " + nodes_in_path);
+for (int i=0; i < nodes_in_path + 1; i++){
+     
+     path = optimal_path[i];
+     optimal_path1[i] = path;
+}
+
+//traceln("Optimal path: " + Arrays.toString(optimal_path1));
+//traceln("optimal path length: " + optimal_path1.length);]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735930</Id>
+					<Name><![CDATA[code132]]></Name>
+					<X>820</X><Y>1420</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[VARIABLE INITIALIZATION FOR V2G SCHEDULE ]]></Comment>
+					<Properties Width="280" Height="30" Previous="1639745735929" Next="1639745735931" >
+						<FillColor/>
+						<Code><![CDATA[//VARIABLE INITIALIZATION FOR V2G SCHEDULE
+
+predictedSOC = b_init;
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ForLoop">
+					<Id>1639745735931</Id>
+					<Name><![CDATA[forLoop32]]></Name>
+					<X>820</X><Y>1470</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[V2G SCHEDULE]]></Comment>
+					<Properties CollectionIterator="false" Width="120" Height="30" Previous="1639745735930" Next="1639745735936" BodyAction="1639745735932" >
+						<FillColor>-256</FillColor>
+
+						<Initializer><![CDATA[int i = 0]]></Initializer>
+						<Condition><![CDATA[i < time_array.length ]]></Condition>
+						<Counting><![CDATA[i++]]></Counting>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735932</Id>
+					<Name><![CDATA[code133]]></Name>
+					<X>820</X><Y>1520</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[CREATING QUARTERS]]></Comment>
+					<Properties Width="140" Height="30" Previous="1639745735931" Next="1639745735934" >
+						<FillColor/>
+						<Code><![CDATA[//DETERMINE kWh TO CHARGE
+
+chargingPower = 0.0;
+
+
+p = (int) optimal_path1[i];
+a = (int) optimal_path1[i+1];
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735934</Id>
+					<Name><![CDATA[code135]]></Name>
+					<X>820</X><Y>1570</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[DETERMINE KWH TO CHARGE]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745735932" Next="1639745735935" >
+						<FillColor/>
+						<Code><![CDATA[//DETERMINE KWh TO CHARGE
+
+//Charging
+if (Math.abs(Nodes.get(a) - (Nodes.get(p) + maxChargePerTimeStep)) < epsilon){ 
+	chargingPower = maxChargePerTimeStep;
+}
+
+//Discharging
+else if (Math.abs(Nodes.get(a) - (Nodes.get(p) - maxChargePerTimeStep)) < epsilon){
+	chargingPower = -maxChargePerTimeStep;
+
+}
+
+//Idle
+else {   
+	chargingPower = 0.0;
+}
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735935</Id>
+					<Name><![CDATA[code136]]></Name>
+					<X>820</X><Y>1620</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[UPDATE SOC & V2G SCHEDULE ]]></Comment>
+					<Properties Width="200" Height="30" Previous="1639745735934" >
+						<FillColor/>
+						<Code><![CDATA[//UPDATE SOC & V2G SCHEDULE
+predictedSOC += chargingPower; 
+kWhScheduled += abs(chargingPower);
+
+batteryChargeScheduleDS.add(inter1,chargingPower);
+batteryChargeSchedule.set(inter1,chargingPower);
+
+
+main.hourlyElectricityImbalanceCollection.set(i, (main.hourlyElectricityImbalanceCollection.get(i) + batteryChargeSchedule.get(i)));
+
+
+inter1++;
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1639745735936</Id>
+					<Name><![CDATA[code137]]></Name>
+					<X>820</X><Y>1690</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[TRIGGER CHARGE & PRICE CALCULATION ]]></Comment>
+					<Properties Width="260" Height="30" Previous="1639745735931" Next="1639745735937" >
+						<FillColor>-256</FillColor>
+						<Code><![CDATA[//If charge schedule not possible, code here
+
+//If price required, code here]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1639745735937</Id>
+					<Name><![CDATA[returnStatement12]]></Name>
+					<X>820</X><Y>1740</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1639745735936" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+			</ActionChartElements>
+			<AnalysisData>
+    			<DataSet>
+					<Id>1639745735651</Id>
+					<Name><![CDATA[batteryPriceSchedule]]></Name>
+					<X>1265</X><Y>840</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1590566400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>1000</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1639745735654</Id>
+					<Name><![CDATA[batteryChargeScheduleDS]]></Name>
+					<X>1265</X><Y>860</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1590566400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>true</FreezeXAxis>
+					<SamplesToKeep>1000</SamplesToKeep>
+				</DataSet>
+    			<DataSet>
+					<Id>1639745735657</Id>
+					<Name><![CDATA[graphMatrixData]]></Name>
+					<X>1265</X><Y>880</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1591948800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<FreezeXAxis>false</FreezeXAxis>
+					<SamplesToKeep>1500</SamplesToKeep>
+				</DataSet>
+			</AnalysisData>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1639745735939</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1639745752673</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1639745735861</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<Figure3D>
+					<Id>1639745735863</Id>
+					<Name><![CDATA[panel_2]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>0</X><Y>0</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<ResourceReference>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[3d/panel_2.dae]]></ClassName>
+					</ResourceReference>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_7]]></Name>
+							<OriginalColor>-6750199</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_16]]></Name>
+							<OriginalColor>-10586498</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_jean_blue]]></Name>
+							<OriginalColor>-14471614</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material_11]]></Name>
+							<OriginalColor>-3618616</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA_material]]></Name>
+							<OriginalColor>-11447983</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>1.0</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+					<InternalLighting>OFF</InternalLighting>
+					<IgnoreSceneLights>false</IgnoreSceneLights>
+				</Figure3D>
+    			<Plot>
+					<Id>1639745735867</Id>
+					<Name><![CDATA[v2gPricePlot]]></Name>
+					<X>1060</X><Y>1120</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1590566400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>400</Width>
+					<Height>240</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>320</Width>
+						<Height>150</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Price schedule]]></Title>
+					<Id>1639745735864</Id>
+					<Expression><![CDATA[batteryPriceSchedule]]></Expression>
+					<Color>-7667573</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>1000</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+				<Text>
+					<Id>1639745735869</Id>
+					<Name><![CDATA[text92]]></Name>
+					<X>1260</X><Y>660</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Schedule allocation variables]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<RoundedRectangle>
+					<Id>1639745735871</Id>
+					<Name><![CDATA[roundRectangle18]]></Name>
+					<X>600</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>3</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1040</Width>
+					<Height>1840</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor/>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>10</ArcRadius>
+				</RoundedRectangle>
+				<Text>
+					<Id>1639745735873</Id>
+					<Name><![CDATA[text97]]></Name>
+					<X>1260</X><Y>470</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Backward induction algorithm variables]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<Plot>
+					<Id>1639745735877</Id>
+					<Name><![CDATA[v2gChargePlot]]></Name>
+					<X>1060</X><Y>1360</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1590566400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>400</Width>
+					<Height>240</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>320</Width>
+						<Height>150</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Charge schedule]]></Title>
+					<Id>1639745735874</Id>
+					<Expression><![CDATA[batteryChargeScheduleDS]]></Expression>
+					<Color>-23296</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>CIRCLE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+						<HorizontalAxisExpression><![CDATA[0]]></HorizontalAxisExpression>
+					</DatasetExpression>
+					<SamplesToKeep>1000</SamplesToKeep>
+					<HorScaleFromExpression><![CDATA[0]]></HorScaleFromExpression>
+					<HorScaleToExpression><![CDATA[1]]></HorScaleToExpression>
+					<HorScaleType>AUTO</HorScaleType>
+    			</Plot>
+				<Text>
+					<Id>1639745735879</Id>
+					<Name><![CDATA[text87]]></Name>
+					<X>640</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Battery algorithm]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Group>
+					<Id>1639745735881</Id>
+					<Name><![CDATA[group4]]></Name>
+					<X>1430</X><Y>270</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Presentation>
+				<Text>
+					<Id>1639745735883</Id>
+					<Name><![CDATA[text99]]></Name>
+					<X>-170</X><Y>-180</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Initialization variables]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+				</Group>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1640099309285</Id>
+			<Name><![CDATA[HydrogenStoragePlant]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1640099309283</Id>
+				<Name><![CDATA[1640099309283]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1640160000000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1640099309281</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1640099309284</CurrentLevel>
+			<ConnectionsId>1640099309280</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1640099347374</Id>
+					<Name><![CDATA[SOC]]></Name>
+					<X>350</X><Y>75</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766857</Id>
+					<Name><![CDATA[hydrogenDischargeAnnual]]></Name>
+					<X>350</X><Y>255</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[2]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766860</Id>
+					<Name><![CDATA[installedCapFuelCells]]></Name>
+					<X>50</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766864</Id>
+					<Name><![CDATA[dayAheadHydrogenStored]]></Name>
+					<Description><![CDATA[in MWh]]></Description>
+					<X>710</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766867</Id>
+					<Name><![CDATA[dailyImbalance]]></Name>
+					<X>710</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766870</Id>
+					<Name><![CDATA[dailySurplus]]></Name>
+					<X>710</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766872</Id>
+					<Name><![CDATA[hydrogenProduced]]></Name>
+					<X>350</X><Y>95</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766875</Id>
+					<Name><![CDATA[hydrogenConsumed]]></Name>
+					<X>350</X><Y>115</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766877</Id>
+					<Name><![CDATA[hydrogenStored]]></Name>
+					<X>350</X><Y>135</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766880</Id>
+					<Name><![CDATA[dailyShortage]]></Name>
+					<X>710</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766882</Id>
+					<Name><![CDATA[fuelCellElectricitySupply]]></Name>
+					<X>350</X><Y>185</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766885</Id>
+					<Name><![CDATA[fuelCellHydrogenDemand]]></Name>
+					<X>350</X><Y>165</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766888</Id>
+					<Name><![CDATA[dailyHydrogenRequired]]></Name>
+					<X>710</X><Y>70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766892</Id>
+					<Name><![CDATA[electrolyzerHydrogenSupply]]></Name>
+					<X>350</X><Y>225</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640123766894</Id>
+					<Name><![CDATA[electrolyzerElectricityDemand]]></Name>
+					<X>350</X><Y>205</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640099328650</Id>
+					<Name><![CDATA[capacity]]></Name>
+					<X>50</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640099328648</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640099328656</Id>
+					<Name><![CDATA[efficiency]]></Name>
+					<X>50</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640099328654</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640099328661</Id>
+					<Name><![CDATA[startOperatingYear]]></Name>
+					<X>50</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640099328659</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640099374345</Id>
+					<Name><![CDATA[type]]></Name>
+					<X>50</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640099374343</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640123766899</Id>
+					<Name><![CDATA[hydrogenStorageCapacity]]></Name>
+					<X>50</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640123766897</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640123766906</Id>
+					<Name><![CDATA[installedCapElectrolyzers]]></Name>
+					<X>50</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1640123766904</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640124966837</Id>
+					<Name><![CDATA[electrolyzerEfficiency]]></Name>
+					<X>50</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.7]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640124966835</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640124980257</Id>
+					<Name><![CDATA[fuelCellEfficiency]]></Name>
+					<X>50</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.7]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640124980255</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640099328616</Id>
+					<Name><![CDATA[hydrogenStorageSchedule]]></Name>
+					<X>710</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640123766834</Id>
+					<Name><![CDATA[electrolyzerElectricityDemandCollection]]></Name>
+					<X>710</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640123766839</Id>
+					<Name><![CDATA[fuelCellHydrogenDemandCollection]]></Name>
+					<X>710</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640123766845</Id>
+					<Name><![CDATA[electrolyzerHydrogenSupplyCollection]]></Name>
+					<X>710</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640123766851</Id>
+					<Name><![CDATA[fuelCellElectricityProductionCollection]]></Name>
+					<X>710</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+			</Variables>
+			<ActionChartElements>
+				<ActionChartElement Class="ActionChart">
+					<Id>1640123665879</Id>
+					<Name><![CDATA[hydrogenStorageScheduleCalculations]]></Name>
+					<X>740</X><Y>400</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1640123677981" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640123677981</Id>
+					<Name><![CDATA[code]]></Name>
+					<X>740</X><Y>450</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30" Previous="1640123665879" Next="1640123668462" >
+						<FillColor/>
+						<Code><![CDATA[dailyImbalance = 0;
+dailySurplus = 0;
+dailyShortage = 0;
+fuelCellHydrogenDemandCollection.clear();
+fuelCellElectricityProductionCollection.clear();
+electrolyzerElectricityDemandCollection.clear();
+electrolyzerHydrogenSupplyCollection.clear();
+	
+	
+for (int i=0; i < main.hourlyElectricityImbalanceCollection.size(); i++){
+	dailyImbalance += main.hourlyElectricityImbalanceCollection.get(i);
+}
+
+	//In case of daily surplus of renewables, spread H2 charge over the day
+if (dailyImbalance < 0){ //renewable supply is larger than demand
+	dailySurplus = -dailyImbalance;
+	
+	//make sure to never go beyond max storage capacity
+	if (dayAheadHydrogenStored + (dailySurplus * electrolyzerEfficiency) > hydrogenStorageCapacity){
+		dailySurplus = (hydrogenStorageCapacity - dayAheadHydrogenStored) / electrolyzerEfficiency;
+	}
+	if (dailySurplus < 0){
+		traceln("Daily surplus is minus " + dailySurplus);
+		dailySurplus = 0;
+	}
+	
+	//Make H2 charge schedule
+	for (int i=0; i < 24; i++){
+		if (dailySurplus / 24 > installedCapElectrolyzers){
+			electrolyzerElectricityDemandCollection.add(installedCapElectrolyzers);
+		}
+		else {
+			electrolyzerElectricityDemandCollection.add(dailySurplus / 24);
+		}
+		
+		if (dayAheadHydrogenStored + (electrolyzerElectricityDemandCollection.get(i) * electrolyzerEfficiency) > hydrogenStorageCapacity){
+			electrolyzerElectricityDemandCollection.set(i, (hydrogenStorageCapacity - dayAheadHydrogenStored) / electrolyzerEfficiency);
+		}
+		if (electrolyzerElectricityDemandCollection.get(i) > -(main.hourlyElectricityImbalanceCollection.get(i)) && main.hourlyElectricityImbalanceCollection.get(i) < 0){
+			electrolyzerElectricityDemandCollection.set(i, -(main.hourlyElectricityImbalanceCollection.get(i)));
+		}
+		if (main.hourlyElectricityImbalanceCollection.get(i) > 0){ //meaning there is an e-shortage
+			main.electrolyzerElectricityDemandCollection.set(i, 0.0);
+		}
+			
+		electrolyzerHydrogenSupplyCollection.add(electrolyzerElectricityDemandCollection.get(i) * electrolyzerEfficiency);
+		dayAheadHydrogenStored += electrolyzerHydrogenSupplyCollection.get(i);
+			
+		if(roundToInt(dayAheadHydrogenStored) > roundToInt(hydrogenStorageCapacity)){
+			traceln("----ERROR---- More (day-ahead) hydrogen stored than capacity " + roundToInt((dayAheadHydrogenStored - hydrogenStorageCapacity)));
+		}
+	
+	
+	}
+		
+	//H2 discharge schedules add 0
+	for (int i=0; i < 24; i++){
+		fuelCellHydrogenDemandCollection.add(0.0);
+		fuelCellElectricityProductionCollection.add(0.0);
+	}
+}
+	
+//In case of daily shortage of renewables, spread H2Discharge over the day
+else if (dailyImbalance > 0){
+	dailyShortage = dailyImbalance;
+	if (dailyShortage < 0){
+		traceln("Daily shortage is minus " + dailyShortage);
+		dailyShortage = 0;
+	}
+	dailyHydrogenRequired = dailyShortage / fuelCellEfficiency;
+	if (dayAheadHydrogenStored > 0){
+		
+		//Make sure hydrogen storage can never go below 0
+		if (dailyHydrogenRequired > dayAheadHydrogenStored){
+			dailyHydrogenRequired = dayAheadHydrogenStored;
+		}
+			
+		//Make H2 discharge schedule
+		for (int i=0; i < 24; i++){
+			if (dailyHydrogenRequired / 24 > (installedCapFuelCells / fuelCellEfficiency)){
+				fuelCellHydrogenDemandCollection.add(installedCapFuelCells / fuelCellEfficiency);
+				//Note installed cap fuel cell is in KWe output
+			}
+			else {
+				fuelCellHydrogenDemandCollection.add(dailyHydrogenRequired / 24);
+			}
+			//Als Fuel cell production hoger is dan imbalance
+			if (fuelCellHydrogenDemandCollection.get(i) * fuelCellEfficiency > main.hourlyElectricityImbalanceCollection.get(i) && main.hourlyElectricityImbalanceCollection.get(i) > 0){
+				fuelCellHydrogenDemandCollection.set(i, main.hourlyElectricityImbalanceCollection.get(i) / fuelCellEfficiency);
+				if (fuelCellHydrogenDemandCollection.get(i) < 0){
+					traceln("fuel cell production hoger dan imbalance");
+				}
+			}
+			//Als opslag leeg is
+			if (dayAheadHydrogenStored - fuelCellHydrogenDemandCollection.get(i) < 0){
+				fuelCellHydrogenDemandCollection.set(i, dayAheadHydrogenStored);
+				if (fuelCellHydrogenDemandCollection.get(i) < 0){
+					traceln("fuel cell production hlager door lege opslag");
+				}
+			}
+			if (main.hourlyElectricityImbalanceCollection.get(i) < 0){ //meaning there is an e-excess
+				fuelCellHydrogenDemandCollection.set(i, 0.0);
+			}
+				
+			fuelCellElectricityProductionCollection.add(fuelCellHydrogenDemandCollection.get(i) * fuelCellEfficiency);
+			dayAheadHydrogenStored -= fuelCellHydrogenDemandCollection.get(i);
+			if(dayAheadHydrogenStored < 0){
+				traceln("----ERROR----Less than 0 hydrogen stored (day-ahead) " + dayAheadHydrogenStored);
+			}
+		}
+	}
+
+	else {
+		for (int i=0; i < 24; i++){
+			fuelCellHydrogenDemandCollection.add(0.0);
+			fuelCellElectricityProductionCollection.add(0.0);
+		}
+	}
+		
+	//H2 Charge schedules add zero
+	for (int i=0; i < 24; i++){
+		electrolyzerElectricityDemandCollection.add(0.0);
+		electrolyzerHydrogenSupplyCollection.add(0.0);
+	}
+}
+	
+else {
+	for (int i=0; i < 24; i++){
+		electrolyzerElectricityDemandCollection.add(0.0);
+		electrolyzerHydrogenSupplyCollection.add(0.0);
+		fuelCellHydrogenDemandCollection.add(0.0);
+		fuelCellElectricityProductionCollection.add(0.0);
+	}
+}
+		
+	
+	
+	
+for (int i=0; i < 24; i++){
+	main.hourlyElectricityDemandCollection.set(i, main.hourlyElectricityDemandCollection.get(i) + electrolyzerElectricityDemandCollection.get(i));
+	main.hourlyElectricitySupplyCollection.set(i, main.hourlyElectricitySupplyCollection.get(i) + fuelCellElectricityProductionCollection.get(i));
+	//	dayAheadImbalanceCollection.set(i, dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i));	
+}
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1640123668462</Id>
+					<Name><![CDATA[returnStatement]]></Name>
+					<X>740</X><Y>500</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1640123677981" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ActionChart">
+					<Id>1640124541997</Id>
+					<Name><![CDATA[currentHydrogenStorage]]></Name>
+					<X>360</X><Y>400</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1640124542012" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640124542012</Id>
+					<Name><![CDATA[code1]]></Name>
+					<X>360</X><Y>450</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30" Previous="1640124541997" Next="1640124542014" >
+						<FillColor/>
+						<Code><![CDATA[electrolyzerElectricityDemand = electrolyzerElectricityDemandCollection.get(getHourOfDay());]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1640124542014</Id>
+					<Name><![CDATA[returnStatement1]]></Name>
+					<X>360</X><Y>500</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1640124542012" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+			</ActionChartElements>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1640099309280</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1640099309321</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1640099309284</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<Text>
+					<Id>1640123766797</Id>
+					<Name><![CDATA[text45]]></Name>
+					<X>700</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Day-ahead schedule]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+    			<TimePlot>
+					<Id>1640123766816</Id>
+					<Name><![CDATA[hydrogenStoragePlot]]></Name>
+					<X>1040</X><Y>160</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1599897600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>340</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>260</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Electrolyzer electricity demand]]></Title>
+					<Id>1640123766810</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-16728065</Color>
+					<Expression2><![CDATA[electrolyzerElectricityDemand]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Fuel cell electricity supply]]></Title>
+					<Id>1640123766811</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-4565549</Color>
+					<Expression2><![CDATA[fuelCellElectricitySupply]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Electrolyzer hydrogen production]]></Title>
+					<Id>1640123766812</Id>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-2354116</Color>
+					<Expression2><![CDATA[electrolyzerHydrogenSupply]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Fuel cell hydrogen consumption]]></Title>
+					<Id>1640123766813</Id>
+					<Expression><![CDATA[my_dataset3]]></Expression>
+					<Color>-10496</Color>
+					<Expression2><![CDATA[fuelCellHydrogenDemand]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
+					<LabelFormat>HH_mm</LabelFormat>
+    			</TimePlot>
+    			<TimePlot>
+					<Id>1640123766830</Id>
+					<Name><![CDATA[hydrogenStorageCapacityPlot]]></Name>
+					<X>1040</X><Y>440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1599897600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>340</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>260</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Hydrogen stored]]></Title>
+					<Id>1640123766827</Id>
+					<Expression><![CDATA[my_dataset4]]></Expression>
+					<Color>-6632142</Color>
+					<Expression2><![CDATA[hydrogenStored]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
+					<LabelFormat>HH_mm</LabelFormat>
+    			</TimePlot>
+				<Text>
+					<Id>1640123988014</Id>
+					<Name><![CDATA[text46]]></Name>
+					<X>340</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Current]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1640124524009</Id>
+					<Name><![CDATA[text47]]></Name>
+					<X>40</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Parameters]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>18</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
 	</ActiveObjectClasses>	
 	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
@@ -71548,6 +75345,10 @@ Evening_cooking = Evening_cooking - 1;]]></Body>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/PowerCurves_WindTurbines.xlsx]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[3d/panel_2.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
