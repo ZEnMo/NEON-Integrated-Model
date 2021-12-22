@@ -1893,7 +1893,79 @@
 				<Variable Class="PlainVariable">
 					<Id>1639690682029</Id>
 					<Name><![CDATA[currentTime]]></Name>
-					<X>950</X><Y>5010</Y>
+					<X>40</X><Y>4180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640164721040</Id>
+					<Name><![CDATA[timeReset]]></Name>
+					<X>40</X><Y>4200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640205079697</Id>
+					<Name><![CDATA[capacityShortage]]></Name>
+					<X>2100</X><Y>5740</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640205496270</Id>
+					<Name><![CDATA[marginalCostArray]]></Name>
+					<X>2100</X><Y>5760</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double []]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640205544046</Id>
+					<Name><![CDATA[countHourCapacityShortage]]></Name>
+					<X>2100</X><Y>5780</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640206118473</Id>
+					<Name><![CDATA[marketClearingPrice]]></Name>
+					<X>2100</X><Y>5800</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640206829380</Id>
+					<Name><![CDATA[maxLoadDay]]></Name>
+					<X>2100</X><Y>6040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3059,6 +3131,36 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640205516011</Id>
+					<Name><![CDATA[additionalSupplyRequiredCollection]]></Name>
+					<X>2100</X><Y>5820</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640206088466</Id>
+					<Name><![CDATA[marketClearingPriceCollection]]></Name>
+					<X>2100</X><Y>5840</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<ActionChartElements>
 				<ActionChartElement Class="ActionChart">
@@ -3545,15 +3647,257 @@ electricityDemand = electricityDemandCollection.get(0);
 					<ReturnType><![CDATA[double]]></ReturnType>
 					</Properties>
 				</ActionChartElement>
-				<ActionChartElement Class="Code">
-					<Id>1640111659248</Id>
-					<Name><![CDATA[code20]]></Name>
-					<X>1230</X><Y>4245</Y>
+				<ActionChartElement Class="Return">
+					<Id>1638799959608</Id>
+					<Name><![CDATA[returnStatement1]]></Name>
+					<X>1230</X><Y>4595</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Comment><![CDATA[Battery storage schedules]]></Comment>
-					<Properties Width="180" Height="30" Previous="1639745690895" Next="1639689862241" >
+					<Properties Width="80" Height="20" Previous="1640206455859" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640206455859</Id>
+					<Name><![CDATA[code28]]></Name>
+					<X>1230</X><Y>4545</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Max load hour for grid calculations]]></Comment>
+					<Properties Width="180" Height="30" Previous="1640206445254" Next="1638799959608" >
+						<FillColor/>
+						<Code><![CDATA[maxLoadDay = false;
+dayAheadMaxLoad = 0;
+for (int i=0; i<24; i++){
+	if (dayAheadElectricitySupplyCollection.size() == 24 && dayAheadElectricitySupplyCollection.get(i) > dayAheadMaxLoad){
+		dayAheadMaxLoad = dayAheadElectricitySupplyCollection.get(i);
+		maxLoadDay = true;
+		dayAheadMaxLoadHour = i;
+	}
+}]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640206445254</Id>
+					<Name><![CDATA[code11]]></Name>
+					<X>1230</X><Y>4465</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Additional gas peaker in case of shortage]]></Comment>
+					<Properties Width="180" Height="60" Previous="1640165029893" Next="1640206455859" >
+						<FillColor/>
+						<Code><![CDATA[//----ADDITIONAL CAPACITY IN CASE OF SHORTAGE-----
+
+if (dayAheadImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	iterator = 0; 
+	additionalSupply = 0;
+	additionalHydrogenDemand = 0;
+	for (i=0; i < 24; i++){
+		additionalFuelCellElectricitySupply = 0;
+		hourlyAdditionalHydrogenDemand = 0;
+		
+		if (additionalSupplyRequiredCollection.get(i) > 0){
+		
+			if (fuelCellHydrogenDemandSchedule.get(i) < installedCapFuelCells && dayAheadHydrogenStored - additionalHydrogenDemand > 0){
+			
+				double additionalHydrogenPossibleFromFuelCell = installedCapFuelCells - fuelCellHydrogenDemandSchedule.get(i);
+				double additionalHydrogenRequiredFromImbalance = additionalSupplyRequiredCollection.get(i) / average(HydrogenStoragePlants, x -> x.fuelCellEfficiency);
+			
+				if (additionalHydrogenRequiredFromImbalance > additionalHydrogenPossibleFromFuelCell){
+					hourlyAdditionalHydrogenDemand = floor(additionalHydrogenPossibleFromFuelCell);
+				}
+				else {
+					hourlyAdditionalHydrogenDemand = floor(additionalHydrogenRequiredFromImbalance);
+				}
+				
+				fuelCellHydrogenDemandSchedule.set(i, fuelCellHydrogenDemandSchedule.get(i) + hourlyAdditionalHydrogenDemand);
+				
+				double additionalFuelCellElectricitySupply = hourlyAdditionalHydrogenDemand *  average(HydrogenStoragePlants, x -> x.fuelCellEfficiency);
+				fuelCellElectricityProductionSchedule.set(i, fuelCellElectricityProductionSchedule.get(i) + additionalFuelCellElectricitySupply);			
+			
+				additionalSupply += additionalFuelCellElectricitySupply;
+				additionalSupplyRequiredCollection.set(i, floor(additionalSupplyRequiredCollection.get(i)) - floor(additionalFuelCellElectricitySupply));
+				if (additionalSupplyRequiredCollection.get(i) < 0){
+					traceln("Additiona supply smaller than 0 " + additionalSupplyRequiredCollection.get(i));
+				}
+				additionalHydrogenDemand += hourlyAdditionalHydrogenDemand;
+				dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + additionalFuelCellElectricitySupply);
+			}
+		}
+	}
+	dayAheadHydrogenStored -= additionalHydrogenDemand;
+		
+			
+			
+			
+			
+			
+			
+	for (i=0; i < 24; i++){	
+		if (additionalSupplyRequiredCollection.get(i) > 0){
+			
+			if (additionalSupplyRequiredCollection.get(i) > gasPeakerCapacity){
+				gasPeakerCapacity = additionalSupplyRequiredCollection.get(i);
+				traceln("Gas peaker capacity = " + gasPeakerCapacity);
+			}
+			
+			//traceln("Additional capacity of " + roundToInt(additionalSupplyRequiredCollection.get(i)) + " MW required");
+			
+			
+			/*			
+			installedCapGas = installedCapGas + additionalSupplyRequiredCollection.get(i);
+			traceln(additionalSupplyRequiredCollection.get(i) + " MW additional supply required");
+			setGasPowerInstalledCapacity();
+			
+			while additionalSupplyRequiredCollection.get(i) > 0{
+			for (GasPowerPlant x : gasPowerPlants){
+				if (x.electricitySupplyCollection.get(i) == 0){
+					if (additionalSupplyRequiredCollection.get(i) < x.capacityMWel){
+						x.electricitySupplyCollection.set(i,additionalSupplyRequiredCollection.get(i));
+					}
+					else{
+						x.electricitySupplyCollection.set(i, x.capacityMWel);
+					}
+					dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + x.electricitySupplyCollection.get(i));
+					additionalSupplyRequiredCollection.set(i, additionalSupplyRequiredCollection.get(i) - x.electricitySupplyCollection.get(i));
+					addedGasCapacity += x.capacityMWel;	
+				}
+			*/
+		}
+	}
+}
+
+
+			
+/*			
+			
+			
+			
+			
+			
+			//---ADDITIONAL GAS POWER PLANTS-----
+			for (GasPowerPlant x : gasPowerPlants){
+				x.marginalCosts = 9999999;
+				if (x.status.equals("Mothballed")){
+					x.currentlyRunning = false;
+					x.rankInMeritOrder = 0;
+					x.marginalCostCalculation();
+				}
+			}
+			//OCGT plants
+			while (additionalSupplyRequiredCollection.get(i) > additionalSupply && count(gasPowerPlants, p->p.status.equals("Mothballed") && p.technology.equals("OCGT")) > 0){
+				GasPowerPlant gasToReopen = randomWhere(gasPowerPlants, p->p.technology.equals("OCGT") && p.status.equals("Mothballed"));//top(gasPowerPlants, p-> 10000000 - p.marginalCosts);
+				if (gasToReopen.status.equals("Mothballed")){
+					gasToReopen.status = "Operational";
+					gasToReopen.electricitySupplyCalculation();
+					additionalSupply += gasToReopen.electricitySupply;
+					dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + gasToReopen.electricitySupply);
+					gasToReopen.currentlyRunning = true;
+					gasToReopen.marginalCosts = 9999999;
+					addedGasCapacity += gasToReopen.capacityMWel;
+					traceln("While loop gas " + additionalSupply);
+				}					
+			}
+			//Conventional plants
+			while (additionalSupplyRequiredCollection.get(i) > additionalSupply && count(gasPowerPlants, p->p.status.equals("Mothballed") && p.technology.equals("Conventional")) > 0){
+				GasPowerPlant gasToReopen = randomWhere(gasPowerPlants, p->p.technology.equals("Conventional") && p.status.equals("Mothballed"));//top(gasPowerPlants, p-> 10000000 - p.marginalCosts);
+				if (gasToReopen.status.equals("Mothballed")){
+					gasToReopen.status = "Operational";
+					gasToReopen.electricitySupplyCalculation();
+					additionalSupply += gasToReopen.electricitySupply;
+					dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + gasToReopen.electricitySupply);
+					gasToReopen.currentlyRunning = true;
+					gasToReopen.marginalCosts = 9999999;
+					addedGasCapacity += gasToReopen.capacityMWel;
+					traceln("While loop gas " + additionalSupply);
+				}					
+			}
+			//CCGT plants
+			while (additionalSupplyRequiredCollection.get(i) > additionalSupply && count(gasPowerPlants, p->p.status.equals("Mothballed") && p.technology.equals("CCGT")) > 0){
+				GasPowerPlant gasToReopen = randomWhere(gasPowerPlants, p->p.technology.equals("CCGT") && p.status.equals("Mothballed"));//top(gasPowerPlants, p-> 10000000 - p.marginalCosts);
+				if (gasToReopen.status.equals("Mothballed")){
+					gasToReopen.status = "Operational";
+					gasToReopen.electricitySupplyCalculation();
+					additionalSupply += gasToReopen.electricitySupply;
+					dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + gasToReopen.electricitySupply);
+					gasToReopen.currentlyRunning = true;
+					gasToReopen.marginalCosts = 9999999;
+					addedGasCapacity += gasToReopen.capacityMWel;
+					traceln("While loop gas " + additionalSupply);
+				}					
+			}
+			installedCapGas = sumWhere(gasPowerPlants, x->x.capacityMWel, x->x.status.equals("Operational"));
+			sliderGasCap.setValue(installedCapGas);
+			totalInstalledCapacityElectricityGeneration 	= installedCapOnshoreWind + installedCapOffshoreWind + installedCapSolarUtility + installedCapSolarRooftop + installedCapCoal + installedCapGas + installedCapNuclear;
+			traceln(count(gasPowerPlants, x->x.status.equals("Operational")) + " Operational gas power plants");
+			
+			
+			//---ADDITIONAL COAL POWER PLANTS IF NOT ENOUGH MOTHBALLED GAS-----			
+			if (additionalSupplyRequiredCollection.get(i) > additionalSupply){
+				for (CoalPowerPlant x : coalPowerPlants){
+					x.marginalCosts = 9999999;
+					if (x.status.equals("Mothballed")){
+						x.currentlyRunning = false;
+						x.rankInMeritOrder = 0;
+						x.marginalCostCalculation();
+					}
+				}
+				while (additionalSupplyRequiredCollection.get(i) > additionalSupply && count(coalPowerPlants, p->p.status.equals("Mothballed")) > 0){
+					CoalPowerPlant coalToReopen = randomWhere(coalPowerPlants, p->p.status.equals("Mothballed")); //top(coalPowerPlants, p-> 10000000 - p.marginalCosts);
+					if (coalToReopen.status.equals("Mothballed")){
+						coalToReopen.status = "Operational";
+						coalToReopen.electricitySupplyCalculation();
+						additionalSupply += coalToReopen.electricitySupply;
+						dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + coalToReopen.electricitySupply);
+						coalToReopen.currentlyRunning = true;
+						coalToReopen.marginalCosts = 9999999;
+						addedCoalCapacity += coalToReopen.capacityMWel;
+						traceln("While loop coal " + additionalSupply);
+					}					
+				}
+				while (additionalSupplyRequiredCollection.get(i) > additionalSupply && count(coalPowerPlants, p->p.status.equals("Mothballed")) > 0){
+					CoalPowerPlant coalToReopen = randomWhere(coalPowerPlants, p->p.status.equals("Mothballed")); //top(coalPowerPlants, p-> 10000000 - p.marginalCosts);
+					if (coalToReopen.status.equals("Mothballed")){
+						coalToReopen.status = "Operational";
+						coalToReopen.electricitySupplyCalculation();
+						additionalSupply += coalToReopen.electricitySupply;
+						dayAheadElectricitySupplyCollection.set(i, dayAheadElectricitySupplyCollection.get(i) + coalToReopen.electricitySupply);
+						coalToReopen.currentlyRunning = true;
+						coalToReopen.marginalCosts = 9999999;
+						addedCoalCapacity += coalToReopen.capacityMWel;
+						traceln("While loop coal " + additionalSupply);
+					}					
+				}		
+				installedCapCoal = sumWhere(coalPowerPlants, x->x.capacityMWel, x->x.status.equals("Operational"));
+				sliderCoalCap.setValue(installedCapCoal);
+				totalInstalledCapacityElectricityGeneration 	= installedCapOnshoreWind + installedCapOffshoreWind + installedCapSolarUtility + installedCapSolarRooftop + installedCapCoal + installedCapGas + installedCapNuclear;
+				traceln(count(coalPowerPlants, x->x.status.equals("Operational")) + " Operational coal power plants");
+				
+				if (additionalSupplyRequiredCollection.get(i) > additionalSupply){
+					traceln("----ERROR---- " + (additionalSupplyRequiredCollection.get(i) - additionalSupply) + " MW additional capacity required not possible from mothballed gas and coal");
+					traceln("----ERROR---- " + (dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i)) + " MW additional capacity required not possible from mothballed gas and coal");
+					pauseSimulation();
+				}
+			}	
+		}
+	iterator++;
+	} 
+}		
+*/]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640165029893</Id>
+					<Name><![CDATA[code10]]></Name>
+					<X>1230</X><Y>4395</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Dispatchable merit order]]></Comment>
+					<Properties Width="180" Height="50" Previous="1639689862241" Next="1640206445254" >
 						<FillColor/>
 						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
 
@@ -3565,56 +3909,238 @@ electricityDemand = electricityDemandCollection.get(0);
 
 
 
-//------BATTERIES------
+//------DISPATCHABLE MERIT ORDER--------
 //New schedule and collection on hour 0 of each day
 if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
-	//traceln("Battery calculation");
+
+//------Set Parameters-------
+	//reset collections
+	marketClearingPriceCollection.clear();
+	additionalSupplyRequiredCollection.clear();
+	for (GasPowerPlant x : gasPowerPlants){
+		x.electricitySupplyCollection.clear();
+	}
+	for (CoalPowerPlant x : coalPowerPlants){
+		x.electricitySupplyCollection.clear();
+	}
+	for (NuclearPowerPlant x : nuclearPowerPlants){
+		x.electricitySupplyCollection.clear();
+	}
+	
+	interconnectors.electricityImportCollection.clear();
 	
 	iterator = 0;
-	batteryChargeSchedule.clear();
-		
-	for (Battery b : batteries){
-		if (b.operational == true){
-			b.makeBatteryChargeSchedule();
-		}
-		else {
-			b.batteryChargeSchedule.clear();
-			for (iterator = 0; iterator < 24; iterator++){
-				b.batteryChargeSchedule.add(0.0);
-			}
-			iterator = 0;
-		}
-	}
 	
-
+	
+	//create new collections with spotmarket order
+	
+	timeReset = time; //for loop adding on time, after for loop rest to get back to previous time setting
 	for (int i=0; i < 24; i++){
-		batteryChargeSchedule.add(sum(batteries, x->x.batteryChargeSchedule.get(iterator)));
+		time = currentTime + i;
+		//traceln(time + " Time for dispatch merit order calculations");
+		rankInMeritOrder = 0;
+		capacityShortage = false;
+		additionalSupplyRequiredCollection.add(0.0);
+	
+		//Run marginal cost calculations per power source
+		for (GasPowerPlant x : gasPowerPlants){
+			x.electricitySupply = 0.0;
+			if (x.status.equals("Operational")){
+				x.currentlyRunning = false;
+				x.marginalCosts = 9999999;
+				x.rankInMeritOrder = 0;
+				x.marginalCostCalculation();
+			}
+		}
+		for (CoalPowerPlant x : coalPowerPlants){
+			x.electricitySupply = 0.0;
+			if (x.status.equals("Operational")){
+				x.currentlyRunning = false;
+				x.marginalCosts = 9999999;
+				x.rankInMeritOrder = 0;
+				x.marginalCostCalculation();
+			}
+		}
+		
+		for (NuclearPowerPlant x : nuclearPowerPlants){
+			x.electricitySupply = 0.0;
+			if (x.status.equals("Operational")){
+				x.currentlyRunning = false;
+				x.marginalCosts = 9999999;
+				x.rankInMeritOrder = 0;
+				x.marginalCostCalculation();
+			}
+		}	
+		
+		interconnectors.dayAheadImportPricesCalculation();
+		
+		
+		
+		//traceln("Imbalance before dispatchable and import: " + (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i)) + " MWh");
+		
+		
+		//Select cheapest source from marginal cost array
+		while (hourlyElectricityDemandCollection.get(i) > hourlyElectricitySupplyCollection.get(i) && capacityShortage == false){
+			marginalCostArray = new double [7]; //depends on number of dispatchable power generating agents
+			rankInMeritOrder++;
+			
+			marginalCostArray[0] = minWhere(gasPowerPlants, x -> x.marginalCosts, x -> x.status.equals("Operational") && x.currentlyRunning == false);
+			marginalCostArray[1] = minWhere(coalPowerPlants, x -> x.marginalCosts, x -> x.status.equals("Operational") && x.currentlyRunning == false);	
+			marginalCostArray[2] = minWhere(nuclearPowerPlants, x -> x.marginalCosts, x -> x.status.equals("Operational") && x.currentlyRunning == false);
+			
+			//Import prices
+			marginalCostArray[3] = interconnectors.hourlyElectricityPriceGermany;
+			marginalCostArray[4] = interconnectors.hourlyElectricityPriceBelgium;
+			marginalCostArray[5] = interconnectors.hourlyElectricityPriceNorway;
+			marginalCostArray[6] = interconnectors.hourlyElectricityPriceUnitedKingdom;
+		
+			int cheapestElectricitySource = indexOfMin(marginalCostArray);
+			//traceln(cheapestElectricitySource);
+			
+			//In case of not enough supply options
+			if (marginalCostArray[cheapestElectricitySource] >= 9999999){
+			//	traceln("---ERROR---- Not enough power capcity" + i);
+				additionalSupplyRequiredCollection.set(i, hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i));
+				if (additionalSupplyRequiredCollection.get(i) < 0){
+					traceln("Something wrong at additional supply collection creationg " + additionalSupplyRequiredCollection.get(i));
+				}
+				countHourCapacityShortage++;
+				capacityShortage = true;
+			}
+			
+			//In case of enough supply choose cheapest plant
+			else {
+				if (cheapestElectricitySource == 0){
+					GasPowerPlant p = randomWhere(gasPowerPlants, x -> x.marginalCosts == marginalCostArray[0] && x.status.equals("Operational") && x.currentlyRunning == false);
+					p.electricitySupplyCalculation();
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + p.electricitySupply);
+					p.currentlyRunning = true;
+					p.marginalCosts = 9999999;
+				}
 				
-		if (batteryChargeSchedule.get(i) > 0){
-			hourlyElectricityDemandCollection.set(i, (hourlyElectricityDemandCollection.get(i) + batteryChargeSchedule.get(i)));
-			//dayAheadImbalanceCollection.set(i, (dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i)));
+				if (cheapestElectricitySource == 1){
+					CoalPowerPlant p = randomWhere(coalPowerPlants, x -> x.marginalCosts == marginalCostArray[1] && x.status.equals("Operational") && x.currentlyRunning == false);
+					p.electricitySupplyCalculation();
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + p.electricitySupply);
+					p.currentlyRunning = true;
+					p.marginalCosts = 9999999;
+				}
+				
+				if (cheapestElectricitySource == 2){
+					NuclearPowerPlant p = randomWhere(nuclearPowerPlants, x -> x.marginalCosts == marginalCostArray[2] && x.status.equals("Operational") && x.currentlyRunning == false);
+					p.electricitySupplyCalculation();
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + p.electricitySupply);
+					p.currentlyRunning = true;
+					p.marginalCosts = 9999999;
+				}
+				//Import Germany
+				if (cheapestElectricitySource == 3){
+					if (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i) > interconnectors.interconnectionCapacityGermany){
+						interconnectors.electricityImportGermany = interconnectors.interconnectionCapacityGermany;
+					}
+					else {
+						interconnectors.electricityImportGermany = hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i);
+					}
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + interconnectors.electricityImportGermany);
+					interconnectors.hourlyElectricityPriceGermany = 9999999;
+				}
+				//Import Belgium
+				if (cheapestElectricitySource == 4){
+					if (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i) > interconnectors.interconnectionCapacityBelgium){
+						interconnectors.electricityImportBelgium = interconnectors.interconnectionCapacityBelgium;
+					}
+					else {
+						interconnectors.electricityImportBelgium = hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i);
+					}
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + interconnectors.electricityImportBelgium);
+					interconnectors.hourlyElectricityPriceBelgium = 9999999;
+				}
+				//Import Norway
+				if (cheapestElectricitySource == 5){
+					if (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i) > interconnectors.interconnectionCapacityNorway){
+						interconnectors.electricityImportNorway = interconnectors.interconnectionCapacityNorway;
+					}
+					else {
+						interconnectors.electricityImportNorway = hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i);
+					}
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + interconnectors.electricityImportNorway);
+					interconnectors.hourlyElectricityPriceNorway = 9999999;
+				}
+				//Import UK
+				if (cheapestElectricitySource == 6){
+					if (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i) > interconnectors.interconnectionCapacityUnitedKingdom){
+						interconnectors.electricityImportUnitedKingdom = interconnectors.interconnectionCapacityUnitedKingdom;
+					}
+					else {
+						interconnectors.electricityImportUnitedKingdom = hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i);
+					}
+					hourlyElectricitySupplyCollection.set(i, hourlyElectricitySupplyCollection.get(i) + interconnectors.electricityImportUnitedKingdom);
+					interconnectors.hourlyElectricityPriceUnitedKingdom = 9999999;
+				}												
+			}
 		}
-		else if (batteryChargeSchedule.get(i) < 0){
-			hourlyElectricitySupplyCollection.set(i, (hourlyElectricitySupplyCollection.get(i) + (-batteryChargeSchedule.get(i))));
-			//dayAheadImbalanceCollection.set(i, (dayAheadElectricityDemandCollection.get(i) - dayAheadElectricitySupplyCollection.get(i)));
+		interconnectors.electricityImportCollection.add(interconnectors.electricityImportBelgium + interconnectors.electricityImportGermany + interconnectors.electricityImportNorway + interconnectors.electricityImportUnitedKingdom);
+		//update collections
+		marketClearingPriceCollection.add(marketClearingPrice);
+		for (GasPowerPlant x : gasPowerPlants){
+			x.electricitySupplyCollection.add(x.electricitySupply);
 		}
+		for (CoalPowerPlant x : coalPowerPlants){
+			x.electricitySupplyCollection.add(x.electricitySupply);
+		}
+		for (NuclearPowerPlant x : nuclearPowerPlants){
+			x.electricitySupplyCollection.add(x.electricitySupply);
+		}
+		
+
+		
 		iterator++;
 	}
-}	
+	time = timeReset;
+	iterator = 0;
+}
 
 
+
+
+//traceln("Total production" + (sum(coalPowerPlants, x -> x.electricitySupply) + sum(gasPowerPlants, x -> x.electricitySupply) + sum(nuclearPowerPlants, x -> x.electricitySupply) + sum(windFarms, x -> x.electricitySupply) + sum(pVSystems, x -> x.electricitySupply)));
+//traceln("Count available power plants " + count(gasPowerPlants, x -> x.electricitySupply == 0 && x.status.equals("Operational")));
+//traceln("Day ahead mismatch " + (dayAheadElectricitySupply - dayAheadElectricityDemand));
+//traceln("Day ahead supply " + dayAheadElectricitySupply);
+//traceln("Day ahead demand " + dayAheadElectricityDemand);
 ]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640161646349</Id>
+					<Name><![CDATA[code23]]></Name>
+					<X>1230</X><Y>4295</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Export
+]]></Comment>
+					<Properties Width="180" Height="30" Previous="1640111659248" Next="1639689862241" >
+						<FillColor/>
+						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
+
+//Day ahead market is a merit order based spot market to trade energy based on supply and demand at a specific price.
+//Day ahead market is based on marginal energy cost
+//Energy calculations are split up amongst Volatile sources, storage, and dispatchable merit-order sources
+
+
+interconnectors.dayAheadExportCalculation();]]></Code>
 					</Properties>	
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
 					<Id>1639689862241</Id>
 					<Name><![CDATA[code9]]></Name>
-					<X>1230</X><Y>4295</Y>
+					<X>1230</X><Y>4345</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Comment><![CDATA[Curtailment]]></Comment>
-					<Properties Width="180" Height="30" Previous="1640111659248" Next="1638799959608" >
+					<Properties Width="180" Height="30" Previous="1640161646349" Next="1640165029893" >
 						<FillColor/>
 						<Code><![CDATA[
 
@@ -3708,15 +4234,65 @@ if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
 ]]></Code>
 					</Properties>	
 				</ActionChartElement>
-				<ActionChartElement Class="Return">
-					<Id>1638799959608</Id>
-					<Name><![CDATA[returnStatement1]]></Name>
-					<X>1230</X><Y>4345</Y>
+				<ActionChartElement Class="Code">
+					<Id>1640111659248</Id>
+					<Name><![CDATA[code20]]></Name>
+					<X>1230</X><Y>4245</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1639689862241" >
+					<Comment><![CDATA[Battery storage schedules]]></Comment>
+					<Properties Width="180" Height="30" Previous="1639745690895" Next="1640161646349" >
 						<FillColor/>
+						<Code><![CDATA[//-------DAY-AHEAD MARKET-----
+
+//Day ahead market is a merit order based spot market to trade energy based on supply and demand at a specific price.
+//Day ahead market is based on marginal energy cost
+//Energy calculations are split up amongst Volatile sources, storage, and dispatchable merit-order sources
+
+
+
+
+
+//------BATTERIES------
+//New schedule and collection on hour 0 of each day
+if (hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	//traceln("Battery calculation");
+	
+	iterator = 0;
+	batteryChargeSchedule.clear();
+		
+	for (Battery b : batteries){
+		if (b.operational == true){
+			b.makeBatteryChargeSchedule();
+		}
+		else {
+			b.batteryChargeSchedule.clear();
+			for (iterator = 0; iterator < 24; iterator++){
+				b.batteryChargeSchedule.add(0.0);
+			}
+			iterator = 0;
+		}
+	}
+	
+
+	for (int i=0; i < 24; i++){
+		batteryChargeSchedule.add(sum(batteries, x->x.batteryChargeSchedule.get(iterator)));
+				
+		if (batteryChargeSchedule.get(i) > 0){
+			hourlyElectricityDemandCollection.set(i, (hourlyElectricityDemandCollection.get(i) + batteryChargeSchedule.get(i)));
+			//hourlyImbalanceCollection.set(i, (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i)));
+		}
+		else if (batteryChargeSchedule.get(i) < 0){
+			hourlyElectricitySupplyCollection.set(i, (hourlyElectricitySupplyCollection.get(i) + (-batteryChargeSchedule.get(i))));
+			//hourlyElectricityImbalanceCollection.set(i, (hourlyElectricityDemandCollection.get(i) - hourlyElectricitySupplyCollection.get(i)));
+		}
+		iterator++;
+	}
+}	
+
+
+]]></Code>
 					</Properties>	
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
@@ -11493,6 +12069,79 @@ backgroundFrame.setPos( viewArea.getX() - 100, viewArea.getY() - 100);]]></Body>
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1640161747696</Id>
+					<Name><![CDATA[interconnectors]]></Name>
+					<X>90</X><Y>1710</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Interconnectors]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[Interconnectors]]></ClassName>
+							<ItemName><![CDATA[1640161747662]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[interconnectionCapacityGermany]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interconnectionCapacityBelgium]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interconnectionCapacityNorway]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interconnectionCapacityUnitedKingdom]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -13448,6 +14097,48 @@ demand]]></Text>
 					<Latitude>52.58637770430901</Latitude>
 					<Longitude>4.342307784538929</Longitude>
 				</EmbeddedObjectPresentation>
+				<Text>
+					<Id>1640206504287</Id>
+					<Name><![CDATA[text45]]></Name>
+					<X>2078</X><Y>5688</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Spotmarket]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1640206536049</Id>
+					<Name><![CDATA[text46]]></Name>
+					<X>2080</X><Y>5880</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Capacity shortage]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
@@ -74827,6 +75518,970 @@ for (int i=0; i < 24; i++){
 			</Presentation>
 
 		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1640161747664</Id>
+			<Name><![CDATA[Interconnectors]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1640161747662</Id>
+				<Name><![CDATA[1640161747662]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1640246400000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1640161747660</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1640161747663</CurrentLevel>
+			<ConnectionsId>1640161747659</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1640161959286</Id>
+					<Name><![CDATA[electricityImport]]></Name>
+					<X>70</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959291</Id>
+					<Name><![CDATA[electricityImportDaily]]></Name>
+					<X>70</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959295</Id>
+					<Name><![CDATA[electricityImportAnnual]]></Name>
+					<X>70</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959299</Id>
+					<Name><![CDATA[netImport]]></Name>
+					<X>70</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959303</Id>
+					<Name><![CDATA[netImportAnnual]]></Name>
+					<X>70</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959308</Id>
+					<Name><![CDATA[electricityImportBelgium]]></Name>
+					<X>390</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959312</Id>
+					<Name><![CDATA[electricityImportGermany]]></Name>
+					<X>390</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959317</Id>
+					<Name><![CDATA[electricityImportNorway]]></Name>
+					<X>390</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959322</Id>
+					<Name><![CDATA[electricityImportUnitedKingdom]]></Name>
+					<X>390</X><Y>320</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959326</Id>
+					<Name><![CDATA[electricityExportGermany]]></Name>
+					<X>680</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959331</Id>
+					<Name><![CDATA[electricityExportBelgium]]></Name>
+					<X>680</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959335</Id>
+					<Name><![CDATA[electricityExportNorway]]></Name>
+					<X>680</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959340</Id>
+					<Name><![CDATA[electricityExportUnitedKingdom]]></Name>
+					<X>680</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959344</Id>
+					<Name><![CDATA[hourlyElectricityPriceGermany]]></Name>
+					<X>680</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959348</Id>
+					<Name><![CDATA[hourlyElectricityPriceBelgium]]></Name>
+					<X>680</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959354</Id>
+					<Name><![CDATA[hourlyElectricityPriceNorway]]></Name>
+					<X>680</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959358</Id>
+					<Name><![CDATA[hourlyElectricityPriceUnitedKingdom]]></Name>
+					<X>680</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959363</Id>
+					<Name><![CDATA[electricityExport]]></Name>
+					<X>70</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959367</Id>
+					<Name><![CDATA[electricityExportDaily]]></Name>
+					<X>70</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959372</Id>
+					<Name><![CDATA[electricityExportAnnual]]></Name>
+					<X>70</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640161959376</Id>
+					<Name><![CDATA[exportMarketArray]]></Name>
+					<X>390</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double []]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1640164640946</Id>
+					<Name><![CDATA[whileLoopEnd]]></Name>
+					<X>680</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640161959382</Id>
+					<Name><![CDATA[interconnectionCapacityGermany]]></Name>
+					<X>390</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1000//3000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640161959380</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640161959392</Id>
+					<Name><![CDATA[interconnectionCapacityBelgium]]></Name>
+					<X>390</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1000 //2000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640161959390</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640161959398</Id>
+					<Name><![CDATA[interconnectionCapacityNorway]]></Name>
+					<X>390</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100 //1000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640161959396</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1640161959404</Id>
+					<Name><![CDATA[interconnectionCapacityUnitedKingdom]]></Name>
+					<X>390</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[100//1000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1640161959402</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640161959204</Id>
+					<Name><![CDATA[electricityImportCollection]]></Name>
+					<X>70</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1640161959210</Id>
+					<Name><![CDATA[electricityExportCollection]]></Name>
+					<X>70</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Double]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+			</Variables>
+			<ActionChartElements>
+				<ActionChartElement Class="ActionChart">
+					<Id>1640161796816</Id>
+					<Name><![CDATA[dayAheadExportCalculation]]></Name>
+					<X>720</X><Y>380</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1640161805385" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640161805385</Id>
+					<Name><![CDATA[code]]></Name>
+					<X>720</X><Y>430</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[Export in case of surplus]]></Comment>
+					<Properties Width="160" Height="50" Previous="1640161796816" Next="1640161801384" >
+						<FillColor/>
+						<Code><![CDATA[	
+//----EXPORT----
+//Only in case of energy surplus
+if (main.hourlyElectricityImbalanceCollection.size() == 24 && getHourOfDay() == 0){
+	main.timeReset = main.time; //for loop adding on time, after for loop rest to get back to previous time setting
+	main.iterator = 0;
+	electricityExportCollection.clear();
+	main.hourlyCurtailmentRequiredCollection.clear();
+		
+	for (int i=0; i<24; i++){	
+		main.time = main.currentTime + i;
+		//traceln(time + " Time for export and curtailment calculations");
+		electricityExportGermany = 0.0;
+		electricityExportBelgium = 0.0;
+		electricityExportNorway = 0.0;
+		electricityExportUnitedKingdom = 0.0;
+		main.hourlyCurtailmentRequiredCollection.add(0.0);
+		whileLoopEnd = false;
+		
+		if (main.hourlyElectricitySupplyCollection.get(i) > main.hourlyElectricityDemandCollection.get(i)){
+			hourlyElectricityPriceGermany = hourlyElectricityPricesGermany2017(main.time);
+			hourlyElectricityPriceBelgium = hourlyElectricityPricesBelgium2017(main.time);
+			hourlyElectricityPriceNorway = hourlyElectricityPricesNorway2017(main.time);
+			hourlyElectricityPriceUnitedKingdom = hourlyElectricityPricesUnitedKingdom2017(main.time);			
+
+			exportMarketArray = new double [4];
+			
+			while (main.hourlyElectricitySupplyCollection.get(i) > main.hourlyElectricityDemandCollection.get(i) && whileLoopEnd == false){
+				exportMarketArray[0] = hourlyElectricityPriceGermany;
+				exportMarketArray[1] = hourlyElectricityPriceBelgium;
+				exportMarketArray[2] = hourlyElectricityPriceNorway;
+				exportMarketArray[3] = hourlyElectricityPriceUnitedKingdom;
+			
+				int bestExportMarket = indexOfMax(exportMarketArray);
+			
+				//---CURTAILMENT REQUIRED----
+				//In case all export capacity is covered
+				if (exportMarketArray[bestExportMarket] <= 0){
+				//	traceln("Curtailment required " + i + " kWh to be curtailed: " + (hourlyElectricitySupplyCollection.get(i) - hourlyElectricityDemandCollection.get(i)) + " kWh");
+					main.hourlyCurtailmentRequiredCollection.set(i, main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i));	
+					whileLoopEnd = true;
+				}
+
+				else {
+					//Export to Germany
+					if (bestExportMarket == 0){
+						if (main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i) > interconnectionCapacityGermany){
+							electricityExportGermany = interconnectionCapacityGermany;
+						}
+						else {
+							electricityExportGermany = main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i);
+						}
+						main.hourlyElectricityDemandCollection.set(i, main.hourlyElectricityDemandCollection.get(i) + electricityExportGermany);
+						hourlyElectricityPriceGermany = 0;
+					}
+					//Export to Belgium
+					if (bestExportMarket == 1){
+						if (main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i) > interconnectionCapacityBelgium){
+							electricityExportBelgium = interconnectionCapacityBelgium;
+						}
+						else {
+							electricityExportBelgium = main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i);
+						}
+						main.hourlyElectricityDemandCollection.set(i, main.hourlyElectricityDemandCollection.get(i) + electricityExportBelgium);
+						hourlyElectricityPriceBelgium = 0;
+					}						
+					//Export to Norway
+					if (bestExportMarket == 2){
+						if (main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i) > interconnectionCapacityNorway){
+							electricityExportNorway = interconnectionCapacityNorway;
+						}
+						else {
+							electricityExportNorway = main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i);
+						}
+						main.hourlyElectricityDemandCollection.set(i, main.hourlyElectricityDemandCollection.get(i) + electricityExportNorway);
+						hourlyElectricityPriceNorway = 0;
+					}
+					//Export to United Kingdom
+					if (bestExportMarket == 3){
+						if (main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i) > interconnectionCapacityUnitedKingdom){
+							electricityExportUnitedKingdom = interconnectionCapacityUnitedKingdom;
+						}
+						else {
+							electricityExportUnitedKingdom = main.hourlyElectricitySupplyCollection.get(i) - main.hourlyElectricityDemandCollection.get(i);
+						}
+						main.hourlyElectricityDemandCollection.set(i, main.hourlyElectricityDemandCollection.get(i) + electricityExportUnitedKingdom);
+						hourlyElectricityPriceUnitedKingdom = 0;
+					}
+				}
+			}
+		}
+		electricityExportCollection.add(electricityExportBelgium + electricityExportGermany + electricityExportNorway + electricityExportUnitedKingdom);
+		main.iterator++;
+	}
+	main.time = main.timeReset;
+}
+
+
+
+]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1640161801384</Id>
+					<Name><![CDATA[returnStatement]]></Name>
+					<X>720</X><Y>500</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1640161805385" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="ActionChart">
+					<Id>1640165280116</Id>
+					<Name><![CDATA[dayAheadImportPricesCalculation]]></Name>
+					<X>470</X><Y>370</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties AccessType="default" StaticFunction="false" Width="20" Height="20" Next="1640165293998" >
+						<FillColor/>
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					</Properties>
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
+					<Id>1640165293998</Id>
+					<Name><![CDATA[code1]]></Name>
+					<X>470</X><Y>420</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Comment><![CDATA[import in caseo of market prices]]></Comment>
+					<Properties Width="140" Height="50" Previous="1640165280116" Next="1640165282607" >
+						<FillColor/>
+						<Code><![CDATA[electricityImportGermany = 0.0;
+electricityImportBelgium = 0.0;
+electricityImportNorway = 0.0;
+electricityImportUnitedKingdom = 0.0;
+	
+hourlyElectricityPriceGermany = hourlyElectricityPricesGermany2017(main.time);
+hourlyElectricityPriceBelgium = hourlyElectricityPricesBelgium2017(main.time);
+hourlyElectricityPriceNorway = hourlyElectricityPricesNorway2017(main.time);
+hourlyElectricityPriceUnitedKingdom = hourlyElectricityPricesUnitedKingdom2017(main.time);	]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Return">
+					<Id>1640165282607</Id>
+					<Name><![CDATA[returnStatement1]]></Name>
+					<X>470</X><Y>490</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="80" Height="20" Previous="1640165293998" >
+						<FillColor/>
+					</Properties>	
+				</ActionChartElement>
+			</ActionChartElements>
+			<TableFunctions>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1640161959216</Id>
+					<Name><![CDATA[hourlyElectricityPricesGermany2017]]></Name>
+					<X>70</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[prices2017]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[timestemp]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[de_at_lu_day_ahead_price_eur_mwh]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1640161959244</Id>
+					<Name><![CDATA[hourlyElectricityPricesBelgium2017]]></Name>
+					<X>70</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[prices2017]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[timestemp]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[be_day_ahead_price_eur_mwh]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1640161959258</Id>
+					<Name><![CDATA[hourlyElectricityPricesNorway2017]]></Name>
+					<X>70</X><Y>390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[prices2017]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[timestemp]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[no2_day_ahead_price_eur_mwh]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+				<TableFunction AccessType="public" StaticFunction="false">
+					<Id>1640161959272</Id>
+					<Name><![CDATA[hourlyElectricityPricesUnitedKingdom2017]]></Name>
+					<X>70</X><Y>410</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<InterpolationMethod>LINEAR</InterpolationMethod>
+					<OutOfRangeBehaviour>REPEATING</OutOfRangeBehaviour>
+					<OutOfRangeCustomValue><![CDATA[0.0]]></OutOfRangeCustomValue>
+					<ApproximationOrder><![CDATA[1]]></ApproximationOrder>
+					<LoadFromDatabase><![CDATA[true]]></LoadFromDatabase>
+					<ValuesQuery>
+						<TableReference>
+							<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+							<ClassName><![CDATA[prices2017]]></ClassName>
+						</TableReference>
+							<ArgumentColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[timestemp]]></ItemName>
+							</ArgumentColumnReference>
+							<ValueColumnReference>
+								<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+								<ClassName><![CDATA[prices2017]]></ClassName>
+								<ItemName><![CDATA[uk_day_ahead_price_eur_mwh]]></ItemName>
+							</ValueColumnReference>
+					</ValuesQuery>
+// arguments and values
+					<Argument><![CDATA[0.0]]></Argument>
+					<Value><![CDATA[0.0]]></Value>
+				</TableFunction>
+			</TableFunctions>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1640161747659</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1640161747746</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1640161747663</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+    			<TimePlot>
+					<Id>1640161959184</Id>
+					<Name><![CDATA[importExportPlot]]></Name>
+					<X>1020</X><Y>140</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>false</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1630396800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Import]]></Title>
+					<Id>1640161959180</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-6632142</Color>
+					<Expression2><![CDATA[electricityImport]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Export]]></Title>
+					<Id>1640161959181</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-3308225</Color>
+					<Expression2><![CDATA[electricityExport]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>164</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+				<Text>
+					<Id>1640161959201</Id>
+					<Name><![CDATA[text124]]></Name>
+					<X>20</X><Y>40</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Import & export]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
 	</ActiveObjectClasses>	
 	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
@@ -74991,6 +76646,27 @@ for (int i=0; i < 24; i++){
 				<Login><![CDATA[]]></Login>
 				<Password><![CDATA[]]></Password>
 			</ExternalConnection>
+			<ExternalConnection>
+				<Id>1640162512361</Id>
+				<Name><![CDATA[database]]></Name>
+				<X>0</X><Y>0</Y>
+				<Label><X>10</X><Y>0</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<DatabaseType>EXCEL_ACCESS</DatabaseType>
+				<ConnectionURL><![CDATA[]]></ConnectionURL>
+				<ConnectOnStartup>true</ConnectOnStartup>
+				<DatabaseName><![CDATA[]]></DatabaseName>
+				<ResourceReference>
+					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+					<ClassName><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/ElectricityPrices2017NL-DE-BE.xlsx]]></ClassName>
+				</ResourceReference>
+				<Host><![CDATA[localhost]]></Host>
+				<JdbcDriverClassName><![CDATA[net.sourceforge.jtds.jdbc.Driver]]></JdbcDriverClassName>
+				<Login><![CDATA[]]></Login>
+				<Password><![CDATA[]]></Password>
+			</ExternalConnection>
 			<TableImportSettings>
 				<TableReference>
 					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
@@ -75070,6 +76746,15 @@ for (int i=0; i < 24; i++){
 				</TableReference>
 				<ConnectionIndex>3</ConnectionIndex>
 				<ExternalTableName><![CDATA["Prop Power Curve 3MW"]]></ExternalTableName>
+				<AutoImport>false</AutoImport>
+			</TableImportSettings>
+			<TableImportSettings>
+				<TableReference>
+					<PackageName><![CDATA[neon_integrated_model_netherlands]]></PackageName>
+					<ClassName><![CDATA[prices2017]]></ClassName>
+				</TableReference>
+				<ConnectionIndex>7</ConnectionIndex>
+				<ExternalTableName><![CDATA["prices2017"]]></ExternalTableName>
 				<AutoImport>false</AutoImport>
 			</TableImportSettings>
 			<TableImportSettings>
@@ -75349,6 +77034,10 @@ for (int i=0; i < 24; i++){
 		</Resource>
 		<Resource>
 			<Path><![CDATA[3d/panel_2.dae]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[C:/Users/s124129/Documents/GitHub/NEON-Integrated-Model/Data/ElectricityPrices2017NL-DE-BE.xlsx]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
